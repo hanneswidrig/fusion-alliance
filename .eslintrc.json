@@ -1,12 +1,24 @@
 {
-  "extends": "airbnb",
-  "rules": {
-    "semi": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  },
-  "globals": {
-    "document": false,
-    "window": false,
-    "it": false
-  }
+	"extends": ["airbnb", "prettier"],
+	"rules": {
+		"semi": "off",
+		"comma-dangle": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"indent": [2, "tab", { "SwitchCase": 1, "VariableDeclarator": 1 }],
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{ "components": ["Link"], "specialLink": ["to"] }
+		],
+		"no-tabs": 0,
+		"arrow-body-style": "off",
+		"react/prop-types": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"]
+	},
+	"globals": {
+		"document": false,
+		"window": false,
+		"it": false,
+		"expect": false
+	}
 }
