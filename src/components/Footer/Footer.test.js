@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './Main'
+import Footer from './Footer'
 
-it(' successfully loads HeroBlock', () => {
+it(' successfully loads Footer', () => {
 	const div = document.createElement('div')
-	ReactDOM.render(<Main />, div)
+	ReactDOM.render(<Footer />, div)
 	ReactDOM.unmountComponentAtNode(div)
 })

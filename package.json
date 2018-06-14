@@ -42,7 +42,10 @@
 	"jest": {
 		"setupFiles": [
 			"raf/polyfill"
-		]
+		],
+		"moduleNameMapper": {
+			"\\.(jpg|png|svg)$": "<rootDir>/empty-module.js"
+		}
 	},
 	"babel": {
 		"presets": [

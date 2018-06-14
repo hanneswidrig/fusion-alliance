@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../../styles/theme'
+import theme from '../../../styles/theme'
 
 const VideoSection = styled.section`
 	display: flex;
@@ -13,7 +13,7 @@ const VideoSection = styled.section`
 
 const Header = styled.h1`
 	color: ${theme.colors.black};
-	font-family: ${props => props.theme.fonts.nettoBold};
+	font-family: ${theme.fonts.nettoBold};
 	font-size: calc(16px + 1.5vw);
 	margin-bottom: 20px;
 	text-align: center;
