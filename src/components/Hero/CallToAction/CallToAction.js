@@ -25,6 +25,6 @@ const Button = styled.a`
 	}
 `
 
-const CallToAction = () => <Button href="/expertise/">EXPLORE</Button>
+const CallToAction = () => <Button href="/expertise">EXPLORE</Button>
 
 export default CallToAction
