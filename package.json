@@ -1,55 +1,69 @@
 {
-  "name": "fusion-alliance",
-  "description": "Unsolicited redesign of fusionalliance.com",
-  "version": "0.1.0",
-  "repository": "https://github.com/hanneswidrig/fusion-alliance",
-  "author": "Hannes Widrig<hanneswidrig@gmail.com>",
-  "private": true,
-  "dependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-icons": "^2.2.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.3.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest",
-    "format": "prettier --write \"src/**/*.js\" && eslint --fix",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
-    "react-test-renderer": "^16.4.0",
-    "stylelint-config-prettier": "^3.2.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.3.1"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
-  "stylelint": {
-    "processors": [
-      "stylelint-processor-styled-components"
-    ],
-    "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-prettier",
-      "stylelint-config-styled-components"
-    ],
-    "rules": {
-      "no-descending-specificity": null
-    }
-  }
+	"name": "fusion-alliance",
+	"description": "Unsolicited redesign of fusionalliance.com",
+	"version": "0.1.0",
+	"repository": "https://github.com/hanneswidrig/fusion-alliance",
+	"author": "Hannes Widrig<hanneswidrig@gmail.com>",
+	"private": true,
+	"dependencies": {
+		"prop-types": "^15.6.1",
+		"react": "^16.4.0",
+		"react-dom": "^16.4.0",
+		"react-icons": "^2.2.7",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "1.1.4",
+		"styled-components": "^3.3.2"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "jest",
+		"format": "prettier --write \"src/**/*.js\"",
+		"eject": "react-scripts eject"
+	},
+	"devDependencies": {
+		"enzyme": "^3.3.0",
+		"enzyme-to-json": "^3.3.4",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-config-prettier": "^2.9.0",
+		"eslint-plugin-import": "^2.12.0",
+		"eslint-plugin-jsx-a11y": "^6.0.3",
+		"eslint-plugin-react": "^7.9.1",
+		"prettier": "^1.13.5",
+		"raf": "^3.4.0",
+		"react-test-renderer": "^16.4.0",
+		"stylelint": "^9.2.1",
+		"stylelint-config-prettier": "^3.2.0",
+		"stylelint-config-standard": "^18.2.0",
+		"stylelint-config-styled-components": "^0.1.1",
+		"stylelint-processor-styled-components": "^1.3.1"
+	},
+	"jest": {
+		"setupFiles": [
+			"raf/polyfill"
+		],
+		"moduleNameMapper": {
+			"\\.(jpg|png|svg)$": "<rootDir>/empty-module.js"
+		}
+	},
+	"babel": {
+		"presets": [
+			"react",
+			"env"
+		]
+	},
+	"stylelint": {
+		"processors": [
+			"stylelint-processor-styled-components"
+		],
+		"extends": [
+			"stylelint-config-standard",
+			"stylelint-config-prettier",
+			"stylelint-config-styled-components"
+		],
+		"rules": {
+			"no-descending-specificity": null
+		}
+	}
 }
