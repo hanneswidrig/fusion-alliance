@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import theme from '../../../styles/theme'
 
-const Button = styled.a`
+const Button = styled(Link)`
 	color: ${theme.colors.blue};
 	border: solid 2px ${theme.colors.blue};
 	border-radius: 4px;
@@ -25,6 +26,6 @@ const Button = styled.a`
 	}
 `
 
-const CallToAction = () => <Button href="/expertise">EXPLORE</Button>
+const CallToAction = () => <Button to="/expertise">EXPLORE</Button>
 
 export default CallToAction
