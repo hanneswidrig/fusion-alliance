@@ -1,63 +1,69 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
-import styledHeaderTheme from '../../styles/styledHeaderTheme'
+import { NavLink } from 'react-router-dom'
+
+import theme from '../../styles/theme'
 
 const Section = styled.section`
-  display: none;
-  a {
-    color: ${styledHeaderTheme.colors.grey};
-    text-decoration: none;
-    padding: 28.5px 8px;
-    height: 100%;
-    font-weight: 600;
-    transition: all 0.2s;
-    &:hover {
-      color: ${styledHeaderTheme.colors.blackLinkHover};
-      text-decoration: underline;
-    }
-  }
+	display: none;
+	a {
+		color: ${theme.colors.grey};
+		text-decoration: none;
+		padding: 28.5px 8px;
+		height: 100%;
+		font-weight: 600;
+		transition: all 0.2s;
+		&:hover {
+			color: ${theme.colors.blackLinkHover};
+			text-decoration: underline;
+		}
+	}
 
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    & {
-      display: flex;
-    }
-  }
+	@media screen and (min-width: ${theme.responsive.medium}) {
+		& {
+			display: flex;
+		}
+	}
 `
 
-const NavSection = () => (
-  <Section>
-    <Link
-      to="/expertise/"
-      activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-    >
-      EXPERTISE
-    </Link>
-    <Link
-      to="/products/"
-      activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-    >
-      PRODUCTS
-    </Link>
-    <Link
-      to="/about/"
-      activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-    >
-      ABOUT
-    </Link>
-    <Link
-      to="/contact/"
-      activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-    >
-      CONTACT
-    </Link>
-    <Link
-      to="/careers/"
-      activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-    >
-      CAREERS
-    </Link>
-  </Section>
+const NavSection = props => (
+	<Section active={props.active}>
+		<NavLink
+			exact
+			to="/expertise"
+			activeStyle={{ color: theme.colors.activeLinkStyle }}
+		>
+			EXPERTISE
+		</NavLink>
+		<NavLink
+			exact
+			to="/products"
+			activeStyle={{ color: theme.colors.activeLinkStyle }}
+		>
+			PRODUCTS
+		</NavLink>
+		<NavLink
+			exact
+			to="/about"
+			activeStyle={{ color: theme.colors.activeLinkStyle }}
+		>
+			ABOUT
+		</NavLink>
+		<NavLink
+			exact
+			to="/contact"
+			activeStyle={{ color: theme.colors.activeLinkStyle }}
+		>
+			CONTACT
+		</NavLink>
+		<NavLink
+			exact
+			to="/careers"
+			activeStyle={{ color: theme.colors.activeLinkStyle }}
+		>
+			CAREERS
+		</NavLink>
+	</Section>
 )
 
 export default NavSection

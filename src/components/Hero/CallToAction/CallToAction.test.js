@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import CallToAction from './CallToAction'
 
-it('renders without crashing', () => {
+it(' successfully loads CallToAction button', () => {
 	const div = document.createElement('div')
-	ReactDOM.render(<App />, div)
+	ReactDOM.render(<CallToAction />, div)
 	ReactDOM.unmountComponentAtNode(div)
 })

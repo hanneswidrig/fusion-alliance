@@ -1,20 +1,20 @@
-import Navigation from './Navigation'
-
 import React from 'react'
 import styled from 'styled-components'
-import styledHeaderTheme from '../../styles/styledHeaderTheme'
+
+import theme from '../../styles/theme'
+import Navigation from './Navigation'
 
 const Header = styled.header`
-  border-top: 6px solid ${styledHeaderTheme.colors.blue};
-  background: ${styledHeaderTheme.colors.white};
-  width: 100%;
-  font-family: ${props => props.theme.fonts.nettoBold};
+	border-top: 6px solid ${theme.colors.blue};
+	background: ${theme.colors.white};
+	width: 100%;
+	font-family: ${theme.fonts.nettoBold};
 `
 
 const Menu = () => (
-  <Header>
-    <Navigation />
-  </Header>
+	<Header>
+		<Navigation />
+	</Header>
 )
 
 export default Menu

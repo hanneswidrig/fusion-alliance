@@ -1,31 +1,31 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import MdMenu from 'react-icons/lib/md/menu'
-import styledHeaderTheme from '../../styles/styledHeaderTheme'
+import theme from '../../styles/theme'
 
-const MobileMenuWrapper = styled(Link)`
-  padding: 20px;
-  svg {
-    color: ${styledHeaderTheme.colors.black};
-    width: 24px;
-    height: 24px;
-  }
+const MobileMenuWrapper = styled(NavLink)`
+	padding: 20px;
+	svg {
+		color: ${theme.colors.black};
+		width: 24px;
+		height: 24px;
+	}
 
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    & {
-      display: none;
-    }
-  }
+	@media screen and (min-width: ${theme.responsive.medium}) {
+		& {
+			display: none;
+		}
+	}
 `
 
 const MobileMenuButton = () => (
-  <MobileMenuWrapper
-    to="#"
-    activeStyle={{ color: styledHeaderTheme.colors.activeLinkStyle }}
-  >
-    <MdMenu />
-  </MobileMenuWrapper>
+	<MobileMenuWrapper
+		to="#"
+		activeStyle={{ color: theme.colors.activeLinkStyle }}
+	>
+		<MdMenu />
+	</MobileMenuWrapper>
 )
 
 export default MobileMenuButton
