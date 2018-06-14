@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import MdMenu from 'react-icons/lib/md/menu'
-import theme from '../../styles/theme'
+import theme from '../../../styles/theme'
 
 const MobileMenuWrapper = styled(NavLink)`
 	padding: 20px;

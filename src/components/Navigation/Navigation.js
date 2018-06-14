@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import MdMenu from 'react-icons/lib/md/menu'
 
-import NavSection from './NavSection'
-import LogoSection from './LogoSection'
-import MobileNavSection from './MobileNavSection'
+import NavSection from './NavSection/NavSection'
+import LogoSection from './LogoSection/LogoSection'
+import MobileNavSection from './MobileNavSection/MobileNavSection'
 import theme from '../../styles/theme'
 
 const NavSpacing = styled.div`
