@@ -3,8 +3,8 @@ const theme = {
 		white: '#FFFFFF',
 		black: '#000000',
 		blackLinkHover: 'hsl(0, 98%, 2%)',
-		grey: '#777777',
-		blue: '#007BC2', // modified for accessibility
+		grey: '#555555',
+		blue: '#007BC2',
 		blueLinkHover: 'hsl(202, 0%, 100%)',
 		orange: '#F68B20',
 		orangeHighlight: '#FAF7F5',
@@ -24,9 +24,8 @@ const theme = {
 		large: '70em',
 	},
 	fonts: {
-		netto: 'NettoWeb, sans-serif',
-		nettoBold: 'NettoWeb-Bold, sans-serif',
-		metaWeb: 'MetaWeb-Normal, sans-serif',
+		netto: 'netto-web, sans-serif',
+		metaWeb: 'meta-web, sans-serif',
 	},
 	fontSize: {
 		h1: '3rem',
