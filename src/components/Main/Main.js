@@ -12,27 +12,36 @@ import {
 	insights,
 	insightsDescription,
 	insightsButtonText,
+	insightsContent,
 } from '../../content'
 
-const Main = () => (
-	<main>
-		<HeroBanner />
-		<VideoBanner />
-		<MainContainer>
-			<TitleContainer
-				{...theme}
-				height="72px"
-				header={insights}
-				themeColor={theme.colors.orange}
-			/>
-			<DescriptionContainer {...theme} description={insightsDescription} />
-			<MainCardContainer {...theme}>
-				<Card {...theme} />
-				<Card {...theme} />
-			</MainCardContainer>
-			<MainButtonContainer {...theme} text={insightsButtonText} />
-		</MainContainer>
-	</main>
-)
+const Main = () => {
+	const Insights = insightsContent.map((content, index) => (
+		<Card
+			{...theme}
+			title={content.title}
+			date={content.date}
+			body={content.body}
+			key={index.toString()}
+		/>
+	))
+	return (
+		<main>
+			<HeroBanner />
+			<VideoBanner />
+			<MainContainer>
+				<TitleContainer
+					{...theme}
+					height="72px"
+					header={insights}
+					themeColor={theme.colors.orange}
+				/>
+				<DescriptionContainer {...theme} description={insightsDescription} />
+				<MainCardContainer {...theme}>{Insights}</MainCardContainer>
+				<MainButtonContainer {...theme} text={insightsButtonText} />
+			</MainContainer>
+		</main>
+	)
+}
 
 export default Main
