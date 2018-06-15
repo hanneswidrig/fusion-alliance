@@ -4,8 +4,14 @@ import VideoBanner from '../Hero/VideoBanner/VideoBanner'
 import MainContainer from '../Layouts/Container/MainContainer/MainContainer'
 import TitleContainer from '../Layouts/Container/TitleContainer/TitleContainer'
 import DescriptionContainer from '../Layouts/Container/DescriptionContainer/DescriptionContainer'
+import MainCardContainer from '../Layouts/Container/MainCardContainer/MainCardContainer'
+import MainButtonContainer from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
 import theme from '../../styles/theme'
-import { insights, insightsDescription } from '../../content'
+import {
+	insights,
+	insightsDescription,
+	insightsButtonText,
+} from '../../content'
 
 const Main = () => (
 	<main>
@@ -19,6 +25,8 @@ const Main = () => (
 				themeColor={theme.colors.orange}
 			/>
 			<DescriptionContainer {...theme} description={insightsDescription} />
+			<MainCardContainer {...theme} />
+			<MainButtonContainer {...theme} buttonText={insightsButtonText} />
 		</MainContainer>
 	</main>
 )

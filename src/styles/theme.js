@@ -32,6 +32,7 @@ const theme = {
 		h1: '3rem',
 		h2: '2.5rem',
 		h3: '2rem',
+		button: '1.25rem',
 		description: '1.125rem',
 	},
 }
