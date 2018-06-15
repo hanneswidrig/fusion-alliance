@@ -28,6 +28,12 @@ const theme = {
 		nettoBold: 'NettoWeb-Bold, sans-serif',
 		metaWeb: 'MetaWeb-Normal, sans-serif',
 	},
+	fontSize: {
+		h1: '3rem',
+		h2: '2.5rem',
+		h3: '2rem',
+		description: '1.125rem',
+	},
 }
 
 export default theme
