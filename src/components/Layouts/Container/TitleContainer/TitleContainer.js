@@ -5,14 +5,13 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: 100%;
 	margin: 20px 20px 0 20px;
 	height: ${props => props.height || '72px'};
 `
 
 const Title = styled.h2`
 	color: ${props => props.colors.white || '#ffffff'};
-	flex-basis: 75%;
+	width: 100%;
 	line-height: ${props => props.height || '72px'};
 	text-align: center;
 	font-family: ${props => props.fonts.netto || 'Arial, Sans Serif'};

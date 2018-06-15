@@ -9,7 +9,7 @@ it(' successfully loads MainButtonContainer', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<MainButtonContainer {...theme} buttonText={insightsButtonText} />
+			<MainButtonContainer {...theme} text={insightsButtonText} />
 		</BrowserRouter>,
 		div
 	)

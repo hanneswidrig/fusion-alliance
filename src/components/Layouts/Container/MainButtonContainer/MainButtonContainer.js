@@ -28,7 +28,7 @@ const Button = styled(Link)`
 `
 
 const MainButtonContainer = props => {
-	const buttonText = props.buttonText.toUpperCase()
+	const buttonText = props.text.toUpperCase()
 	return (
 		<Container {...props}>
 			<Button {...props} to="/expertise">

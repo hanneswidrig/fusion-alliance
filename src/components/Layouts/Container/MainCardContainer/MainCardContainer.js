@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	flex-basis: 100%;
+	padding: 20px;
 `
 
 const MainCardContainer = props => {
