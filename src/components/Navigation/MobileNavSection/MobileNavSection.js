@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-import theme from '../../../styles/theme'
+const naviEntries = ['expertise', 'products', 'about', 'contact', 'careers']
 
-const Section = styled.section`
+const Mobile = styled.section`
 	display: ${props => (props.active ? 'flex' : 'none')};
 	flex-direction: column;
 	user-select: none;
@@ -13,31 +13,29 @@ const Section = styled.section`
 		padding: 16px;
 		text-decoration: none;
 		text-align: center;
-		color: ${theme.colors.blackHover};
+		color: ${props => props.colors.blackHover};
 	}
 `
 
-const NavSection = props => (
-	<Section active={props.active}>
-		<NavLink exact to="/" activeStyle={{ color: theme.colors.blueActive }}>
-			HOME
+const MobileNavSection = props => {
+	const navigationItems = naviEntries.map((entry, index) => (
+		<NavLink
+			exact
+			to={`/${entry}`}
+			activeStyle={{ color: props.colors.blueActive }}
+			key={index.toString()}
+		>
+			{entry.toUpperCase()}
 		</NavLink>
-		<NavLink to="/expertise" activeStyle={{ color: theme.colors.blueActive }}>
-			EXPERTISE
-		</NavLink>
-		<NavLink to="/products" activeStyle={{ color: theme.colors.blueActive }}>
-			PRODUCTS
-		</NavLink>
-		<NavLink to="/about" activeStyle={{ color: theme.colors.blueActive }}>
-			ABOUT
-		</NavLink>
-		<NavLink to="/contact" activeStyle={{ color: theme.colors.blueActive }}>
-			CONTACT
-		</NavLink>
-		<NavLink to="/careers" activeStyle={{ color: theme.colors.blueActive }}>
-			CAREERS
-		</NavLink>
-	</Section>
-)
+	))
+	return (
+		<Mobile {...props} active={props.active}>
+			<NavLink exact to="/" activeStyle={{ color: props.colors.blueActive }}>
+				HOME
+			</NavLink>
+			{navigationItems}
+		</Mobile>
+	)
+}
 
-export default NavSection
+export default MobileNavSection

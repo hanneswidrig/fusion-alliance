@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const naviEntries = ['expertise', 'products', 'about', 'contact', 'careers']
 
-const Section = styled.section`
+const Desktop = styled.section`
 	display: none;
 	a {
 		color: ${props => props.colors.grey};
@@ -38,9 +38,9 @@ const NavigationSection = props => {
 		</NavLink>
 	))
 	return (
-		<Section active={props.active} {...props}>
+		<Desktop active={props.active} {...props}>
 			{navigationItems}
-		</Section>
+		</Desktop>
 	)
 }
 
