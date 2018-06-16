@@ -6,7 +6,7 @@ const VideoSection = styled.section`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #f6f8fa;
+	background-color: hsla(202, 16%, 96%, 1);
 	width: 100%;
 `
 

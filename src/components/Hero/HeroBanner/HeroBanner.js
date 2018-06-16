@@ -32,7 +32,6 @@ const VideoBackground = styled.img`
 	z-index: -1;
 	margin-top: -40px;
 	width: 100vw;
-	height: 40px;
 `
 
 const HeroBanner = () => (

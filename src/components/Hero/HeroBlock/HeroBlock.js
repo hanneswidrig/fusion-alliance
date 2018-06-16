@@ -10,7 +10,7 @@ const HeroWrapper = styled.div`
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
-	margin-top: calc(100px - 5vw);
+	margin-top: calc(100px - 10vw);
 
 	@media screen and (max-width: ${theme.responsive.small}) {
 		margin: 0;

@@ -1,7 +1,7 @@
 module.exports = {
 	colors: {
 		white: 'hsla(0, 100%, 100%, 1)',
-		black: 'hsla(0, 0%, 0%, 1)',
+		black: 'hsla(202, 76%, 15%, 1)',
 		blackHover: 'hsla(0, 98%, 2%, 1)',
 		grey: 'hsla(0, 0%, 33%, 1)',
 		blue: 'hsla(202, 100%, 37%, 1)',
