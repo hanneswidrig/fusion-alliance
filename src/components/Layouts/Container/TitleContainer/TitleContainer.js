@@ -15,7 +15,7 @@ const Title = styled.h2`
 	line-height: ${props => props.height || '72px'};
 	text-align: center;
 	font-size: ${props => props.fontSize.h2 || '2.5rem'};
-	background-color: ${props => props.themeColor || props.colors.black};
+	background-color: ${props => props.themecolor || props.colors.black};
 `
 
 const TitleContainer = props => {

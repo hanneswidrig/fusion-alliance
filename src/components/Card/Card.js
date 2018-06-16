@@ -7,7 +7,7 @@ const CardWrapper = styled.div`
 	flex-direction: column;
 	flex-basis: 49%;
 	border-radius: 4px;
-	background-color: ${props => props.backgroundColor};
+	background-color: ${props => props.backgroundcolor};
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 	transition: 200ms ease-in;
 	cursor: default;
@@ -70,7 +70,7 @@ const CardButton = styled(Link)`
 	padding: 12px 8px;
 	transition: 200ms ease-in-out;
 	&:hover {
-		background-color: hsla(30, 82%, 88%, 1);
+		background-color: ${props => props.buttoncolor};
 		text-decoration: underline;
 	}
 `

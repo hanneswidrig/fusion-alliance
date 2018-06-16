@@ -10,22 +10,21 @@ const theme = {
 		orangeTheme: {
 			orange: 'hsla(30, 92%, 55%, 1)',
 			orangeGentle: 'hsla(30, 92%, 98%, 1)',
-			orangeButton: 'hsla(30, 92%, 55%, 1)',
+			orangeButton: 'hsla(30, 82%, 88%, 1)',
 		},
 		greenTheme: {
 			green: 'hsla(84, 53%, 50%, 1)',
 			greenGentle: 'hsla(84, 92%, 98%, 1)',
-			greenButton: 'hsla(84, 92%, 55%, 1)',
+			greenButton: 'hsla(84, 82%, 88%, 1)',
 		},
 		purpleTheme: {
 			purple: 'hsla(252, 30%, 52%, 1)',
 			purpleGentle: 'hsla(252, 92%, 98%, 1)',
-			purpleButton: 'hsla(252, 92%, 55%, 1)',
+			purpleButton: 'hsla(252, 82%, 88%, 1)',
 		},
 	},
 	sizes: {
 		maxWidth: '960px',
-		maxWidthCentered: '650px',
 	},
 	responsive: {
 		small: '35em',

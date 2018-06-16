@@ -29,9 +29,8 @@ const Main = () => {
 			date={content.date}
 			body={content.body}
 			image={content.image}
-			color={theme.colors.orangeTheme.orange}
-			backgroundColor={theme.colors.orangeTheme.orangeGentle}
-			buttonColor={theme.colors.orangeTheme.orangeButton}
+			backgroundcolor={theme.colors.orangeTheme.orangeGentle}
+			buttoncolor={theme.colors.orangeTheme.orangeButton}
 			key={index.toString()}
 		/>
 	))
@@ -44,7 +43,7 @@ const Main = () => {
 					{...theme}
 					height="72px"
 					header={insights}
-					themeColor={theme.colors.orange}
+					themecolor={theme.colors.orange}
 				/>
 				<DescriptionContainer {...theme} description={insightsDescription} />
 				<MainCardContainer {...theme}>{Insights}</MainCardContainer>
