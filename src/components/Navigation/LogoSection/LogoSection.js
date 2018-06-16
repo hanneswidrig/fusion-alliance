@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 import logo from '../../../images/header-logo.png'
-import theme from '../../../styles/theme'
 
-const LSection = styled.section`
+const Section = styled.section`
 	height: 38px;
 
 	a {
@@ -19,7 +18,7 @@ const LSection = styled.section`
 		height: 32px;
 	}
 
-	@media screen and (max-width: ${theme.responsive.medium}) {
+	@media screen and (max-width: ${props => props.responsive.medium}) {
 		& {
 			height: 32px;
 			padding: 0 10px;
@@ -30,12 +29,12 @@ const LSection = styled.section`
 	}
 `
 
-const LogoSection = () => (
-	<LSection>
-		<NavLink to="/" activeStyle={{ color: theme.colors.activeLinkStyle }}>
+const LogoSection = props => (
+	<Section {...props}>
+		<NavLink to="/" activeStyle={{ color: props.colors.blueActive }}>
 			<img src={logo} alt="logo" />
 		</NavLink>
-	</LSection>
+	</Section>
 )
 
 export default LogoSection

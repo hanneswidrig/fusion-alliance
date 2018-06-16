@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import Menu from './Menu'
+import Menu from './Header'
+import theme from '../../styles/theme'
 
-it(' successfully loads Menu', () => {
+it(' successfully loads Header', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<Menu />
+			<Menu {...theme} />
 		</BrowserRouter>,
 		div
 	)
