@@ -8,7 +8,8 @@ const Header = styled.header`
 	border-top: 6px solid ${theme.colors.blue};
 	background: ${theme.colors.white};
 	width: 100%;
-	font-family: ${theme.fonts.nettoBold};
+	font-family: ${theme.fonts.netto};
+	font-weight: 600;
 `
 
 const Menu = () => (

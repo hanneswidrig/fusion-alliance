@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import CallToAction from './CallToAction'
+import MainContainer from './MainContainer'
 
-it(' successfully loads CallToAction button', () => {
+it(' successfully loads MainContainer', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<CallToAction />
+			<MainContainer />
 		</BrowserRouter>,
 		div
 	)

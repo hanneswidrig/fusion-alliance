@@ -1,22 +1,30 @@
 const theme = {
 	colors: {
-		white: '#FFFFFF',
-		black: '#000000',
-		blackLinkHover: 'hsl(0, 98%, 2%)',
-		grey: '#777777',
-		blue: '#007BC2', // modified for accessibility
-		blueLinkHover: 'hsl(202, 0%, 100%)',
-		orange: '#F68B20',
-		orangeHighlight: '#FAF7F5',
-		green: '#8EC33C',
-		greenHighlight: '#F8FAF5',
-		purple: '#6F60AA',
-		purpleHighlight: '#F6F5FA',
-		activeLinkStyle: 'hsl(202,50%,50%)',
+		white: 'hsla(0, 100%, 100%, 1)',
+		black: 'hsla(0, 0%, 0%, 1)',
+		blackHover: 'hsla(0, 98%, 2%, 1)',
+		grey: 'hsla(0, 0%, 33%, 1)',
+		blue: 'hsla(202, 100%, 37%, 1)',
+		blueHover: 'hsla(202, 5%, 95%, 1)',
+		blueActive: 'hsla(202, 50%, 50%, 1)',
+		orangeTheme: {
+			orange: 'hsla(30, 92%, 55%, 1)',
+			orangeGentle: 'hsla(30, 92%, 98%, 1)',
+			orangeButton: 'hsla(30, 82%, 88%, 1)',
+		},
+		greenTheme: {
+			green: 'hsla(84, 53%, 50%, 1)',
+			greenGentle: 'hsla(84, 92%, 98%, 1)',
+			greenButton: 'hsla(84, 82%, 88%, 1)',
+		},
+		purpleTheme: {
+			purple: 'hsla(252, 30%, 52%, 1)',
+			purpleGentle: 'hsla(252, 92%, 98%, 1)',
+			purpleButton: 'hsla(252, 82%, 88%, 1)',
+		},
 	},
 	sizes: {
 		maxWidth: '960px',
-		maxWidthCentered: '650px',
 	},
 	responsive: {
 		small: '35em',
@@ -24,9 +32,15 @@ const theme = {
 		large: '70em',
 	},
 	fonts: {
-		netto: 'NettoWeb, sans-serif',
-		nettoBold: 'NettoWeb-Bold, sans-serif',
-		metaWeb: 'MetaWeb-Normal, sans-serif',
+		netto: 'netto-web, sans-serif',
+		metaWeb: 'meta-web, sans-serif',
+	},
+	fontSize: {
+		h1: '3rem',
+		h2: '2.5rem',
+		h3: '2rem',
+		button: '1.25rem',
+		description: '1rem',
 	},
 }
 

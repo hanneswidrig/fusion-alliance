@@ -19,7 +19,8 @@ const HeroWrapper = styled.div`
 
 const HeroTitle = styled.div`
 	font-size: calc(16px + 2.75vw);
-	font-family: ${theme.fonts.nettoBold};
+	font-family: ${theme.fonts.netto};
+	font-weight: 600;
 	color: ${theme.colors.blue};
 	@media screen and (min-width: ${theme.responsive.large}) {
 		& {
@@ -29,7 +30,6 @@ const HeroTitle = styled.div`
 `
 
 const HeroTitleDetails = styled.div`
-	font-family: ${theme.fonts.metaWeb};
 	padding: 8px 0 14px 0;
 	line-height: 1.25rem;
 	width: 50%;

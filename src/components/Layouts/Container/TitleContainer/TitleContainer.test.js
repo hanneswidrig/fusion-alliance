@@ -1,13 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import CallToAction from './CallToAction'
+import TitleContainer from './TitleContainer'
+import theme from '../../../../styles/theme'
 
-it(' successfully loads CallToAction button', () => {
+it(' successfully loads TitleContainer', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<CallToAction />
+			<TitleContainer
+				{...theme}
+				height="72px"
+				header="insights"
+				themeColor={theme.colors.orange}
+			/>
 		</BrowserRouter>,
 		div
 	)

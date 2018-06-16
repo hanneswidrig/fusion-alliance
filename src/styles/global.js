@@ -8,16 +8,46 @@ injectGlobal([
   */
  
 	@font-face {
-		font-family: 'NettoWeb';
+		font-family: 'netto-web';
+		font-weight: 400;
+		font-style: normal;
 		src: url('${'/fonts/NettoWeb.woff'}') format('woff');
 	}
 	@font-face {
-		font-family: 'NettoWeb-Bold';
+		font-family: 'netto-web';
+		font-weight: 700;
+		font-style: normal;
 	  src: url('${'/fonts/NettoWeb-Bold.woff'}') format('woff');		
 	}
 	@font-face {
-		font-family: 'MetaWeb-Normal';
+		font-family: 'meta-web';
+		font-weight: 400;
+		font-style: normal;
 	  src: url('${'/fonts/MetaWeb-Normal.woff'}') format('woff');		
+	}
+	@font-face {
+		font-family: 'meta-web';
+		font-weight: 600;
+		font-style: normal;
+	  src: url('${'/fonts/MetaWeb-Medium.woff'}') format('woff');		
+	}
+	@font-face {
+		font-family: 'meta-web';
+		font-weight: 600;
+		font-style: italic;
+	  src: url('${'/fonts/MetaWeb-MediumIta.woff'}') format('woff');		
+	}
+	@font-face {
+		font-family: 'meta-web';
+		font-weight: 700;
+		font-style: normal;
+	  src: url('${'/fonts/MetaWeb-Bold.woff'}') format('woff');		
+	}
+	@font-face {
+		font-family: 'meta-web';
+		font-weight: 700;
+		font-style: italic;
+	  src: url('${'/fonts/MetaWeb-BoldIta.woff'}') format('woff');		
 	}
 
   html, body, div, span, applet, object, iframe,
@@ -43,7 +73,7 @@ injectGlobal([
 
   /* Added to Fix Footer to bottom of viewport */
   html, body {
-    height: 100%;
+		height: 100%;
   }
   .siteRoot {
     height: 100vh;

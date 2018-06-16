@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import CallToAction from './CallToAction'
+import theme from '../../styles/theme'
+import Card from './Card'
 
-it(' successfully loads CallToAction button', () => {
+it(' successfully loads Card', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<CallToAction />
+			<Card {...theme} />
 		</BrowserRouter>,
 		div
 	)

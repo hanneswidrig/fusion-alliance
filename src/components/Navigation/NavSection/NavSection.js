@@ -14,7 +14,7 @@ const Section = styled.section`
 		font-weight: 600;
 		transition: all 0.2s;
 		&:hover {
-			color: ${theme.colors.blackLinkHover};
+			color: ${theme.colors.blackHover};
 			text-decoration: underline;
 		}
 	}
@@ -31,35 +31,31 @@ const NavSection = props => (
 		<NavLink
 			exact
 			to="/expertise"
-			activeStyle={{ color: theme.colors.activeLinkStyle }}
+			activeStyle={{ color: theme.colors.blueActive }}
 		>
 			EXPERTISE
 		</NavLink>
 		<NavLink
 			exact
 			to="/products"
-			activeStyle={{ color: theme.colors.activeLinkStyle }}
+			activeStyle={{ color: theme.colors.blueActive }}
 		>
 			PRODUCTS
 		</NavLink>
-		<NavLink
-			exact
-			to="/about"
-			activeStyle={{ color: theme.colors.activeLinkStyle }}
-		>
+		<NavLink exact to="/about" activeStyle={{ color: theme.colors.blueActive }}>
 			ABOUT
 		</NavLink>
 		<NavLink
 			exact
 			to="/contact"
-			activeStyle={{ color: theme.colors.activeLinkStyle }}
+			activeStyle={{ color: theme.colors.blueActive }}
 		>
 			CONTACT
 		</NavLink>
 		<NavLink
 			exact
 			to="/careers"
-			activeStyle={{ color: theme.colors.activeLinkStyle }}
+			activeStyle={{ color: theme.colors.blueActive }}
 		>
 			CAREERS
 		</NavLink>
