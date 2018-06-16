@@ -48,7 +48,7 @@ const CardHeader = styled.div`
 `
 
 const CardTitle = styled.div`
-	color: ${props => props.colors.black};
+	color: ${props => props.colors.darkBlue};
 	font-weight: 600;
 `
 

@@ -6,12 +6,12 @@ const VideoSection = styled.section`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #f6f8fa;
+	background-color: hsla(202, 16%, 96%, 1);
 	width: 100%;
 `
 
 const Header = styled.h1`
-	color: ${props => props.colors.black};
+	color: ${props => props.colors.darkBlue};
 	font-family: ${props => props.fonts.netto};
 	font-weight: 600;
 	font-size: calc(16px + 1.5vw);
