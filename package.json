@@ -48,7 +48,14 @@
 		],
 		"moduleNameMapper": {
 			"\\.(jpg|png|svg)$": "<rootDir>/empty-module.js"
-		}
+		},
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/**/*.js",
+			"!src/index.js",
+			"!src/styles/*"
+		],
+		"mapCoverage": true
 	},
 	"babel": {
 		"presets": [

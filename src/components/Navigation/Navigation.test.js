@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
 it('successfully loads Navigation', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter>
+		<MemoryRouter initialEntries={['/']} initialIndex={0}>
 			<Navigation />
 		</MemoryRouter>,
 		div

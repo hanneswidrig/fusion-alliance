@@ -9,9 +9,9 @@ const Container = styled.div`
 `
 
 const Description = styled.p`
-	color: ${props => props.colors.black || '#000000'};
+	color: ${props => (props.colors ? props.colors.black : '#000000')};
 	line-height: 1.5rem;
-	font-size: ${props => props.fontSize.description || '1rem'};
+	font-size: ${props => (props.fontSize ? props.fontSize.description : '1rem')};
 `
 
 const DescriptionContainer = props => {
