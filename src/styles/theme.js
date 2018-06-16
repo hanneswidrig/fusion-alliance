@@ -1,4 +1,4 @@
-const theme = {
+module.exports = {
 	colors: {
 		white: 'hsla(0, 100%, 100%, 1)',
 		black: 'hsla(0, 0%, 0%, 1)',
@@ -43,5 +43,3 @@ const theme = {
 		description: '1rem',
 	},
 }
-
-export default theme

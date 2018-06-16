@@ -12,8 +12,19 @@ it(' successfully loads TitleContainer', () => {
 				{...theme}
 				height="72px"
 				header="insights"
-				themeColor={theme.colors.orange}
+				themeColor={theme.colors.orangeTheme.orange}
 			/>
+		</BrowserRouter>,
+		div
+	)
+	ReactDOM.unmountComponentAtNode(div)
+})
+
+it(' has no props passed to TitleContainer', () => {
+	const div = document.createElement('div')
+	ReactDOM.render(
+		<BrowserRouter>
+			<TitleContainer />
 		</BrowserRouter>,
 		div
 	)

@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import MdMenu from 'react-icons/lib/md/menu'
 
-import NavSection from './NavSection/NavSection'
 import LogoSection from './LogoSection/LogoSection'
 import MobileNavSection from './MobileNavSection/MobileNavSection'
+import NavigationSection from './NavigationSection/NavigationSection'
 import theme from '../../styles/theme'
 
 const NavSpacing = styled.div`
@@ -60,8 +60,8 @@ const NavWrapper = styled.nav`
 `
 
 class Navigation extends React.Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
 			toggleMenu: false,
 		}
@@ -74,16 +74,16 @@ class Navigation extends React.Component {
 
 	render() {
 		return (
-			<NavWrapper active={this.state.toggleMenu}>
-				<NavBar>
-					<MobileMenuWrapper onClick={this.toggle}>
+			<NavWrapper {...theme} active={this.state.toggleMenu}>
+				<NavBar {...theme}>
+					<MobileMenuWrapper {...theme} onClick={this.toggle}>
 						<MdMenu />
 					</MobileMenuWrapper>
-					<LogoSection />
-					<NavSection />
+					<LogoSection {...theme} />
+					<NavigationSection {...theme} />
 					<NavSpacing />
 				</NavBar>
-				<MobileNavSection active={this.state.toggleMenu} />
+				<MobileNavSection {...theme} active={this.state.toggleMenu} />
 			</NavWrapper>
 		)
 	}
