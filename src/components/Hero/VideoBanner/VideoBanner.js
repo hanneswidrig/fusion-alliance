@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../../../styles/theme'
 
 const VideoSection = styled.section`
 	display: flex;
@@ -12,51 +11,53 @@ const VideoSection = styled.section`
 `
 
 const Header = styled.h1`
-	color: ${theme.colors.black};
-	font-family: ${theme.fonts.netto};
+	color: ${props => props.colors.black};
+	font-family: ${props => props.fonts.netto};
 	font-weight: 600;
 	font-size: calc(16px + 1.5vw);
 	margin-bottom: 20px;
 	text-align: center;
 
-	@media screen and (max-width: ${theme.responsive.small}) {
+	@media screen and (max-width: ${props => props.responsive.small}) {
 		& {
 			margin-top: 20px;
 		}
 	}
 `
 
-const FloatingContainer = styled.div`
+const VideoContainer = styled.div`
+	width: 80%;
 	margin-bottom: 20px;
+	max-width: ${props => props.sizes.maxWidth};
+`
+
+const FloatingContainer = styled.div`
 	position: relative;
-	width: 75vw;
-	height: 45vh;
-	max-width: 720px;
-	max-height: 432px;
+	padding-bottom: 56.25%;
+	height: 0;
+	width: 100%;
 
 	iframe {
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 	}
-
-	@media screen and (max-width: ${theme.responsive.small}) {
-		& {
-			height: 25vh;
-		}
-	}
 `
 
-const VideoBanner = () => (
-	<VideoSection>
-		<Header>FUSION ALLIANCE TRANSFORMS BUSINESS</Header>
-		<FloatingContainer>
-			<iframe
-				title="FUSION ALLIANCE TRANSFORMS BUSINESS"
-				src="https://www.youtube.com/embed/wEwEVeiSCZQ?rel=0&amp;showinfo=0"
-				frameBorder="0"
-			/>
-		</FloatingContainer>
+const VideoBanner = props => (
+	<VideoSection {...props}>
+		<Header {...props}>FUSION ALLIANCE TRANSFORMS BUSINESS</Header>
+		<VideoContainer {...props}>
+			<FloatingContainer>
+				<iframe
+					title="FUSION ALLIANCE TRANSFORMS BUSINESS"
+					src="https://www.youtube.com/embed/wEwEVeiSCZQ"
+					frameBorder="0"
+				/>
+			</FloatingContainer>
+		</VideoContainer>
 	</VideoSection>
 )
 

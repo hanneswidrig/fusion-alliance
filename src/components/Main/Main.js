@@ -37,7 +37,7 @@ const Main = () => {
 	return (
 		<MainWrapper>
 			<HeroBanner />
-			<VideoBanner />
+			<VideoBanner {...theme} />
 			<MainContainer>
 				<TitleContainer
 					{...theme}
