@@ -14,6 +14,14 @@ import {
 	insightsDescription,
 	insightsButtonText,
 	insightsContent,
+	foundations,
+	foundationsDescription,
+	foundationsButtonText,
+	foundationsContent,
+	experiences,
+	experiencesDescription,
+	experiencesButtonText,
+	experiencesContent,
 } from '../../content'
 
 const MainWrapper = styled.main`
@@ -34,6 +42,30 @@ const Main = () => {
 			key={index.toString()}
 		/>
 	))
+	const Foundations = foundationsContent.map((content, index) => (
+		<Card
+			{...theme}
+			title={content.title}
+			date={content.date}
+			body={content.body}
+			image={content.image}
+			backgroundcolor={theme.colors.greenTheme.greenGentle}
+			buttoncolor={theme.colors.greenTheme.greenButton}
+			key={index.toString()}
+		/>
+	))
+	const Experiences = experiencesContent.map((content, index) => (
+		<Card
+			{...theme}
+			title={content.title}
+			date={content.date}
+			body={content.body}
+			image={content.image}
+			backgroundcolor={theme.colors.purpleTheme.purpleGentle}
+			buttoncolor={theme.colors.purpleTheme.purpleButton}
+			key={index.toString()}
+		/>
+	))
 	return (
 		<MainWrapper>
 			<HeroBanner />
@@ -51,6 +83,36 @@ const Main = () => {
 					{...theme}
 					color={theme.colors.orangeTheme.orange}
 					text={insightsButtonText}
+				/>
+			</MainContainer>
+			<MainContainer>
+				<TitleContainer
+					{...theme}
+					height="72px"
+					header={foundations}
+					themecolor={theme.colors.greenTheme.green}
+				/>
+				<DescriptionContainer {...theme} description={foundationsDescription} />
+				<MainCardContainer {...theme}>{Foundations}</MainCardContainer>
+				<MainButtonContainer
+					{...theme}
+					color={theme.colors.greenTheme.green}
+					text={foundationsButtonText}
+				/>
+			</MainContainer>
+			<MainContainer>
+				<TitleContainer
+					{...theme}
+					height="72px"
+					header={experiences}
+					themecolor={theme.colors.purpleTheme.purple}
+				/>
+				<DescriptionContainer {...theme} description={experiencesDescription} />
+				<MainCardContainer {...theme}>{Experiences}</MainCardContainer>
+				<MainButtonContainer
+					{...theme}
+					color={theme.colors.purpleTheme.purple}
+					text={experiencesButtonText}
 				/>
 			</MainContainer>
 		</MainWrapper>

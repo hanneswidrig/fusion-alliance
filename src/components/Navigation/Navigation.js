@@ -4,7 +4,7 @@ import MdMenu from 'react-icons/lib/md/menu'
 
 import LogoSection from './LogoSection/LogoSection'
 import MobileNavSection from './MobileNavSection/MobileNavSection'
-import NavigationSection from './NavigationSection/NavigationSection'
+import DesktopNavSection from './DesktopNavSection/DesktopNavSection'
 import theme from '../../styles/theme'
 
 const NavSpacing = styled.div`
@@ -80,10 +80,14 @@ class Navigation extends React.Component {
 						<MdMenu />
 					</MobileMenuWrapper>
 					<LogoSection {...theme} />
-					<NavigationSection {...theme} />
+					<DesktopNavSection {...theme} />
 					<NavSpacing />
 				</NavBar>
-				<MobileNavSection {...theme} active={this.state.toggleMenu} />
+				<MobileNavSection
+					{...theme}
+					onClick={this.toggle}
+					active={this.state.toggleMenu}
+				/>
 			</NavWrapper>
 		)
 	}
