@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import NavigationSection from './NavigationSection'
+import DesktopNavSection from './DesktopNavSection'
 import theme from '../../../styles/theme'
 
-it(' successfully loads NavigationSection', () => {
+it(' successfully loads DesktopNavSection', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<NavigationSection {...theme} />
+			<DesktopNavSection {...theme} />
 		</BrowserRouter>,
 		div
 	)
