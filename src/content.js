@@ -25,16 +25,18 @@ module.exports = {
 	foundationsButtonText: 'view more foundations',
 	foundationsContent: [
 		{
-			title: '',
-			date: '',
-			body: '',
-			image: '',
+			title: 'Case Study: Boost Productivity through SharePoint',
+			date: 'February 28, 2018',
+			body:
+				'Discover how a Fortune 500 card services company dramatically improved daily operations, increased collaboration and raised productivity. You can too.',
+			image: '/images/foundations1.jpg',
 		},
 		{
-			title: '',
-			date: '',
-			body: '',
-			image: '',
+			title: 'Case Study: Meet Customer Demands through Mobile Engagement',
+			date: 'January 19, 2018',
+			body:
+				'Cincinnati Bell wanted to give customers the convenience of managing their accounts from anywhere at any time. Learn how the company succeeded.',
+			image: '/images/foundations2.jpg',
 		},
 	],
 	experiences: 'experiences',
@@ -43,16 +45,18 @@ module.exports = {
 	experiencesButtonText: 'view more experiences',
 	experiencesContent: [
 		{
-			title: '',
-			date: '',
-			body: '',
-			image: '',
+			title: 'Transforming Customer Engagement in the Digital Age',
+			date: 'April 11, 2018',
+			body:
+				'As the number of communication channels and devices increases, so does the challenge of engaging consumers effectively. Is your organization ready?',
+			image: '/images/experiences1.jpg',
 		},
 		{
-			title: '',
-			date: '',
-			body: '',
-			image: '',
+			title: 'Case Study: Visual Analytics Drives Business Value',
+			date: 'March 6, 2018',
+			body:
+				'Learn how you can use visual analytics to create data dashboards that provide relevant and actionable information and drive business decisions.',
+			image: '/images/experiences2.jpg',
 		},
 	],
 }

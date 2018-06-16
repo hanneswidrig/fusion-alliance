@@ -26,6 +26,11 @@ const CardImg = styled.div`
 	flex-basis: 67%;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
+	@media (min-width: ${props => props.responsive.large}) {
+		& {
+			height: 300px;
+		}
+	}
 `
 
 const CardSection = styled.div`
@@ -35,7 +40,6 @@ const CardSection = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	padding: 10px 10px 0 10px;
-	min-height: 172px;
 `
 
 const CardHeader = styled.div`
