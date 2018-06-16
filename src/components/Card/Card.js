@@ -23,7 +23,6 @@ const CardImg = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	flex-basis: 67%;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 	@media (min-width: ${props => props.responsive.large}) {
