@@ -29,6 +29,9 @@ const Main = () => {
 			date={content.date}
 			body={content.body}
 			image={content.image}
+			color={theme.colors.orangeTheme.orange}
+			backgroundColor={theme.colors.orangeTheme.orangeGentle}
+			buttonColor={theme.colors.orangeTheme.orangeButton}
 			key={index.toString()}
 		/>
 	))

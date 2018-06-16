@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const CardWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-basis: 49%;
 	border-radius: 4px;
-	background-color: ${props => props.colors.orangeHighlight};
+	background-color: ${props => props.backgroundColor};
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 	transition: 200ms ease-in;
 	cursor: default;
@@ -29,27 +30,49 @@ const CardImg = styled.div`
 
 const CardSection = styled.div`
 	display: flex;
-	flex-basis: 33%;
 	color: ${props => props.colors.grey};
 	font-size: 0.875rem;
 	flex-direction: column;
-	justify-content: space-between;
-	padding: 8px;
+	justify-content: flex-start;
+	padding: 10px 10px 0 10px;
+	min-height: 172px;
 `
+
 const CardHeader = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 `
+
 const CardTitle = styled.div`
-	flex-basis: 75%;
-	color: ${props => props.colors.blue};
+	color: ${props => props.colors.black};
+	font-weight: 600;
 `
+
 const CardDate = styled.div`
-	flex-basis: 25%;
-	text-align: end;
+	margin-top: 6px;
+	font-size: 0.75rem;
 `
+
 const CardBody = styled.div`
-	margin-top: 10px;
+	margin-top: 12px;
+	line-height: 1.125rem;
+`
+
+const CardButton = styled(Link)`
+	display: flex;
+	text-decoration: none;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px 10px 10px;
+	color: ${props => props.colors.blue};
+	border-radius: 4px;
+	font-weight: 600;
+	padding: 12px 8px;
+	transition: 200ms ease-in-out;
+	&:hover {
+		background-color: hsla(30, 82%, 88%, 1);
+		text-decoration: underline;
+	}
 `
 
 const Card = props => (
@@ -62,6 +85,9 @@ const Card = props => (
 			</CardHeader>
 			<CardBody {...props}>{props.body}</CardBody>
 		</CardSection>
+		<CardButton to="#" {...props}>
+			LEARN MORE
+		</CardButton>
 	</CardWrapper>
 )
 
