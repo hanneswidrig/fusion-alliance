@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-
-const naviEntries = ['expertise', 'products', 'about', 'contact', 'careers']
+import NavigationItems from '../NavigationItems'
 
 const Desktop = styled.section`
 	display: none;
@@ -26,22 +24,12 @@ const Desktop = styled.section`
 	}
 `
 
-const NavigationSection = props => {
-	const navigationItems = naviEntries.map((entry, index) => (
-		<NavLink
-			exact
-			to={`/${entry}`}
-			activeStyle={{ color: props.colors.blueActive }}
-			key={index.toString()}
-		>
-			{entry.toUpperCase()}
-		</NavLink>
-	))
+const DesktopNavSection = props => {
 	return (
-		<Desktop active={props.active} {...props}>
-			{navigationItems}
+		<Desktop {...props} active={props.active}>
+			<NavigationItems {...props} />
 		</Desktop>
 	)
 }
 
-export default NavigationSection
+export default DesktopNavSection

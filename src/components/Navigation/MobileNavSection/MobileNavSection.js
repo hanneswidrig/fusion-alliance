@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-
-const naviEntries = ['expertise', 'products', 'about', 'contact', 'careers']
+import NavigationItems from '../NavigationItems'
 
 const Mobile = styled.section`
 	display: ${props => (props.active ? 'flex' : 'none')};
@@ -18,22 +16,9 @@ const Mobile = styled.section`
 `
 
 const MobileNavSection = props => {
-	const navigationItems = naviEntries.map((entry, index) => (
-		<NavLink
-			exact
-			to={`/${entry}`}
-			activeStyle={{ color: props.colors.blueActive }}
-			key={index.toString()}
-		>
-			{entry.toUpperCase()}
-		</NavLink>
-	))
 	return (
 		<Mobile {...props} active={props.active}>
-			<NavLink exact to="/" activeStyle={{ color: props.colors.blueActive }}>
-				HOME
-			</NavLink>
-			{navigationItems}
+			<NavigationItems {...props} mobile />
 		</Mobile>
 	)
 }

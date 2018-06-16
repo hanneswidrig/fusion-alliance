@@ -80,16 +80,13 @@ class Navigation extends React.Component {
 						<MdMenu />
 					</MobileMenuWrapper>
 					<LogoSection {...theme} />
-					<DesktopNavSection
-						{...theme}
-						entries={['expertise', 'products', 'about', 'contact', 'careers']}
-					/>
+					<DesktopNavSection {...theme} />
 					<NavSpacing />
 				</NavBar>
 				<MobileNavSection
 					{...theme}
+					onClick={this.toggle}
 					active={this.state.toggleMenu}
-					entries={['expertise', 'products', 'about', 'contact', 'careers']}
 				/>
 			</NavWrapper>
 		)
