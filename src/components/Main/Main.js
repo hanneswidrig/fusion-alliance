@@ -43,11 +43,15 @@ const Main = () => {
 					{...theme}
 					height="72px"
 					header={insights}
-					themecolor={theme.colors.orange}
+					themecolor={theme.colors.orangeTheme.orange}
 				/>
 				<DescriptionContainer {...theme} description={insightsDescription} />
 				<MainCardContainer {...theme}>{Insights}</MainCardContainer>
-				<MainButtonContainer {...theme} text={insightsButtonText} />
+				<MainButtonContainer
+					{...theme}
+					color={theme.colors.orangeTheme.orange}
+					text={insightsButtonText}
+				/>
 			</MainContainer>
 		</MainWrapper>
 	)

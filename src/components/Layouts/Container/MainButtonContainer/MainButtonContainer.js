@@ -10,19 +10,19 @@ const Container = styled.div`
 `
 
 const Button = styled(Link)`
-	color: ${props => props.colors.orange};
+	color: ${props => props.color};
 	text-align: center;
 	text-decoration: none;
 	font-size: ${props => props.fontSize.button};
 	background-color: ${props => props.colors.white};
-	border: 2px solid ${props => props.colors.orange};
+	border: 2px solid ${props => props.color};
 	border-radius: 4px;
 	padding: 12px 40px 8px 40px;
 	transition: 125ms ease-in;
 	&:hover {
 		transform: scale(1.1);
 		color: ${props => props.colors.white};
-		background-color: ${props => props.colors.orange};
+		background-color: ${props => props.color};
 	}
 `
 

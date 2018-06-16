@@ -5,7 +5,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 20px 20px 0 20px;
+	margin: 10px 20px 0 20px;
 	height: ${props => props.height || '72px'};
 `
 
