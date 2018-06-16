@@ -14,7 +14,6 @@ const Title = styled.h2`
 	width: 100%;
 	line-height: ${props => props.height || '72px'};
 	text-align: center;
-	font-family: ${props => props.fonts.netto || 'Arial, Sans Serif'};
 	font-size: ${props => props.fontSize.h2 || '2.5rem'};
 	background-color: ${props => props.themeColor || props.colors.black};
 `

@@ -17,7 +17,11 @@ const CardWrapper = styled.div`
 
 const CardImg = styled.div`
 	user-select: none;
-	background-color: ${props => props.colors.orange};
+	height: 200px;
+	background: url(${props => props.image});
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	flex-basis: 67%;
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
@@ -27,7 +31,6 @@ const CardSection = styled.div`
 	display: flex;
 	flex-basis: 33%;
 	color: ${props => props.colors.grey};
-	font-family: ${props => props.fonts.metaWeb};
 	font-size: 0.875rem;
 	flex-direction: column;
 	justify-content: space-between;

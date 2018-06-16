@@ -13,7 +13,6 @@ const Button = styled(Link)`
 	color: ${props => props.colors.orange};
 	text-align: center;
 	text-decoration: none;
-	font-family: ${props => props.fonts.metaWeb};
 	font-size: ${props => props.fontSize.button};
 	background-color: ${props => props.colors.white};
 	border: 2px solid ${props => props.colors.orange};

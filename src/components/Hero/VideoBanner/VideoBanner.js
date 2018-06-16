@@ -13,7 +13,6 @@ const VideoSection = styled.section`
 
 const Header = styled.h1`
 	color: ${theme.colors.black};
-	font-family: ${theme.fonts.nettoBold};
 	font-size: calc(16px + 1.5vw);
 	margin-bottom: 20px;
 	text-align: center;
@@ -54,7 +53,6 @@ const VideoBanner = () => (
 				title="FUSION ALLIANCE TRANSFORMS BUSINESS"
 				src="https://www.youtube.com/embed/wEwEVeiSCZQ?rel=0&amp;showinfo=0"
 				frameBorder="0"
-				allowFullScreen
 			/>
 		</FloatingContainer>
 	</VideoSection>

@@ -6,7 +6,6 @@ import videoBackground from './../../../images/waves.png'
 import theme from './../../../styles/theme'
 
 const HeroSection = styled.section`
-	font-family: ${theme.fonts.netto};
 	display: flex;
 	justify-content: center;
 	align-items: center;

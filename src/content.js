@@ -9,12 +9,14 @@ module.exports = {
 			date: 'May 7, 2018',
 			body:
 				'M/I wanted to simplified its home-buying process and improve CX. Learn how Fusion helped with the website redesign and Sitecore optimization.',
+			image: '/images/insights1.jpg',
 		},
 		{
 			title: 'Top 4 Roadblocks to Digital Customer Engagement',
 			date: 'April 18, 2018',
 			body:
 				'Transforming your customer engagement for the Digital Age often requires major organizational change. Here’s how to empower your organization to tackle the initiative.',
+			image: '/images/insights2.jpg',
 		},
 	],
 	foundations: 'foundations',
@@ -26,11 +28,13 @@ module.exports = {
 			title: '',
 			date: '',
 			body: '',
+			image: '',
 		},
 		{
 			title: '',
 			date: '',
 			body: '',
+			image: '',
 		},
 	],
 	experiences: 'experiences',
@@ -42,11 +46,13 @@ module.exports = {
 			title: '',
 			date: '',
 			body: '',
+			image: '',
 		},
 		{
 			title: '',
 			date: '',
 			body: '',
+			image: '',
 		},
 	],
 }

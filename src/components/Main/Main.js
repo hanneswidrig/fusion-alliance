@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import HeroBanner from '../Hero/HeroBanner/HeroBanner'
 import VideoBanner from '../Hero/VideoBanner/VideoBanner'
 import MainContainer from '../Layouts/Container/MainContainer/MainContainer'
@@ -15,6 +16,11 @@ import {
 	insightsContent,
 } from '../../content'
 
+const MainWrapper = styled.main`
+	font-family: ${theme.fonts.metaWeb};
+	font-weight: 400;
+`
+
 const Main = () => {
 	const Insights = insightsContent.map((content, index) => (
 		<Card
@@ -22,11 +28,12 @@ const Main = () => {
 			title={content.title}
 			date={content.date}
 			body={content.body}
+			image={content.image}
 			key={index.toString()}
 		/>
 	))
 	return (
-		<main>
+		<MainWrapper>
 			<HeroBanner />
 			<VideoBanner />
 			<MainContainer>
@@ -40,7 +47,7 @@ const Main = () => {
 				<MainCardContainer {...theme}>{Insights}</MainCardContainer>
 				<MainButtonContainer {...theme} text={insightsButtonText} />
 			</MainContainer>
-		</main>
+		</MainWrapper>
 	)
 }
 

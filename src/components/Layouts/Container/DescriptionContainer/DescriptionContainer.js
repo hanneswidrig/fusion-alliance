@@ -11,7 +11,6 @@ const Container = styled.div`
 const Description = styled.p`
 	color: ${props => props.colors.black || '#000000'};
 	line-height: 1.5rem;
-	font-family: ${props => props.fonts.netto || 'Helvetica'};
 	font-size: ${props => props.fontSize.description || '1.125rem'};
 `
 

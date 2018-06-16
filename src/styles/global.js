@@ -73,7 +73,7 @@ injectGlobal([
 
   /* Added to Fix Footer to bottom of viewport */
   html, body {
-    height: 100%;
+		height: 100%;
   }
   .siteRoot {
     height: 100vh;
