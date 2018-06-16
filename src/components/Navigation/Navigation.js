@@ -39,7 +39,7 @@ const MobileMenuWrapper = styled.div`
 	cursor: pointer;
 
 	svg {
-		color: ${theme.colors.black};
+		color: ${theme.colors.darkBlue};
 		width: 24px;
 		height: 24px;
 	}
