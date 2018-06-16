@@ -5,7 +5,7 @@ const theme = {
 		blackHover: 'hsla(0, 98%, 2%, 1)',
 		grey: 'hsla(0, 0%, 33%, 1)',
 		blue: 'hsla(202, 100%, 37%, 1)',
-		blueHover: 'hsla(202, 55%, 85%, 1)',
+		blueHover: 'hsla(202, 5%, 95%, 1)',
 		blueActive: 'hsla(202, 50%, 50%, 1)',
 		orangeTheme: {
 			orange: 'hsla(30, 92%, 55%, 1)',

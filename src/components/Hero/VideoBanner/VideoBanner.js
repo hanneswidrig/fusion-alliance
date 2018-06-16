@@ -13,6 +13,8 @@ const VideoSection = styled.section`
 
 const Header = styled.h1`
 	color: ${theme.colors.black};
+	font-family: ${theme.fonts.netto};
+	font-weight: 600;
 	font-size: calc(16px + 1.5vw);
 	margin-bottom: 20px;
 	text-align: center;
