@@ -8,7 +8,7 @@ const CardWrapper = styled.div`
 	flex-basis: 49%;
 	border-radius: 4px;
 	background-color: ${props => props.backgroundcolor};
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 	transition: 200ms ease-in;
 	cursor: default;
 	&:hover {

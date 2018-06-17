@@ -27,8 +27,13 @@ const Header = styled.h1`
 
 const VideoContainer = styled.div`
 	width: 80%;
-	margin-bottom: 20px;
+	margin-bottom: 80px;
 	max-width: ${props => props.sizes.maxWidth};
+	@media screen and (max-width: ${props => props.responsive.small}) {
+		& {
+			margin-bottom: 20px;
+		}
+	}
 `
 
 const FloatingContainer = styled.div`
