@@ -18,7 +18,7 @@ const Button = styled(Link)`
 	border: 2px solid ${props => props.color};
 	border-radius: 4px;
 	padding: 12px 40px 8px 40px;
-	transition: 125ms ease-in;
+	transition: 100ms ease-in-out;
 	&:hover {
 		transform: scale(1.1);
 		color: ${props => props.colors.white};

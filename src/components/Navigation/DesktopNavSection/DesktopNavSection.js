@@ -10,7 +10,7 @@ const Desktop = styled.section`
 		padding: 28.5px 8px;
 		height: 100%;
 		font-weight: 600;
-		transition: all 0.2s;
+		transition: 200ms ease-in-out;
 		&:hover {
 			color: ${props => props.colors.darkBlueHover};
 			text-decoration: underline;
