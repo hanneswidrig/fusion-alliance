@@ -12,7 +12,7 @@ const Button = styled(Link)`
 	font-weight: 400;
 	text-decoration: none;
 	padding: 10px 80px 6px 80px;
-	transition: 125ms ease-in;
+	transition: 100ms ease-in-out;
 	background-color: #fff;
 
 	&:hover {

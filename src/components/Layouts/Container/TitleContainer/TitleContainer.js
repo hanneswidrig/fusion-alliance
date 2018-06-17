@@ -6,7 +6,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 10px;
+	margin-top: 80px;
 	height: ${props => (props.height ? props.height : '72px')};
 `
 
