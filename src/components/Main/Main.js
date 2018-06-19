@@ -68,7 +68,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-			buttoncolor={theme.colors.orangeTheme.orangeButton}
+			iconcolor={theme.colors.orangeTheme.orangeIcon}
 			key={index.toString()}
 		/>
 	))
@@ -80,7 +80,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.greenTheme.greenGentle}
-			buttoncolor={theme.colors.greenTheme.greenButton}
+			iconcolor={theme.colors.greenTheme.greenIcon}
 			key={index.toString()}
 		/>
 	))
@@ -92,7 +92,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-			buttoncolor={theme.colors.purpleTheme.purpleButton}
+			iconcolor={theme.colors.purpleTheme.purpleIcon}
 			key={index.toString()}
 		/>
 	))

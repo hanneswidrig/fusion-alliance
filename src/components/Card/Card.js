@@ -23,6 +23,7 @@ const Icon = styled(MdArrowForward)`
 	width: 48px;
 	height: 48px;
 	padding: 8px;
+	color: ${props => (props.iconcolor ? props.iconcolor : props.colors.grey)};
 `
 
 const CardImg = styled.div`
@@ -76,7 +77,7 @@ const Card = props => (
 		<CardSection {...props}>
 			<CardHeader {...props}>
 				<CardTitle {...props}>{props.title}</CardTitle>
-				<Icon />
+				<Icon {...props} iconcolor={props.iconcolor} />
 			</CardHeader>
 			<CardBody {...props}>{props.body}</CardBody>
 		</CardSection>

@@ -10,17 +10,17 @@ module.exports = {
 		orangeTheme: {
 			orange: 'hsla(30, 92%, 55%, 1)',
 			orangeGentle: 'hsla(30, 92%, 98%, 1)',
-			orangeButton: 'hsla(30, 87%, 93%, 1)',
+			orangeIcon: 'hsla(30, 100%, 35%, 1)',
 		},
 		greenTheme: {
 			green: 'hsla(84, 53%, 50%, 1)',
 			greenGentle: 'hsla(84, 92%, 98%, 1)',
-			greenButton: 'hsla(84, 87%, 93%, 1)',
+			greenIcon: 'hsla(84, 100%, 35%, 1)',
 		},
 		purpleTheme: {
 			purple: 'hsla(252, 30%, 52%, 1)',
 			purpleGentle: 'hsla(252, 92%, 98%, 1)',
-			purpleButton: 'hsla(252, 87%, 93%, 1)',
+			purpleIcon: 'hsla(252, 100%, 35%, 1)',
 		},
 	},
 	sizes: {
