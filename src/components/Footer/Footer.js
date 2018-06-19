@@ -1,52 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from './../../styles/theme'
 
 const Wrapper = styled.footer`
+	background-color: hsla(202, 100%, 37%, 1);
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: center;
+	align-items: center;
 	margin: 0 auto;
-	max-width: ${theme.sizes.maxWidth};
+	width: 100%;
+	height: 80px;
 `
 
-const List = styled.ul`
+const Copyright = styled.div`
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	width: 100%;
-	border-top: 1px solid ${theme.colors.secondary};
-	padding: 1em 0 2em;
-	margin: 0 1.5em;
+	color: white;
+	font-family: ${props => props.fonts.metaWeb};
 `
 
-const Item = styled.li`
-	display: inline-block;
-	padding: 0.25em 0;
-	width: 100%;
-	@media screen and (min-width: ${theme.responsive.small}) {
-		width: auto;
-	}
-	a {
-		font-weight: 600;
-		transition: all 0.2s;
-		color: ${theme.colors.base};
-		&:hover {
-			color: ${theme.colors.highlight};
-		}
-		&:visited {
-			color: ${theme.colors.base};
-		}
-	}
-`
-
-const Footer = () => (
-	<Wrapper>
-		<List>
-			<Item>Hannes Widrig 2018</Item>
-		</List>
+const Footer = props => (
+	<Wrapper {...props}>
+		<Copyright {...props}>&#169; Fusion Alliance 2018</Copyright>
 	</Wrapper>
 )
 
