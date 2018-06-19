@@ -49,6 +49,7 @@ const ExpertiseContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding-right: ${props => (props.extrapadding ? '16px' : '0')};
 	width: 50%;
 	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
@@ -103,10 +104,11 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
+						section="insights"
 						title={insights}
 						body={insightsDescription}
 					/>
-					<ExpertiseContainer {...theme}>
+					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Insights}</MCC>
 						<MBC {...theme} text={insightsButtonText} />
 					</ExpertiseContainer>
@@ -120,6 +122,7 @@ const Main = () => {
 					</ExpertiseContainer>
 					<ContextContainer
 						{...theme}
+						section="foundations"
 						title={foundations}
 						body={foundationsDescription}
 					/>
@@ -129,10 +132,11 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
+						section="experiences"
 						title={experiences}
 						body={experiencesDescription}
 					/>
-					<ExpertiseContainer {...theme}>
+					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Experiences}</MCC>
 						<MBC {...theme} text={experiencesButtonText} />
 					</ExpertiseContainer>
