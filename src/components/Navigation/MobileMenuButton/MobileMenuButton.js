@@ -7,7 +7,7 @@ import theme from '../../../styles/theme'
 const MobileMenuWrapper = styled(NavLink)`
 	padding: 20px;
 	svg {
-		color: ${theme.colors.darkBlue};
+		color: ${theme.colors.grey};
 		width: 24px;
 		height: 24px;
 	}

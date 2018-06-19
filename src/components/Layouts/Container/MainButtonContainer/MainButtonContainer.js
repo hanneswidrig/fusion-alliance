@@ -6,15 +6,14 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-basis: 100%;
 `
 
 const Button = styled(Link)`
-	color: ${props => props.color};
+	color: ${props => props.colors.grey};
+	background-color: transparent;
 	text-align: center;
 	text-decoration: none;
 	font-size: ${props => props.fontSize.button};
-	background-color: ${props => props.colors.white};
 	border: 2px solid ${props => props.color};
 	border-radius: 4px;
 	padding: 12px 40px 8px 40px;
@@ -22,11 +21,11 @@ const Button = styled(Link)`
 	&:hover {
 		transform: scale(1.1);
 		color: ${props => props.colors.white};
-		background-color: ${props => props.color};
+		background-color: ${props => props.colors.grey};
 	}
 `
 
-const MainButtonContainer = props => {
+const MBC = props => {
 	const buttonText = props.text.toUpperCase()
 	return (
 		<Container {...props}>
@@ -37,4 +36,4 @@ const MainButtonContainer = props => {
 	)
 }
 
-export default MainButtonContainer
+export default MBC

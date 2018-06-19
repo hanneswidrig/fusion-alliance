@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import HeroBanner from '../Hero/HeroBanner/HeroBanner'
 import VideoBanner from '../Hero/VideoBanner/VideoBanner'
-import MainContainer from '../Layouts/Container/MainContainer/MainContainer'
-import TitleContainer from '../Layouts/Container/TitleContainer/TitleContainer'
-import DescriptionContainer from '../Layouts/Container/DescriptionContainer/DescriptionContainer'
 import Card from '../Card/Card'
-import MainCardContainer from '../Layouts/Container/MainCardContainer/MainCardContainer'
-import MainButtonContainer from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
+import MainContainer from '../Layouts/Container/MainContainer/MainContainer'
+import ContextContainer from '../Layouts/Container/ContextContainer/ContextContainer'
+import MCC from '../Layouts/Container/MainCardContainer/MainCardContainer'
+import MBC from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
 import theme from '../../styles/theme'
 import {
 	insights,
@@ -27,6 +26,23 @@ import {
 const MainWrapper = styled.main`
 	font-family: ${theme.fonts.metaWeb};
 	font-weight: 400;
+`
+
+const Container = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 1440px;
+	height: 540px;
+	margin: 0 auto;
+	padding: 40px 0;
+`
+
+const ExpertiseContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
 `
 
 const Main = () => {
@@ -70,50 +86,44 @@ const Main = () => {
 		<MainWrapper>
 			<HeroBanner />
 			<VideoBanner {...theme} />
-			<MainContainer>
-				<TitleContainer
-					{...theme}
-					height="72px"
-					header={insights}
-					themecolor={theme.colors.orangeTheme.orange}
-				/>
-				<DescriptionContainer {...theme} description={insightsDescription} />
-				<MainCardContainer {...theme}>{Insights}</MainCardContainer>
-				<MainButtonContainer
-					{...theme}
-					color={theme.colors.orangeTheme.orange}
-					text={insightsButtonText}
-				/>
+			<MainContainer backgroundcolor={theme.colors.orangeTheme.orangeGentle}>
+				<Container>
+					<ContextContainer
+						{...theme}
+						title={insights}
+						body={insightsDescription}
+					/>
+					<ExpertiseContainer {...theme}>
+						<MCC {...theme}>{Insights}</MCC>
+						<MBC {...theme} text={insightsButtonText} />
+					</ExpertiseContainer>
+				</Container>
 			</MainContainer>
-			<MainContainer>
-				<TitleContainer
-					{...theme}
-					height="72px"
-					header={foundations}
-					themecolor={theme.colors.greenTheme.green}
-				/>
-				<DescriptionContainer {...theme} description={foundationsDescription} />
-				<MainCardContainer {...theme}>{Foundations}</MainCardContainer>
-				<MainButtonContainer
-					{...theme}
-					color={theme.colors.greenTheme.green}
-					text={foundationsButtonText}
-				/>
+			<MainContainer backgroundcolor={theme.colors.greenTheme.greenGentle}>
+				<Container>
+					<ExpertiseContainer {...theme}>
+						<MCC {...theme}>{Foundations}</MCC>
+						<MBC {...theme} text={foundationsButtonText} />
+					</ExpertiseContainer>
+					<ContextContainer
+						{...theme}
+						title={foundations}
+						body={foundationsDescription}
+					/>
+				</Container>
 			</MainContainer>
-			<MainContainer>
-				<TitleContainer
-					{...theme}
-					height="72px"
-					header={experiences}
-					themecolor={theme.colors.purpleTheme.purple}
-				/>
-				<DescriptionContainer {...theme} description={experiencesDescription} />
-				<MainCardContainer {...theme}>{Experiences}</MainCardContainer>
-				<MainButtonContainer
-					{...theme}
-					color={theme.colors.purpleTheme.purple}
-					text={experiencesButtonText}
-				/>
+			<MainContainer backgroundcolor={theme.colors.purpleTheme.purpleGentle}>
+				<Container>
+					<ContextContainer
+						{...theme}
+						title={experiences}
+						body={experiencesDescription}
+					/>
+					<ExpertiseContainer {...theme}>
+						<MCC {...theme}>{Experiences}</MCC>
+						<MBC {...theme} text={experiencesButtonText} />
+					</ExpertiseContainer>
+				</Container>
 			</MainContainer>
 		</MainWrapper>
 	)

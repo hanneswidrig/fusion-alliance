@@ -12,7 +12,7 @@ const Desktop = styled.section`
 		font-weight: 600;
 		transition: 200ms ease-in-out;
 		&:hover {
-			color: ${props => props.colors.darkBlueHover};
+			color: ${props => props.colors.greyHover};
 			text-decoration: underline;
 		}
 	}

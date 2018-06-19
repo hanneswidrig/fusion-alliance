@@ -125,7 +125,7 @@ injectGlobal([
   }
 
   body {
-    background: white;
+    background: #FBFBFB;
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
