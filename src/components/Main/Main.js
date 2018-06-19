@@ -36,6 +36,13 @@ const Container = styled.div`
 	height: 540px;
 	margin: 0 auto;
 	padding: 40px 0;
+	@media screen and (max-width: ${theme.responsive.medium}) {
+		& {
+			flex-direction: ${props => (props.reverse ? 'column-reverse' : 'column')};
+			height: auto;
+			align-items: center;
+		}
+	}
 `
 
 const ExpertiseContainer = styled.div`
@@ -43,6 +50,12 @@ const ExpertiseContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	width: 50%;
+	@media screen and (max-width: ${theme.responsive.medium}) {
+		& {
+			width: 100%;
+			max-width: calc(${props => props.sizes.maxWidth} / 2);
+		}
+	}
 `
 
 const Main = () => {
@@ -100,7 +113,7 @@ const Main = () => {
 				</Container>
 			</MainContainer>
 			<MainContainer backgroundcolor={theme.colors.greenTheme.greenGentle}>
-				<Container>
+				<Container reverse>
 					<ExpertiseContainer {...theme}>
 						<MCC {...theme}>{Foundations}</MCC>
 						<MBC {...theme} text={foundationsButtonText} />

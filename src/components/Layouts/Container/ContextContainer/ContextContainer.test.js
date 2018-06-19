@@ -20,3 +20,14 @@ it(' successfully loads ContextContainer', () => {
 	)
 	ReactDOM.unmountComponentAtNode(div)
 })
+
+it(' receives no props', () => {
+	const div = document.createElement('div')
+	ReactDOM.render(
+		<BrowserRouter>
+			<ContextContainer {...theme} />
+		</BrowserRouter>,
+		div
+	)
+	ReactDOM.unmountComponentAtNode(div)
+})

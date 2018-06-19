@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import MdArrowForward from 'react-icons/lib/md/arrow-forward'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const CardWrapper = styled.div`
+const CardWrapper = styled(Link)`
 	display: flex;
 	width: 100%;
 	flex-direction: row;
@@ -11,8 +11,9 @@ const CardWrapper = styled.div`
 	background-color: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 	transition: 200ms ease-in-out;
-	cursor: default;
+	cursor: pointer;
 	margin: 4px;
+	text-decoration: none;
 	&:hover {
 		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 	}
@@ -70,7 +71,7 @@ const CardBody = styled.div`
 `
 
 const Card = props => (
-	<CardWrapper {...props}>
+	<CardWrapper {...props} to="#">
 		<CardImg {...props} />
 		<CardSection {...props}>
 			<CardHeader {...props}>

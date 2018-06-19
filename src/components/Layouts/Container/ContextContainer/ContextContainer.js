@@ -9,6 +9,12 @@ const Container = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	max-width: calc(${props => props.sizes.maxWidth} / 2);
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			width: 100%;
+			padding: 20px 0;
+		}
+	}
 `
 
 const SVGWrapper = styled.img`
@@ -41,13 +47,14 @@ const Body = styled.p`
 `
 
 const ContextContainer = props => {
-	const title = props.title.toUpperCase() || ''
+	const title = props.title ? props.title.toUpperCase() : ''
+	const body = props.body || ''
 	return (
 		<Container {...props}>
 			<SVGWrapper src={insightsSVG} alt="insights contextual image" />
 			<TextContainer {...props}>
 				<Title {...props}>{title}</Title>
-				<Body {...props}>{props.body}</Body>
+				<Body {...props}>{body}</Body>
 			</TextContainer>
 		</Container>
 	)
