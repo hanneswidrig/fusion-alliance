@@ -5,6 +5,7 @@ import theme from '../../../styles/theme'
 
 const Button = styled(Link)`
 	color: ${theme.colors.blue};
+	background-color: transparent;
 	border: solid 2px ${theme.colors.blue};
 	border-radius: 4px;
 	font-size: 1.25rem;
@@ -13,7 +14,6 @@ const Button = styled(Link)`
 	text-decoration: none;
 	padding: 10px 80px 6px 80px;
 	transition: 100ms ease-in-out;
-	background-color: #fff;
 
 	&:hover {
 		transform: scale(1.1);

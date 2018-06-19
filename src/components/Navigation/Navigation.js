@@ -19,6 +19,7 @@ const NavSpacing = styled.div`
 const NavBar = styled.section`
 	width: 100%;
 	height: 80px;
+	background-color: transparent;
 	max-width: ${theme.sizes.maxWidth};
 	margin: 0 auto;
 	padding: 0 20px;
@@ -39,7 +40,7 @@ const MobileMenuWrapper = styled.div`
 	cursor: pointer;
 
 	svg {
-		color: ${theme.colors.darkBlue};
+		color: ${theme.colors.grey};
 		width: 24px;
 		height: 24px;
 	}
@@ -52,6 +53,7 @@ const MobileMenuWrapper = styled.div`
 `
 
 const NavWrapper = styled.nav`
+	background-color: #fbfbfb;
 	height: ${props => (props.active ? '366px' : '80px')};
 	transition: 200ms cubic-bezier(0.19, 1, 0.22, 1);
 	box-shadow: ${props =>

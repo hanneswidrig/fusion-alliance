@@ -5,11 +5,12 @@ const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	flex-direction: column;
+	padding: 16px;
 `
 
-const MainCardContainer = props => {
+const MCC = props => {
 	return <Container {...props}>{props.children}</Container>
 }
 
-export default MainCardContainer
+export default MCC

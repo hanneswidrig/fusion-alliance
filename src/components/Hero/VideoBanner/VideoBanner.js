@@ -11,7 +11,7 @@ const VideoSection = styled.section`
 `
 
 const Header = styled.h1`
-	color: ${props => props.colors.darkBlue};
+	color: ${props => props.colors.grey};
 	font-family: ${props => props.fonts.netto};
 	font-weight: 600;
 	font-size: calc(16px + 1.5vw);
