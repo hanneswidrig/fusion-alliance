@@ -11,7 +11,7 @@ const Mobile = styled.section`
 		padding: 16px;
 		text-decoration: none;
 		text-align: center;
-		color: ${props => props.colors.greyHover};
+		color: ${props => props.colors.grey};
 	}
 `
 

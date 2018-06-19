@@ -49,6 +49,7 @@ const ExpertiseContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding-right: ${props => (props.extrapadding ? '16px' : '0')};
 	width: 50%;
 	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
@@ -67,7 +68,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-			buttoncolor={theme.colors.orangeTheme.orangeButton}
+			iconcolor={theme.colors.orangeTheme.orangeIcon}
 			key={index.toString()}
 		/>
 	))
@@ -79,7 +80,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.greenTheme.greenGentle}
-			buttoncolor={theme.colors.greenTheme.greenButton}
+			iconcolor={theme.colors.greenTheme.greenIcon}
 			key={index.toString()}
 		/>
 	))
@@ -91,7 +92,7 @@ const Main = () => {
 			body={content.body}
 			image={content.image}
 			backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-			buttoncolor={theme.colors.purpleTheme.purpleButton}
+			iconcolor={theme.colors.purpleTheme.purpleIcon}
 			key={index.toString()}
 		/>
 	))
@@ -103,10 +104,11 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
+						section="insights"
 						title={insights}
 						body={insightsDescription}
 					/>
-					<ExpertiseContainer {...theme}>
+					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Insights}</MCC>
 						<MBC {...theme} text={insightsButtonText} />
 					</ExpertiseContainer>
@@ -120,6 +122,7 @@ const Main = () => {
 					</ExpertiseContainer>
 					<ContextContainer
 						{...theme}
+						section="foundations"
 						title={foundations}
 						body={foundationsDescription}
 					/>
@@ -129,10 +132,11 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
+						section="experiences"
 						title={experiences}
 						body={experiencesDescription}
 					/>
-					<ExpertiseContainer {...theme}>
+					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Experiences}</MCC>
 						<MBC {...theme} text={experiencesButtonText} />
 					</ExpertiseContainer>

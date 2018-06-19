@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import insightsSVG from '../../../../images/insights.svg'
+import foundationsSVG from '../../../../images/foundations.svg'
+import experiencesSVG from '../../../../images/experiences.svg'
 
-const Container = styled.div`
+const InsightsContainer = styled.div`
 	display: flex;
 	position: relative;
 	width: 50%;
@@ -17,7 +19,7 @@ const Container = styled.div`
 	}
 `
 
-const SVGWrapper = styled.img`
+const InsightsSVG = styled.img`
 	z-index: 0;
 	position: absolute;
 	top: 20px;
@@ -26,7 +28,7 @@ const SVGWrapper = styled.img`
 	height: 50%;
 `
 
-const TextContainer = styled.div`
+const Insights = styled.div`
 	z-index: 1;
 	color: ${props => props.colors.grey};
 	display: flex;
@@ -35,29 +37,121 @@ const TextContainer = styled.div`
 	margin-right: 20px;
 `
 
+const FoundationsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			padding-bottom: 20px;
+		}
+	}
+`
+
+const FoundationsSVG = styled.img`
+	width: 75%;
+	padding-top: 16px;
+	align-self: center;
+`
+
+const Foundations = styled.div`
+	display: flex;
+	flex-direction: column;
+`
+
+const ExperiencesContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			padding-bottom: 20px;
+		}
+	}
+`
+
+const ExperiencesSVG = styled.img`
+	width: 50%;
+	height: 50%;
+	padding-top: 16px;
+`
+
+const Experiences = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`
+
 const Title = styled.h1`
 	font-family: ${props => props.fonts.netto};
 	font-weight: bold;
 	font-size: 3rem;
 	padding-bottom: 16px;
+	width: ${props => (props.width ? props.width : '100%')};
 `
+
 const Body = styled.p`
 	font-family: ${props => props.fonts.metaWeb};
 	line-height: 1.5;
+	width: ${props => (props.width ? props.width : '100%')};
 `
 
-const ContextContainer = props => {
+function contextChoice(props, sectionName) {
 	const title = props.title ? props.title.toUpperCase() : ''
 	const body = props.body || ''
-	return (
-		<Container {...props}>
-			<SVGWrapper src={insightsSVG} alt="insights contextual image" />
-			<TextContainer {...props}>
-				<Title {...props}>{title}</Title>
-				<Body {...props}>{body}</Body>
-			</TextContainer>
-		</Container>
-	)
+	switch (sectionName) {
+		case 'insights':
+			return (
+				<InsightsContainer {...props}>
+					<InsightsSVG src={insightsSVG} alt="insights contextual image" />
+					<Insights {...props}>
+						<Title {...props}>{title}</Title>
+						<Body {...props}>{body}</Body>
+					</Insights>
+				</InsightsContainer>
+			)
+		case 'foundations':
+			return (
+				<FoundationsContainer {...props}>
+					<Foundations {...props}>
+						<Title {...props}>{title}</Title>
+						<Body {...props} width="90%">
+							{body}
+						</Body>
+					</Foundations>
+					<FoundationsSVG
+						src={foundationsSVG}
+						alt="foundations contextual image"
+					/>
+				</FoundationsContainer>
+			)
+		case 'experiences':
+			return (
+				<ExperiencesContainer {...props}>
+					<Experiences {...props}>
+						<Title {...props} width="90%">
+							{title}
+						</Title>
+						<Body {...props} width="90%">
+							{body}
+						</Body>
+					</Experiences>
+					<ExperiencesSVG
+						src={experiencesSVG}
+						alt="experiences contextual image"
+					/>
+				</ExperiencesContainer>
+			)
+		default:
+			return <React.Fragment />
+	}
 }
+
+const ContextContainer = props =>
+	contextChoice(props, props.section ? props.section : 'insights')
 
 export default ContextContainer
