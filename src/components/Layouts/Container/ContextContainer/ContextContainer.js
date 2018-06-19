@@ -42,8 +42,11 @@ const FoundationsContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	width: 50%;
+	margin-left: 16px;
+	max-width: calc(${props => props.sizes.maxWidth} / 2);
 	@media screen and (max-width: ${props => props.responsive.medium}) {
 		& {
+			width: 100%;
 			padding-bottom: 20px;
 		}
 	}
@@ -66,8 +69,10 @@ const ExperiencesContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	width: 50%;
+	max-width: calc(${props => props.sizes.maxWidth} / 2);
 	@media screen and (max-width: ${props => props.responsive.medium}) {
 		& {
+			width: 100%;
 			padding-bottom: 20px;
 		}
 	}
