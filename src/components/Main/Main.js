@@ -54,6 +54,7 @@ const ExpertiseContainer = styled.div`
 	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
 			width: 100%;
+			padding-right: 0;
 			max-width: calc(${props => props.sizes.maxWidth} / 2);
 		}
 	}
