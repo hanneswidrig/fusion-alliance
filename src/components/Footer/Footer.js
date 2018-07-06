@@ -144,7 +144,7 @@ const Footer = props => (
 			<LocationWrapper {...props}>
 				<BuildingIcon src={building} alt="Building Icon" />
 				<Cities {...props}>
-					{locations.map(entry => <span>{entry}</span>)}
+					{locations.map(entry => <span key={entry}>{entry}</span>)}
 				</Cities>
 			</LocationWrapper>
 		</LeftWrapper>
@@ -158,7 +158,7 @@ const Footer = props => (
 		<RightWrapper {...props}>
 			<SocialMediaWrapper {...props}>
 				{socials.map(entry => (
-					<SocialMedia {...props}>
+					<SocialMedia {...props} key={entry.name}>
 						<img src={entry.src} alt={entry.alt} />
 						<a href={entry.sourceUrl}>{entry.name}</a>
 					</SocialMedia>

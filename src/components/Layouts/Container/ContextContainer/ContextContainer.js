@@ -156,7 +156,6 @@ function contextChoice(props, sectionName) {
 	}
 }
 
-const ContextContainer = props =>
-	contextChoice(props, props.section ? props.section : 'insights')
+const ContextContainer = props => contextChoice(props, props.section)
 
 export default ContextContainer
