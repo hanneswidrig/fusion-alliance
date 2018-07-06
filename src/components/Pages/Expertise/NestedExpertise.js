@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import VerticalCard from '../../Card/VerticalCard'
 import { content } from '../../../content'
@@ -21,23 +21,21 @@ const CardContainer = props => {
 
 const NavigationContainer = styled.div`
 	display: flex;
-	padding: 0 10%;
+	padding: 0 5%;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
 	flex: 1 0 25%;
 	text-align: center;
 	text-decoration: none;
-	font-size: 1.125rem;
+	font-family: ${props => props.fonts.netto};
 	font-weight: bold;
-	letter-spacing: 1px;
-	font-family: ${props => props.fonts.metaWeb};
 	padding: 16px 0;
-	color: ${props => props.colors.grey};
-	border-bottom: 2px solid #fbfbfb;
+	color: hsla(0, 0%, 50%, 1);
+	border-bottom: 3px solid #fbfbfb;
 	transition: 200ms ease-in-out;
 	&:hover {
-		border-bottom: 2px solid ${props => props.colors.grey};
+		border-bottom: 3px solid ${props => props.colors.grey};
 	}
 `
 
@@ -128,7 +126,16 @@ function NavigationEntries(match) {
 		{ name: 'experiences', route: 'experiences' },
 	]
 	nav.push(
-		<StyledLink {...theme} key="index" to={`${match.url}`}>
+		<StyledLink
+			{...theme}
+			exact
+			key="index"
+			to={`${match.url}`}
+			activeStyle={{
+				borderBottomColor: theme.colors.blue,
+				color: theme.colors.grey,
+			}}
+		>
 			LATEST ARTICLES
 		</StyledLink>
 	)
@@ -138,6 +145,10 @@ function NavigationEntries(match) {
 				{...theme}
 				key={index.toString()}
 				to={`${match.url}/${entry.route}`}
+				activeStyle={{
+					borderBottomColor: theme.colors.blue,
+					color: theme.colors.grey,
+				}}
 			>
 				{entry.name.toUpperCase()}
 			</StyledLink>
@@ -149,7 +160,9 @@ function NavigationEntries(match) {
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
-			<CardNavigation {...theme}>{NavigationEntries(match)}</CardNavigation>
+			<CardNavigation {...theme}>
+				{NavigationEntries(match, theme)}
+			</CardNavigation>
 			<Route exact path={match.url} component={SubView} />
 			<Route path={`${match.url}/:sectionName`} component={SubView} />
 		</React.Fragment>
