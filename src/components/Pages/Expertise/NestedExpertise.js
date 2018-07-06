@@ -156,7 +156,7 @@ function NavigationEntries(match) {
 				color: theme.colors.grey,
 			}}
 		>
-			LATEST ARTICLES
+			<span>LATEST ARTICLES</span>
 		</StyledLink>
 	)
 	nav.push(
@@ -170,7 +170,7 @@ function NavigationEntries(match) {
 					color: theme.colors.grey,
 				}}
 			>
-				{entry.name.toUpperCase()}
+				<span>{entry.name.toUpperCase()}</span>
 			</StyledLink>
 		))
 	)
