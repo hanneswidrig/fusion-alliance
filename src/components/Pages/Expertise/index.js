@@ -7,7 +7,7 @@ import theme from '../../../styles/theme'
 
 const PageContainer = styled.main`
 	width: 100%;
-	padding: 5% 10% 0 10%;
+	padding: 5% 10%;
 	@media screen and (max-width: ${props => props.responsive.small}) {
 		& {
 			padding: 0;
