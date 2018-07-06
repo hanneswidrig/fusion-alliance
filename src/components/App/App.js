@@ -10,7 +10,7 @@ const App = props => {
 		<React.Fragment>
 			<Header {...props} />
 			<Route exact path="/" component={Main} />
-			<Route exact path="/expertise" component={Expertise} />
+			<Route path="/expertise" component={Expertise} />
 			<Footer {...props} />
 		</React.Fragment>
 	)
