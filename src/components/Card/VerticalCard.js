@@ -5,14 +5,12 @@ import { Link } from 'react-router-dom'
 const CardWrapper = styled(Link)`
 	display: flex;
 	width: 100%;
-	max-width: 256px;
 	flex-direction: column;
 	border-radius: 8px;
 	background-color: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 	transition: 200ms ease-in-out;
 	cursor: pointer;
-	margin: 4px;
 	text-decoration: none;
 	&:hover {
 		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -24,8 +22,6 @@ const CardImg = styled.div`
 	user-select: none;
 	width: 100%;
 	height: 192px;
-	flex: 1;
-	background-color: red;
 	background: url(${props => props.image});
 	background-position: center;
 	background-repeat: no-repeat;
@@ -38,7 +34,6 @@ const CardSection = styled.div`
 	display: flex;
 	color: ${props => props.colors.grey};
 	flex-direction: column;
-	flex: 2;
 `
 
 const CardHeader = styled.div`
