@@ -13,6 +13,16 @@ const Container = styled.div`
 const VerticalCardWrapper = styled.div`
 	flex: 1 0 33.3%;
 	padding: 16px 16px;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			flex: 1 0 50%;
+		}
+	}
+	@media screen and (max-width: ${props => props.responsive.small}) {
+		& {
+			flex: 1 0 100%;
+		}
+	}
 `
 
 const CardContainer = props => {
@@ -21,7 +31,11 @@ const CardContainer = props => {
 
 const NavigationContainer = styled.div`
 	display: flex;
-	padding: 0 5%;
+	@media screen and (max-width: ${props => props.responsive.small}) {
+		& {
+			flex-direction: column;
+		}
+	}
 `
 
 const StyledLink = styled(NavLink)`
@@ -32,10 +46,16 @@ const StyledLink = styled(NavLink)`
 	font-weight: bold;
 	padding: 16px 0;
 	color: hsla(0, 0%, 50%, 1);
-	border-bottom: 3px solid #fbfbfb;
+	border-bottom: 3px solid transparent;
 	transition: 200ms ease-in-out;
 	&:hover {
 		border-bottom: 3px solid ${props => props.colors.grey};
+	}
+	@media screen and (max-width: ${props => props.responsive.small}) {
+		& {
+			flex: 1 0 100%;
+			padding: 16px 4px;
+		}
 	}
 `
 
