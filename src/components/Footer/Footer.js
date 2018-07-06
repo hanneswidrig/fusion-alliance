@@ -8,9 +8,24 @@ import rss from '../../images/icons/rss.svg'
 
 const locations = ['Indianapolis', 'Cincinnati', 'Columbus']
 const socials = [
-	{ name: 'Twitter', sourceUrl: 'https://twitter.com/fusionalliance', src: twitter, alt: 'twitter icon' },
-	{ name: 'Linkedin', sourceUrl: 'https://www.linkedin.com/company/fusion-alliance', src: linkedin, alt: 'linkedin icon' },
-	{ name: 'RSS', sourceUrl: 'http://fusionalliance.com/feed/', src: rss, alt: 'rss feed icon' },
+	{
+		name: 'Twitter',
+		sourceUrl: 'https://twitter.com/fusionalliance',
+		src: twitter,
+		alt: 'twitter icon',
+	},
+	{
+		name: 'Linkedin',
+		sourceUrl: 'https://www.linkedin.com/company/fusion-alliance',
+		src: linkedin,
+		alt: 'linkedin icon',
+	},
+	{
+		name: 'RSS',
+		sourceUrl: 'http://fusionalliance.com/feed/',
+		src: rss,
+		alt: 'rss feed icon',
+	},
 ]
 
 const BuildingIcon = styled.img`
@@ -26,6 +41,13 @@ const Wrapper = styled.footer`
 	margin: 0 auto;
 	width: 100%;
 	height: 100px;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			height: 100%;
+			padding: 20px 0;
+			flex-direction: column;
+		}
+	}
 `
 
 const LeftWrapper = styled.div`
@@ -33,6 +55,12 @@ const LeftWrapper = styled.div`
 	color: white;
 	justify-content: center;
 	flex: 1;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			order: 2;
+			margin: 20px;
+		}
+	}
 `
 
 const LocationWrapper = styled.div`
@@ -55,6 +83,12 @@ const CenterWrapper = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	flex: 1;
+	@media screen and (max-width: ${props => props.responsive.medium}) {
+		& {
+			order: 2;
+			margin: 20px 0;
+		}
+	}
 `
 
 const RightWrapper = styled.div`
@@ -104,14 +138,13 @@ const SocialMedia = styled.div`
 	}
 `
 
-
 const Footer = props => (
 	<Wrapper {...props}>
 		<LeftWrapper {...props}>
 			<LocationWrapper {...props}>
 				<BuildingIcon src={building} alt="Building Icon" />
 				<Cities {...props}>
-					{locations.map(entry => <span>{entry}</span>)}
+					{locations.map(entry => <span key={entry}>{entry}</span>)}
 				</Cities>
 			</LocationWrapper>
 		</LeftWrapper>
@@ -125,7 +158,7 @@ const Footer = props => (
 		<RightWrapper {...props}>
 			<SocialMediaWrapper {...props}>
 				{socials.map(entry => (
-					<SocialMedia {...props}>
+					<SocialMedia {...props} key={entry.name}>
 						<img src={entry.src} alt={entry.alt} />
 						<a href={entry.sourceUrl}>{entry.name}</a>
 					</SocialMedia>

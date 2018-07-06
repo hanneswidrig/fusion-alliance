@@ -8,20 +8,7 @@ import ContextContainer from '../Layouts/Container/ContextContainer/ContextConta
 import MCC from '../Layouts/Container/MainCardContainer/MainCardContainer'
 import MBC from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
 import theme from '../../styles/theme'
-import {
-	insights,
-	insightsDescription,
-	insightsButtonText,
-	insightsContent,
-	foundations,
-	foundationsDescription,
-	foundationsButtonText,
-	foundationsContent,
-	experiences,
-	experiencesDescription,
-	experiencesButtonText,
-	experiencesContent,
-} from '../../content'
+import { categories, buttonText, descriptions, content } from '../../content'
 
 const MainWrapper = styled.main`
 	font-family: ${theme.fonts.metaWeb};
@@ -54,48 +41,55 @@ const ExpertiseContainer = styled.div`
 	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
 			width: 100%;
+			padding-right: 0;
 			max-width: calc(${props => props.sizes.maxWidth} / 2);
 		}
 	}
 `
 
 const Main = () => {
-	const Insights = insightsContent.map((content, index) => (
-		<Card
-			{...theme}
-			title={content.title}
-			date={content.date}
-			body={content.body}
-			image={content.image}
-			backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-			iconcolor={theme.colors.orangeTheme.orangeIcon}
-			key={index.toString()}
-		/>
-	))
-	const Foundations = foundationsContent.map((content, index) => (
-		<Card
-			{...theme}
-			title={content.title}
-			date={content.date}
-			body={content.body}
-			image={content.image}
-			backgroundcolor={theme.colors.greenTheme.greenGentle}
-			iconcolor={theme.colors.greenTheme.greenIcon}
-			key={index.toString()}
-		/>
-	))
-	const Experiences = experiencesContent.map((content, index) => (
-		<Card
-			{...theme}
-			title={content.title}
-			date={content.date}
-			body={content.body}
-			image={content.image}
-			backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-			iconcolor={theme.colors.purpleTheme.purpleIcon}
-			key={index.toString()}
-		/>
-	))
+	const Insights = content
+		.filter(entry => entry.category === 0)
+		.map((entry, index) => (
+			<Card
+				{...theme}
+				title={entry.title}
+				date={entry.date}
+				body={entry.body}
+				image={entry.image}
+				backgroundcolor={theme.colors.orangeTheme.orangeGentle}
+				iconcolor={theme.colors.orangeTheme.orangeIcon}
+				key={index.toString()}
+			/>
+		))
+	const Foundations = content
+		.filter(entry => entry.category === 1)
+		.map((entry, index) => (
+			<Card
+				{...theme}
+				title={entry.title}
+				date={entry.date}
+				body={entry.body}
+				image={entry.image}
+				backgroundcolor={theme.colors.greenTheme.greenGentle}
+				iconcolor={theme.colors.greenTheme.greenIcon}
+				key={index.toString()}
+			/>
+		))
+	const Experiences = content
+		.filter(entry => entry.category === 2)
+		.map((entry, index) => (
+			<Card
+				{...theme}
+				title={entry.title}
+				date={entry.date}
+				body={entry.body}
+				image={entry.image}
+				backgroundcolor={theme.colors.purpleTheme.purpleGentle}
+				iconcolor={theme.colors.purpleTheme.purpleIcon}
+				key={index.toString()}
+			/>
+		))
 	return (
 		<MainWrapper>
 			<HeroBanner />
@@ -104,13 +98,13 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
-						section="insights"
-						title={insights}
-						body={insightsDescription}
+						section={categories[0]}
+						title={categories[0]}
+						body={descriptions[0]}
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Insights}</MCC>
-						<MBC {...theme} text={insightsButtonText} />
+						<MBC {...theme} text={buttonText[0]} />
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
@@ -118,13 +112,13 @@ const Main = () => {
 				<Container reverse>
 					<ExpertiseContainer {...theme}>
 						<MCC {...theme}>{Foundations}</MCC>
-						<MBC {...theme} text={foundationsButtonText} />
+						<MBC {...theme} text={buttonText[1]} />
 					</ExpertiseContainer>
 					<ContextContainer
 						{...theme}
-						section="foundations"
-						title={foundations}
-						body={foundationsDescription}
+						section={categories[1]}
+						title={categories[1]}
+						body={descriptions[1]}
 					/>
 				</Container>
 			</MainContainer>
@@ -132,13 +126,13 @@ const Main = () => {
 				<Container>
 					<ContextContainer
 						{...theme}
-						section="experiences"
-						title={experiences}
-						body={experiencesDescription}
+						section={categories[2]}
+						title={categories[2]}
+						body={descriptions[2]}
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Experiences}</MCC>
-						<MBC {...theme} text={experiencesButtonText} />
+						<MBC {...theme} text={buttonText[2]} />
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>

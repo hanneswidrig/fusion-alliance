@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import Footer from './Footer'
+import PageHeader from './PageHeader'
 import theme from '../../styles/theme'
 
-it(' successfully loads Footer', () => {
+it(' successfully loads PageHeader', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<Footer {...theme} />
+			<PageHeader {...theme} />
 		</BrowserRouter>,
 		div
 	)

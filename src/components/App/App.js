@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import Main from '../Main/Main'
+import Expertise from '../Pages/Expertise/index'
 import Footer from '../Footer/Footer'
 
 const App = props => {
@@ -9,6 +10,7 @@ const App = props => {
 		<React.Fragment>
 			<Header {...props} />
 			<Route exact path="/" component={Main} />
+			<Route path="/expertise" component={Expertise} />
 			<Footer {...props} />
 		</React.Fragment>
 	)
