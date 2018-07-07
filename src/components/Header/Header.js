@@ -5,9 +5,9 @@ import Navigation from '../../components/Navigation/Navigation'
 const Wrapper = styled.header`
 	border-top: 6px solid ${props => props.colors.blue};
 	background: ${props => props.colors.white};
+	font-family: ${props => props.fonts.renner};
+	font-weight: 500;
 	width: 100%;
-	font-family: ${props => props.fonts.netto};
-	font-weight: 600;
 `
 
 const Header = props => {

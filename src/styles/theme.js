@@ -34,6 +34,7 @@ module.exports = {
 	fonts: {
 		netto: 'netto-web, sans-serif',
 		metaWeb: 'meta-web, sans-serif',
+		renner: 'Renner, sans-serif',
 	},
 	fontSize: {
 		h1: '3rem',

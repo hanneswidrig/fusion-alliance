@@ -8,6 +8,7 @@ const CardWrapper = styled(Link)`
 	flex-direction: column;
 	border-radius: 8px;
 	background-color: #fff;
+	font-family: ${props => props.fonts.renner};
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 	transition: 200ms ease-in-out;
 	cursor: pointer;

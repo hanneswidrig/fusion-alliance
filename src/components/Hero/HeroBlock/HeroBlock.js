@@ -19,7 +19,7 @@ const HeroWrapper = styled.div`
 
 const HeroTitle = styled.div`
 	font-size: calc(16px + 2.75vw);
-	font-family: ${theme.fonts.netto};
+	font-family: ${theme.fonts.renner};
 	font-weight: 600;
 	color: ${theme.colors.blue};
 	@media screen and (min-width: ${theme.responsive.large}) {

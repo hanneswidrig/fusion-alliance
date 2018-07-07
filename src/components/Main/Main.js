@@ -11,7 +11,7 @@ import theme from '../../styles/theme'
 import { categories, buttonText, descriptions, content } from '../../content'
 
 const MainWrapper = styled.main`
-	font-family: ${theme.fonts.metaWeb};
+	font-family: ${theme.fonts.renner};
 	font-weight: 400;
 `
 
