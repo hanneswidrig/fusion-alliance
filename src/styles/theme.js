@@ -4,9 +4,8 @@ module.exports = {
 		darkBlue: 'hsla(202, 76%, 15%, 1)',
 		darkBlueHover: 'hsla(0, 98%, 2%, 1)',
 		grey: 'hsla(0, 0%, 25%, 1)',
-		blue: 'hsla(214, 84%, 56%, 1)',
-		blueHover: 'hsla(202, 5%, 95%, 1)',
-		blueActive: 'hsla(202, 50%, 50%, 1)',
+		blue: 'hsla(214, 84%, 48%, 1)',
+		blueActive: 'hsla(214, 52%, 48%, 1)',
 		orangeTheme: {
 			orange: 'hsla(30, 92%, 55%, 1)',
 			orangeGentle: 'hsla(30, 92%, 98%, 1)',

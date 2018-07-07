@@ -8,6 +8,7 @@ const Button = styled(Link)`
 	background-color: transparent;
 	border: solid 2px ${theme.colors.blue};
 	border-radius: 4px;
+	letter-spacing: 1px;
 	font-size: 1.25rem;
 	text-decoration: none;
 	padding: 10px 80px 10px 80px;
@@ -15,7 +16,7 @@ const Button = styled(Link)`
 
 	&:hover {
 		transform: scale(1.1);
-		color: ${theme.colors.blueHover};
+		color: ${theme.colors.white};
 		background-color: ${theme.colors.blue};
 	}
 `

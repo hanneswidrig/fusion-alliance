@@ -29,6 +29,7 @@ const HeroTitle = styled.div`
 `
 
 const HeroTitleDetails = styled.div`
+	color: ${theme.colors.grey};
 	padding: 8px 0 14px 0;
 	line-height: 1.25rem;
 	width: 50%;
