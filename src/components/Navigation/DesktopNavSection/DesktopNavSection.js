@@ -9,7 +9,6 @@ const Desktop = styled.section`
 		text-decoration: none;
 		padding: 28.5px 8px;
 		height: 100%;
-		font-weight: 600;
 		transition: 200ms ease-in-out;
 		&:hover {
 			color: ${props => props.colors.greyHover};

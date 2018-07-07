@@ -92,15 +92,13 @@ const Experiences = styled.div`
 `
 
 const Title = styled.h1`
-	font-family: ${props => props.fonts.netto};
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 3rem;
 	padding-bottom: 16px;
 	width: ${props => (props.width ? props.width : '100%')};
 `
 
 const Body = styled.p`
-	font-family: ${props => props.fonts.metaWeb};
 	line-height: 1.5;
 	width: ${props => (props.width ? props.width : '100%')};
 `

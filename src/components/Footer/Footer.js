@@ -34,7 +34,6 @@ const BuildingIcon = styled.img`
 
 const Wrapper = styled.footer`
 	background-color: hsla(202, 100%, 37%, 1);
-	font-family: ${props => props.fonts.metaWeb};
 	display: flex;
 	justify-content: center;
 	align-items: center;

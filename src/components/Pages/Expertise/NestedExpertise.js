@@ -42,8 +42,7 @@ const StyledLink = styled(NavLink)`
 	flex: 1 0 25%;
 	text-align: center;
 	text-decoration: none;
-	font-family: ${props => props.fonts.netto};
-	font-weight: bold;
+	font-weight: 500;
 	padding: 16px 0;
 	color: hsla(0, 0%, 50%, 1);
 	border-bottom: 3px solid transparent;
