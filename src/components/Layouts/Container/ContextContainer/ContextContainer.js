@@ -4,19 +4,23 @@ import insightsSVG from '../../../../images/insights.svg'
 import foundationsSVG from '../../../../images/foundations.svg'
 import experiencesSVG from '../../../../images/experiences.svg'
 
-const InsightsContainer = styled.div`
+const ContextWrapper = styled.div`
 	display: flex;
-	position: relative;
 	width: 50%;
-	justify-content: flex-end;
-	align-items: center;
+	color: ${props => props.colors.grey};
 	max-width: calc(${props => props.sizes.maxWidth} / 2);
 	@media screen and (max-width: ${props => props.responsive.medium}) {
 		& {
 			width: 100%;
-			padding: 20px 0;
+			padding-bottom: 20px;
 		}
 	}
+`
+
+const InsightsContainer = ContextWrapper.extend`
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
 `
 
 const InsightsSVG = styled.img`
@@ -37,19 +41,10 @@ const Insights = styled.div`
 	margin-right: 20px;
 `
 
-const FoundationsContainer = styled.div`
-	display: flex;
+const FoundationsContainer = ContextWrapper.extend`
 	flex-direction: column;
 	justify-content: center;
-	width: 50%;
 	margin-left: 16px;
-	max-width: calc(${props => props.sizes.maxWidth} / 2);
-	@media screen and (max-width: ${props => props.responsive.medium}) {
-		& {
-			width: 100%;
-			padding-bottom: 20px;
-		}
-	}
 `
 
 const FoundationsSVG = styled.img`
@@ -63,19 +58,10 @@ const Foundations = styled.div`
 	flex-direction: column;
 `
 
-const ExperiencesContainer = styled.div`
-	display: flex;
+const ExperiencesContainer = ContextWrapper.extend`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
-	max-width: calc(${props => props.sizes.maxWidth} / 2);
-	@media screen and (max-width: ${props => props.responsive.medium}) {
-		& {
-			width: 100%;
-			padding-bottom: 20px;
-		}
-	}
 `
 
 const ExperiencesSVG = styled.img`
