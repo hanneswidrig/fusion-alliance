@@ -10,11 +10,6 @@ import MBC from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
 import theme from '../../styles/theme'
 import { categories, buttonText, descriptions, content } from '../../content'
 
-const MainWrapper = styled.main`
-	font-family: ${theme.fonts.renner};
-	font-weight: 400;
-`
-
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -91,7 +86,7 @@ const Main = () => {
 			/>
 		))
 	return (
-		<MainWrapper>
+		<main>
 			<HeroBanner />
 			<VideoBanner {...theme} />
 			<MainContainer backgroundcolor={theme.colors.orangeTheme.orangeGentle}>
@@ -136,7 +131,7 @@ const Main = () => {
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
-		</MainWrapper>
+		</main>
 	)
 }
 

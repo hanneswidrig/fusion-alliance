@@ -7,6 +7,10 @@ injectGlobal([
    License: none (public domain)
   */
 
+	#root {
+		font-family: renner;
+	}
+
 	@font-face {
 		font-family: 'renner';
 		src: url('https://indestructibletype-fonthosting.github.io/renner_700_bold-webfont.woff2') format('woff2'),

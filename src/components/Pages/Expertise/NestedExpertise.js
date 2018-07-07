@@ -31,7 +31,6 @@ const CardContainer = props => {
 
 const NavigationContainer = styled.div`
 	display: flex;
-	font-family: ${props => props.fonts.renner};
 	@media screen and (max-width: ${props => props.responsive.small}) {
 		& {
 			flex-direction: column;

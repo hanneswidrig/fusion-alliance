@@ -92,7 +92,6 @@ const Experiences = styled.div`
 `
 
 const Title = styled.h1`
-	font-family: ${props => props.fonts.renner};
 	font-weight: 600;
 	font-size: 3rem;
 	padding-bottom: 16px;
@@ -100,7 +99,6 @@ const Title = styled.h1`
 `
 
 const Body = styled.p`
-	font-family: ${props => props.fonts.renner};
 	line-height: 1.5;
 	width: ${props => (props.width ? props.width : '100%')};
 `
