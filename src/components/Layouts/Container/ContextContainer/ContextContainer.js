@@ -4,19 +4,28 @@ import insightsSVG from '../../../../images/insights.svg'
 import foundationsSVG from '../../../../images/foundations.svg'
 import experiencesSVG from '../../../../images/experiences.svg'
 
-const InsightsContainer = styled.div`
+const ContextWrapper = styled.div`
 	display: flex;
-	position: relative;
 	width: 50%;
-	justify-content: flex-end;
-	align-items: center;
+	color: ${props => props.colors.grey};
 	max-width: calc(${props => props.sizes.maxWidth} / 2);
 	@media screen and (max-width: ${props => props.responsive.medium}) {
 		& {
 			width: 100%;
-			padding: 20px 0;
+			padding-bottom: 20px;
 		}
 	}
+`
+
+const InnerContextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+`
+
+const InsightsContainer = ContextWrapper.extend`
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
 `
 
 const InsightsSVG = styled.img`
@@ -28,28 +37,17 @@ const InsightsSVG = styled.img`
 	height: 50%;
 `
 
-const Insights = styled.div`
+const Insights = InnerContextWrapper.extend`
 	z-index: 1;
 	color: ${props => props.colors.grey};
-	display: flex;
-	flex-direction: column;
 	width: 60%;
 	margin-right: 20px;
 `
 
-const FoundationsContainer = styled.div`
-	display: flex;
+const FoundationsContainer = ContextWrapper.extend`
 	flex-direction: column;
 	justify-content: center;
-	width: 50%;
 	margin-left: 16px;
-	max-width: calc(${props => props.sizes.maxWidth} / 2);
-	@media screen and (max-width: ${props => props.responsive.medium}) {
-		& {
-			width: 100%;
-			padding-bottom: 20px;
-		}
-	}
 `
 
 const FoundationsSVG = styled.img`
@@ -58,24 +56,10 @@ const FoundationsSVG = styled.img`
 	align-self: center;
 `
 
-const Foundations = styled.div`
-	display: flex;
-	flex-direction: column;
-`
-
-const ExperiencesContainer = styled.div`
-	display: flex;
+const ExperiencesContainer = ContextWrapper.extend`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
-	max-width: calc(${props => props.sizes.maxWidth} / 2);
-	@media screen and (max-width: ${props => props.responsive.medium}) {
-		& {
-			width: 100%;
-			padding-bottom: 20px;
-		}
-	}
 `
 
 const ExperiencesSVG = styled.img`
@@ -84,9 +68,7 @@ const ExperiencesSVG = styled.img`
 	padding-top: 16px;
 `
 
-const Experiences = styled.div`
-	display: flex;
-	flex-direction: column;
+const Experiences = InnerContextWrapper.extend`
 	justify-content: center;
 	align-items: center;
 `
@@ -120,12 +102,12 @@ function contextChoice(props, sectionName) {
 		case 'foundations':
 			return (
 				<FoundationsContainer {...props}>
-					<Foundations {...props}>
+					<InnerContextWrapper {...props}>
 						<Title {...props}>{title}</Title>
 						<Body {...props} width="90%">
 							{body}
 						</Body>
-					</Foundations>
+					</InnerContextWrapper>
 					<FoundationsSVG
 						src={foundationsSVG}
 						alt="foundations contextual image"

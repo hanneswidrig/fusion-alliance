@@ -4,6 +4,7 @@ import NavigationItems from '../NavigationItems'
 
 const Desktop = styled.section`
 	display: none;
+	height: 80px;
 	a {
 		color: ${props => props.colors.grey};
 		text-decoration: none;

@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-import logo from '../../../images/header-logo.png'
+import logo from '../../../images/logo.svg'
 
 const Section = styled.section`
-	height: 38px;
+	height: 48px;
 
 	a {
 		padding: 0 0 6px 0;
@@ -15,7 +15,7 @@ const Section = styled.section`
 
 	a > img {
 		width: auto;
-		height: 32px;
+		height: 40px;
 	}
 
 	@media screen and (max-width: ${props => props.responsive.medium}) {

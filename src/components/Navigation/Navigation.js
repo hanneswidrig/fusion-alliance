@@ -53,7 +53,6 @@ const MobileMenuWrapper = styled.div`
 `
 
 const NavWrapper = styled.nav`
-	background-color: #fbfbfb;
 	height: ${props => (props.active ? '366px' : '80px')};
 	transition: 200ms cubic-bezier(0.19, 1, 0.22, 1);
 	box-shadow: ${props =>
