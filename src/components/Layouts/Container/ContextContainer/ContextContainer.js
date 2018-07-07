@@ -17,6 +17,11 @@ const ContextWrapper = styled.div`
 	}
 `
 
+const InnerContextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+`
+
 const InsightsContainer = ContextWrapper.extend`
 	position: relative;
 	justify-content: flex-end;
@@ -32,11 +37,9 @@ const InsightsSVG = styled.img`
 	height: 50%;
 `
 
-const Insights = styled.div`
+const Insights = InnerContextWrapper.extend`
 	z-index: 1;
 	color: ${props => props.colors.grey};
-	display: flex;
-	flex-direction: column;
 	width: 60%;
 	margin-right: 20px;
 `
@@ -53,11 +56,6 @@ const FoundationsSVG = styled.img`
 	align-self: center;
 `
 
-const Foundations = styled.div`
-	display: flex;
-	flex-direction: column;
-`
-
 const ExperiencesContainer = ContextWrapper.extend`
 	flex-direction: column;
 	align-items: center;
@@ -70,9 +68,7 @@ const ExperiencesSVG = styled.img`
 	padding-top: 16px;
 `
 
-const Experiences = styled.div`
-	display: flex;
-	flex-direction: column;
+const Experiences = InnerContextWrapper.extend`
 	justify-content: center;
 	align-items: center;
 `
@@ -106,12 +102,12 @@ function contextChoice(props, sectionName) {
 		case 'foundations':
 			return (
 				<FoundationsContainer {...props}>
-					<Foundations {...props}>
+					<InnerContextWrapper {...props}>
 						<Title {...props}>{title}</Title>
 						<Body {...props} width="90%">
 							{body}
 						</Body>
-					</Foundations>
+					</InnerContextWrapper>
 					<FoundationsSVG
 						src={foundationsSVG}
 						alt="foundations contextual image"
