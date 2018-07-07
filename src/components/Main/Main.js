@@ -104,7 +104,7 @@ const Main = () => {
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Insights}</MCC>
-						<MBC {...theme} text={buttonText[0]} />
+						<MBC {...theme} text={buttonText[0]} route={categories[0]} />
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
@@ -112,7 +112,7 @@ const Main = () => {
 				<Container reverse>
 					<ExpertiseContainer {...theme}>
 						<MCC {...theme}>{Foundations}</MCC>
-						<MBC {...theme} text={buttonText[1]} />
+						<MBC {...theme} text={buttonText[1]} route={categories[1]} />
 					</ExpertiseContainer>
 					<ContextContainer
 						{...theme}
@@ -132,7 +132,7 @@ const Main = () => {
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Experiences}</MCC>
-						<MBC {...theme} text={buttonText[2]} />
+						<MBC {...theme} text={buttonText[2]} route={categories[2]} />
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>

@@ -29,7 +29,7 @@ const MBC = props => {
 	const buttonText = props.text.toUpperCase()
 	return (
 		<Container {...props}>
-			<Button {...props} to="/expertise">
+			<Button {...props} to={`/expertise/${props.route}`}>
 				{buttonText}
 			</Button>
 		</Container>
