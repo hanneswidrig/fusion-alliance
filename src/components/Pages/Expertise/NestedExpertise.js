@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import styled from 'styled-components'
-import { NavigationEntries } from '../PageStyles'
+import { NavigationEntries, PageNavigation } from '../PageStyles'
 import VerticalCard from '../../Card/VerticalCard'
 import { content } from '../../../content'
 import theme from '../../../styles/theme'
@@ -28,19 +28,6 @@ const VerticalCardWrapper = styled.div`
 
 const CardContainer = props => {
 	return <Container {...props}>{props.children}</Container>
-}
-
-const NavigationContainer = styled.div`
-	display: flex;
-	@media screen and (max-width: ${props => props.responsive.small}) {
-		& {
-			flex-direction: column;
-		}
-	}
-`
-
-const CardNavigation = props => {
-	return <NavigationContainer {...props}>{props.children}</NavigationContainer>
 }
 
 const SubView = ({ match }) => {
@@ -121,13 +108,14 @@ const SubView = ({ match }) => {
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
-			<CardNavigation {...theme}>
+			<PageNavigation>
 				{NavigationEntries(match, [
+					{ name: 'latest articles', route: '' },
 					{ name: 'insights', route: 'insights' },
 					{ name: 'foundations', route: 'foundations' },
 					{ name: 'experiences', route: 'experiences' },
 				])}
-			</CardNavigation>
+			</PageNavigation>
 			<Route exact path={match.url} component={SubView} />
 			<Route path={`${match.url}/:sectionName`} component={SubView} />
 		</React.Fragment>

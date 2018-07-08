@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../../styles/theme'
 
+/**
+ * Page Container
+ */
 export const PageContainer = styled.main`
 	width: 100%;
 	padding: 5% 10%;
@@ -13,6 +16,9 @@ export const PageContainer = styled.main`
 	}
 `
 
+/**
+ * Header Section
+ */
 export const PageHeader = styled.h1`
 	color: ${theme.colors.grey};
 	text-align: center;
@@ -20,6 +26,22 @@ export const PageHeader = styled.h1`
 	font-size: 2rem;
 	height: 96px;
 `
+
+/**
+ * Page Navigation
+ */
+export const NavigationContainer = styled.div`
+	display: flex;
+	@media screen and (max-width: ${theme.responsive.small}) {
+		& {
+			flex-direction: column;
+		}
+	}
+`
+
+export const PageNavigation = props => {
+	return <NavigationContainer {...props}>{props.children}</NavigationContainer>
+}
 
 export const StyledLink = styled(NavLink)`
 	flex: 1 0 25%;
@@ -43,6 +65,7 @@ export const StyledLink = styled(NavLink)`
 
 export function NavigationEntries(match, navItems) {
 	const nav = []
+	const indexNavigationEntry = navItems.shift()
 	nav.push(
 		<StyledLink
 			exact
@@ -53,7 +76,7 @@ export function NavigationEntries(match, navItems) {
 				color: theme.colors.grey,
 			}}
 		>
-			<span>LATEST ARTICLES</span>
+			<span>{indexNavigationEntry.name.toUpperCase()}</span>
 		</StyledLink>
 	)
 	nav.push(
