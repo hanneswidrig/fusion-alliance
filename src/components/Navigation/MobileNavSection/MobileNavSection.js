@@ -17,7 +17,7 @@ const Mobile = styled.section`
 
 const MobileNavSection = props => {
 	return (
-		<Mobile active={props.active}>
+		<Mobile {...props} active={props.active}>
 			<NavigationItems mobile />
 		</Mobile>
 	)
