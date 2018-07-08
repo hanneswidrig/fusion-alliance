@@ -42,7 +42,7 @@ const ExpertiseContainer = styled.div`
 	}
 `
 
-const Main = () => {
+const Main = props => {
 	const Insights = content
 		.filter(entry => entry.category === 0)
 		.map((entry, index) => (
@@ -87,7 +87,7 @@ const Main = () => {
 		))
 	return (
 		<main>
-			<HeroBanner />
+			<HeroBanner {...props} />
 			<VideoBanner {...theme} />
 			<MainContainer backgroundcolor={theme.colors.orangeTheme.orangeGentle}>
 				<Container>

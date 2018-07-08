@@ -1,15 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import MdMenu from 'react-icons/lib/md/menu'
-
 import LogoSection from './LogoSection/LogoSection'
 import MobileNavSection from './MobileNavSection/MobileNavSection'
 import DesktopNavSection from './DesktopNavSection/DesktopNavSection'
-import theme from '../../styles/theme'
 
 const NavSpacing = styled.div`
 	padding: 32px;
-	@media screen and (min-width: ${theme.responsive.medium}) {
+	@media screen and (min-width: ${props => props.theme.responsive.medium}) {
 		& {
 			display: none;
 		}
@@ -20,7 +18,7 @@ const NavBar = styled.section`
 	width: 100%;
 	height: 80px;
 	background-color: transparent;
-	max-width: ${theme.sizes.maxWidth};
+	max-width: ${props => props.theme.sizes.maxWidth};
 	margin: 0 auto;
 	padding: 0 20px;
 	display: flex;
@@ -28,7 +26,7 @@ const NavBar = styled.section`
 	justify-content: space-between;
 	align-items: center;
 
-	@media screen and (max-width: ${theme.responsive.medium}) {
+	@media screen and (max-width: ${props => props.theme.responsive.medium}) {
 		& {
 			padding: 0 10px;
 		}
@@ -40,12 +38,12 @@ const MobileMenuWrapper = styled.div`
 	cursor: pointer;
 
 	svg {
-		color: ${theme.colors.grey};
+		color: ${props => props.theme.colors.grey};
 		width: 24px;
 		height: 24px;
 	}
 
-	@media screen and (min-width: ${theme.responsive.medium}) {
+	@media screen and (min-width: ${props => props.theme.responsive.medium}) {
 		& {
 			display: none;
 		}
@@ -75,17 +73,16 @@ class Navigation extends React.Component {
 
 	render() {
 		return (
-			<NavWrapper {...theme} active={this.state.toggleMenu}>
-				<NavBar {...theme}>
-					<MobileMenuWrapper {...theme} onClick={this.toggle}>
+			<NavWrapper active={this.state.toggleMenu}>
+				<NavBar>
+					<MobileMenuWrapper onClick={this.toggle}>
 						<MdMenu />
 					</MobileMenuWrapper>
-					<LogoSection {...theme} />
-					<DesktopNavSection {...theme} />
+					<LogoSection />
+					<DesktopNavSection />
 					<NavSpacing />
 				</NavBar>
 				<MobileNavSection
-					{...theme}
 					onClick={this.toggle}
 					active={this.state.toggleMenu}
 				/>

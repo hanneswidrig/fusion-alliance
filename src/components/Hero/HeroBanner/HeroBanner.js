@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import HeroBlock from './../HeroBlock/HeroBlock'
 import heroSVG from './../../../images/hero.svg'
 import videoBackground from './../../../images/waves.png'
-import theme from './../../../styles/theme'
 
 const HeroSection = styled.section`
 	display: flex;
@@ -12,7 +11,7 @@ const HeroSection = styled.section`
 	flex-direction: column;
 	padding: 0 20px;
 
-	@media screen and (max-width: ${theme.responsive.small}) {
+	@media screen and (max-width: ${props => props.theme.responsive.small}) {
 		& {
 			min-height: 250px;
 			height: calc(100vw - 200px);
@@ -25,7 +24,7 @@ const HeroSection = styled.section`
 
 const HeroImg = styled.img`
 	z-index: -1;
-	max-width: ${theme.sizes.maxWidth};
+	max-width: ${props => props.theme.sizes.maxWidth};
 `
 
 const VideoBackground = styled.img`
