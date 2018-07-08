@@ -44,7 +44,7 @@ const HeroBlock = () => (
 			more.
 		</HeroTitleDetails>
 		<Button
-			to="/expertise`"
+			to="/expertise"
 			themecolor={theme.colors.blue}
 			textcolor={theme.colors.white}
 		>
