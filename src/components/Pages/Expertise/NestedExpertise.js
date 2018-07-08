@@ -1,6 +1,7 @@
 import React from 'react'
-import { NavLink, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import styled from 'styled-components'
+import { NavigationEntries } from '../PageStyles'
 import VerticalCard from '../../Card/VerticalCard'
 import { content } from '../../../content'
 import theme from '../../../styles/theme'
@@ -34,26 +35,6 @@ const NavigationContainer = styled.div`
 	@media screen and (max-width: ${props => props.responsive.small}) {
 		& {
 			flex-direction: column;
-		}
-	}
-`
-
-const StyledLink = styled(NavLink)`
-	flex: 1 0 25%;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 500;
-	padding: 16px 0;
-	color: hsla(0, 0%, 50%, 1);
-	border-bottom: 3px solid transparent;
-	transition: 200ms ease-in-out;
-	&:hover {
-		border-bottom: 3px solid ${props => props.colors.grey};
-	}
-	@media screen and (max-width: ${props => props.responsive.small}) {
-		& {
-			flex: 1 0 100%;
-			padding: 16px 4px;
 		}
 	}
 `
@@ -137,50 +118,15 @@ const SubView = ({ match }) => {
 	}
 }
 
-function NavigationEntries(match) {
-	const nav = []
-	const navItems = [
-		{ name: 'insights', route: 'insights' },
-		{ name: 'foundations', route: 'foundations' },
-		{ name: 'experiences', route: 'experiences' },
-	]
-	nav.push(
-		<StyledLink
-			{...theme}
-			exact
-			key="index"
-			to={`${match.url}`}
-			activeStyle={{
-				borderBottomColor: theme.colors.blue,
-				color: theme.colors.grey,
-			}}
-		>
-			<span>LATEST ARTICLES</span>
-		</StyledLink>
-	)
-	nav.push(
-		navItems.map((entry, index) => (
-			<StyledLink
-				{...theme}
-				key={index.toString()}
-				to={`${match.url}/${entry.route}`}
-				activeStyle={{
-					borderBottomColor: theme.colors.blue,
-					color: theme.colors.grey,
-				}}
-			>
-				<span>{entry.name.toUpperCase()}</span>
-			</StyledLink>
-		))
-	)
-	return nav
-}
-
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
 			<CardNavigation {...theme}>
-				{NavigationEntries(match, theme)}
+				{NavigationEntries(match, [
+					{ name: 'insights', route: 'insights' },
+					{ name: 'foundations', route: 'foundations' },
+					{ name: 'experiences', route: 'experiences' },
+				])}
 			</CardNavigation>
 			<Route exact path={match.url} component={SubView} />
 			<Route path={`${match.url}/:sectionName`} component={SubView} />

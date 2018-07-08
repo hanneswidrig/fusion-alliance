@@ -1,22 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import PageHeader from '../PageHeader'
-import theme from '../../../styles/theme'
+import { Route } from 'react-router-dom'
+import { PageContainer, PageHeader } from '../PageStyles'
+import NestedAbout from './NestedAbout'
 
-const PageContainer = styled.main`
-	width: 100%;
-	padding: 5% 10%;
-	@media screen and (max-width: ${props => props.responsive.small}) {
-		& {
-			padding: 0;
-		}
-	}
-`
-
-const About = () => {
+const About = ({ match }) => {
 	return (
-		<PageContainer {...theme}>
-			<PageHeader {...theme}>About</PageHeader>
+		<PageContainer>
+			<PageHeader>Our Company</PageHeader>
+			<Route path={`${match.url}`} component={NestedAbout} />
 		</PageContainer>
 	)
 }
