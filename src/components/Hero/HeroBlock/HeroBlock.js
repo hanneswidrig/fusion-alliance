@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../../../styles/theme'
-import CallToAction from './../CallToAction/CallToAction'
+import Button from '../../Button/Button'
 
 const HeroWrapper = styled.div`
 	position: absolute;
@@ -43,7 +43,13 @@ const HeroBlock = () => (
 			providing insights for CIOs, CMOs, marketing directors, tech leaders, and
 			more.
 		</HeroTitleDetails>
-		<CallToAction />
+		<Button
+			to="/expertise`"
+			themecolor={theme.colors.blue}
+			textcolor={theme.colors.white}
+		>
+			EXPLORE
+		</Button>
 	</HeroWrapper>
 )
 

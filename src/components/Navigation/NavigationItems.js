@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import theme from '../../styles/theme'
 
 const NavigationItems = props => {
 	const entries = props.entries || [
@@ -15,7 +16,7 @@ const NavigationItems = props => {
 			<NavLink
 				exact
 				to="/"
-				activeStyle={{ color: props.colors.blueActive }}
+				activeStyle={{ color: theme.colors.blueActive }}
 				key="home"
 			>
 				HOME
@@ -27,7 +28,7 @@ const NavigationItems = props => {
 			<NavLink
 				exact
 				to={`/${entry}`}
-				activeStyle={{ color: props.colors.blueActive }}
+				activeStyle={{ color: theme.colors.blueActive }}
 				key={`${entry}`}
 			>
 				{entry.toUpperCase()}

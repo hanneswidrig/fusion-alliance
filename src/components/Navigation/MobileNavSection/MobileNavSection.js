@@ -11,14 +11,14 @@ const Mobile = styled.section`
 		padding: 16px;
 		text-decoration: none;
 		text-align: center;
-		color: ${props => props.colors.grey};
+		color: ${props => props.theme.colors.grey};
 	}
 `
 
 const MobileNavSection = props => {
 	return (
-		<Mobile {...props} active={props.active}>
-			<NavigationItems {...props} mobile />
+		<Mobile active={props.active}>
+			<NavigationItems mobile />
 		</Mobile>
 	)
 }
