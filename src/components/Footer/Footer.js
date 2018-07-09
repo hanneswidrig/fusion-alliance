@@ -33,7 +33,7 @@ const BuildingIcon = styled.img`
 `
 
 const Wrapper = styled.footer`
-	background-color: ${props => props.colors.blue};
+	background-color: ${props => props.colors.blue.primary};
 	display: flex;
 	justify-content: center;
 	align-items: center;

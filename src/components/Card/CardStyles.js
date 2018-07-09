@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import MdArrowForward from 'react-icons/lib/md/arrow-forward'
+import theme from '../../styles/theme'
 
 export const CardWrapper = styled(Link)`
 	width: 100%;
@@ -20,7 +21,21 @@ export const Icon = styled(MdArrowForward)`
 	width: 48px;
 	height: 48px;
 	padding: 8px;
-	color: ${props => (props.iconcolor ? props.iconcolor : props.colors.grey)};
+	color: ${props => props.iconcolor};
+`
+
+export const CardTag = styled.div`
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.875rem;
+	padding: 5px 10px;
+	border-top-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	text-transform: capitalize;
+	color: ${props => props.themecolor.font};
+	background-color: ${props => props.themecolor.background};
 `
 
 export const ImgWrapper = styled.div`
@@ -35,7 +50,7 @@ export const ImgWrapper = styled.div`
 
 export const CardSection = styled.div`
 	display: flex;
-	color: ${props => props.colors.grey};
+	color: ${theme.colors.grey};
 	flex-direction: column;
 	flex: ${props => (props.flex ? props.flex : 1)};
 `
@@ -47,7 +62,7 @@ export const CardHeader = styled.div`
 `
 
 export const CardTitle = styled.div`
-	color: ${props => props.colors.grey};
+	color: ${theme.colors.grey};
 	font-weight: 600;
 	margin: 16px 16px 0 16px;
 `
@@ -56,3 +71,33 @@ export const CardBody = styled.div`
 	margin: 12px 16px 16px 16px;
 	line-height: 1.25em;
 `
+
+export function tagTheme(categoryid) {
+	switch (categoryid) {
+		case 0:
+			return {
+				font: theme.colors.orange.dark,
+				background: theme.colors.orange.light,
+			}
+		case 1:
+			return {
+				font: theme.colors.green.dark,
+				background: theme.colors.green.light,
+			}
+		case 2:
+			return {
+				font: theme.colors.purple.dark,
+				background: theme.colors.purple.light,
+			}
+		default:
+			break
+	}
+	return ''
+}
+
+CardTag.defaultProps = {
+	themecolor: {
+		font: theme.colors.blue.dark,
+		background: theme.colors.blue.light,
+	},
+}

@@ -26,7 +26,7 @@ const Button = props => <StyledButton {...props}>{props.children}</StyledButton>
 
 Button.defaultProps = {
 	to: '#',
-	themecolor: theme.colors.blue,
+	themecolor: theme.colors.blue.primary,
 	textcolor: theme.colors.white,
 }
 

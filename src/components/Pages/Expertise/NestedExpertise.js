@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import styled from 'styled-components'
 import { NavigationEntries, PageNavigation } from '../PageStyles'
 import VerticalCard from '../../Card/VerticalCard'
-import { content } from '../../../content'
+import { content, categories } from '../../../content'
 import theme from '../../../styles/theme'
 
 const Container = styled.div`
@@ -38,9 +38,11 @@ const SubView = ({ match }) => {
 				title={entry.title}
 				date={entry.date}
 				body={entry.body}
+				category={categories[entry.category]}
+				categoryid={entry.category}
 				image={entry.image}
-				backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-				iconcolor={theme.colors.orangeTheme.orangeIcon}
+				backgroundcolor={theme.colors.orange.light}
+				iconcolor={theme.colors.orange.dark}
 			/>
 		</VerticalCardWrapper>
 	))
@@ -55,8 +57,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-					iconcolor={theme.colors.orangeTheme.orangeIcon}
+					backgroundcolor={theme.colors.orange.light}
+					iconcolor={theme.colors.orange.dark}
 				/>
 			</VerticalCardWrapper>
 		))
@@ -71,8 +73,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.greenTheme.greenGentle}
-					iconcolor={theme.colors.greenTheme.greenIcon}
+					backgroundcolor={theme.colors.green.light}
+					iconcolor={theme.colors.green.dark}
 				/>
 			</VerticalCardWrapper>
 		))
@@ -87,8 +89,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-					iconcolor={theme.colors.purpleTheme.purpleIcon}
+					backgroundcolor={theme.colors.purple.light}
+					iconcolor={theme.colors.purple.dark}
 				/>
 			</VerticalCardWrapper>
 		))

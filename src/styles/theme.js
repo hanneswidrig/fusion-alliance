@@ -1,25 +1,36 @@
 module.exports = {
 	colors: {
 		white: 'hsla(0, 100%, 100%, 1)',
-		darkBlue: 'hsla(202, 76%, 15%, 1)',
-		darkBlueHover: 'hsla(0, 98%, 2%, 1)',
 		grey: 'hsla(0, 0%, 25%, 1)',
-		blue: 'hsla(214, 84%, 48%, 1)',
-		blueActive: 'hsla(214, 52%, 48%, 1)',
-		orangeTheme: {
-			orange: 'hsla(30, 92%, 55%, 1)',
-			orangeGentle: 'hsla(30, 92%, 98%, 1)',
-			orangeIcon: 'hsla(30, 100%, 35%, 1)',
+		blue: {
+			primary: 'hsla(214, 84%, 48%, 1)',
+			active: 'hsla(214, 84%, 33%, 1)',
+			light: 'hsla(215, 100%, 87%, 1)',
+			dark: 'hsla(214, 84%, 22%, 1)',
 		},
-		greenTheme: {
-			green: 'hsla(84, 53%, 50%, 1)',
-			greenGentle: 'hsla(84, 92%, 98%, 1)',
-			greenIcon: 'hsla(84, 100%, 35%, 1)',
+		orange: {
+			primary: 'hsla(14, 100%, 63%, 1)',
+			active: 'hsla(14, 100%, 48%, 1)',
+			light: 'hsla(6, 71%, 95%, 1)',
+			dark: 'hsla(14, 88%, 40%, 1)',
 		},
-		purpleTheme: {
-			purple: 'hsla(252, 30%, 52%, 1)',
-			purpleGentle: 'hsla(252, 92%, 98%, 1)',
-			purpleIcon: 'hsla(252, 100%, 35%, 1)',
+		green: {
+			primary: 'hsla(123, 38%, 57%, 1)',
+			active: 'hsla(123, 38%, 42%, 1)',
+			light: 'hsla(125, 39%, 94%, 1)',
+			dark: 'hsla(124, 55%, 24%, 1)',
+		},
+		purple: {
+			primary: 'hsla(262, 47%, 55%, 1)',
+			active: 'hsla(262, 47%, 40%, 1)',
+			light: 'hsla(264, 45%, 94%, 1)',
+			dark: 'hsla(251, 69%, 34%, 1)',
+		},
+		brown: {
+			primary: 'hsla(16, 18%, 47%, 1)',
+			active: 'hsla(16, 18%, 32%, 1)',
+			light: 'hsla(20, 16%, 93%, 1)',
+			dark: 'hsla(9, 28%, 19%, 1)',
 		},
 	},
 	sizes: {

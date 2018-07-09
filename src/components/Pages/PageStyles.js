@@ -72,7 +72,7 @@ export function NavigationEntries(match, navItems) {
 			key="index"
 			to={`${match.url}`}
 			activeStyle={{
-				borderBottomColor: theme.colors.blue,
+				borderBottomColor: theme.colors.blue.primary,
 				color: theme.colors.grey,
 			}}
 		>
@@ -85,7 +85,7 @@ export function NavigationEntries(match, navItems) {
 				key={index.toString()}
 				to={`${match.url}/${entry.route}`}
 				activeStyle={{
-					borderBottomColor: theme.colors.blue,
+					borderBottomColor: theme.colors.blue.primary,
 					color: theme.colors.grey,
 				}}
 			>

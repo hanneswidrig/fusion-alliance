@@ -16,7 +16,7 @@ const NavigationItems = props => {
 			<NavLink
 				exact
 				to="/"
-				activeStyle={{ color: theme.colors.blueActive }}
+				activeStyle={{ color: theme.colors.blue.active }}
 				key="home"
 			>
 				HOME
@@ -28,7 +28,7 @@ const NavigationItems = props => {
 			<NavLink
 				exact
 				to={`/${entry}`}
-				activeStyle={{ color: theme.colors.blueActive }}
+				activeStyle={{ color: theme.colors.blue.active }}
 				key={`${entry}`}
 			>
 				{entry.toUpperCase()}
