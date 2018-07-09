@@ -20,7 +20,7 @@ const MobileMenuWrapper = styled(NavLink)`
 `
 
 const MobileMenuButton = () => (
-	<MobileMenuWrapper to="#" activeStyle={{ color: theme.colors.blueActive }}>
+	<MobileMenuWrapper to="#" activeStyle={{ color: theme.colors.blue.active }}>
 		<MdMenu />
 	</MobileMenuWrapper>
 )

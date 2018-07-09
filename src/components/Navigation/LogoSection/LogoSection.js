@@ -31,7 +31,7 @@ const Section = styled.section`
 
 const LogoSection = props => (
 	<Section {...props}>
-		<NavLink to="/" activeStyle={{ color: theme.colors.blueActive }}>
+		<NavLink to="/" activeStyle={{ color: theme.colors.blue.active }}>
 			<img src={logo} alt="logo" />
 		</NavLink>
 	</Section>

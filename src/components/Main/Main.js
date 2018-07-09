@@ -52,8 +52,8 @@ const Main = props => {
 				date={entry.date}
 				body={entry.body}
 				image={entry.image}
-				backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-				iconcolor={theme.colors.orangeTheme.orangeIcon}
+				backgroundcolor={theme.colors.orange.light}
+				iconcolor={theme.colors.orange.dark}
 				key={index.toString()}
 			/>
 		))
@@ -66,8 +66,8 @@ const Main = props => {
 				date={entry.date}
 				body={entry.body}
 				image={entry.image}
-				backgroundcolor={theme.colors.greenTheme.greenGentle}
-				iconcolor={theme.colors.greenTheme.greenIcon}
+				backgroundcolor={theme.colors.green.light}
+				iconcolor={theme.colors.green.dark}
 				key={index.toString()}
 			/>
 		))
@@ -80,8 +80,8 @@ const Main = props => {
 				date={entry.date}
 				body={entry.body}
 				image={entry.image}
-				backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-				iconcolor={theme.colors.purpleTheme.purpleIcon}
+				backgroundcolor={theme.colors.purple.light}
+				iconcolor={theme.colors.purple.dark}
 				key={index.toString()}
 			/>
 		))
@@ -89,7 +89,7 @@ const Main = props => {
 		<main>
 			<HeroBanner {...props} />
 			<VideoBanner {...theme} />
-			<MainContainer backgroundcolor={theme.colors.orangeTheme.orangeGentle}>
+			<MainContainer backgroundcolor={theme.colors.orange.light}>
 				<Container>
 					<ContextContainer
 						{...theme}
@@ -103,7 +103,7 @@ const Main = props => {
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
-			<MainContainer backgroundcolor={theme.colors.greenTheme.greenGentle}>
+			<MainContainer backgroundcolor={theme.colors.green.light}>
 				<Container reverse>
 					<ExpertiseContainer {...theme}>
 						<MCC {...theme}>{Foundations}</MCC>
@@ -117,7 +117,7 @@ const Main = props => {
 					/>
 				</Container>
 			</MainContainer>
-			<MainContainer backgroundcolor={theme.colors.purpleTheme.purpleGentle}>
+			<MainContainer backgroundcolor={theme.colors.purple.light}>
 				<Container>
 					<ContextContainer
 						{...theme}

@@ -1,15 +1,13 @@
-/* eslint-disable indent */
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import theme from '../../styles/theme'
 
 const StyledButton = styled(Link)`
-	color: ${props =>
-		props.themecolor ? props.themecolor : props.theme.colors.blue};
+	color: ${props => props.themecolor};
 	background-color: transparent;
 	text-align: center;
-	border: solid 2px
-		${props => (props.themecolor ? props.themecolor : props.theme.colors.blue)};
+	border: solid 2px ${props => props.themecolor};
 	border-radius: 4px;
 	letter-spacing: 1px;
 	font-size: 1.25rem;
@@ -19,10 +17,8 @@ const StyledButton = styled(Link)`
 
 	&:hover {
 		transform: scale(1.1);
-		color: ${props =>
-			props.textcolor ? props.textcolor : props.theme.colors.white};
-		background-color: ${props =>
-			props.themecolor ? props.themecolor : props.theme.colors.blue};
+		color: ${props => props.textcolor};
+		background-color: ${props => props.themecolor};
 	}
 `
 
@@ -30,6 +26,8 @@ const Button = props => <StyledButton {...props}>{props.children}</StyledButton>
 
 Button.defaultProps = {
 	to: '#',
+	themecolor: theme.colors.blue.primary,
+	textcolor: theme.colors.white,
 }
 
 export default Button

@@ -1,8 +1,9 @@
 import React from 'react'
-import { NavLink, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import styled from 'styled-components'
+import { NavigationEntries, PageNavigation } from '../PageStyles'
 import VerticalCard from '../../Card/VerticalCard'
-import { content } from '../../../content'
+import { content, categories } from '../../../content'
 import theme from '../../../styles/theme'
 
 const Container = styled.div`
@@ -29,39 +30,6 @@ const CardContainer = props => {
 	return <Container {...props}>{props.children}</Container>
 }
 
-const NavigationContainer = styled.div`
-	display: flex;
-	@media screen and (max-width: ${props => props.responsive.small}) {
-		& {
-			flex-direction: column;
-		}
-	}
-`
-
-const StyledLink = styled(NavLink)`
-	flex: 1 0 25%;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 500;
-	padding: 16px 0;
-	color: hsla(0, 0%, 50%, 1);
-	border-bottom: 3px solid transparent;
-	transition: 200ms ease-in-out;
-	&:hover {
-		border-bottom: 3px solid ${props => props.colors.grey};
-	}
-	@media screen and (max-width: ${props => props.responsive.small}) {
-		& {
-			flex: 1 0 100%;
-			padding: 16px 4px;
-		}
-	}
-`
-
-const CardNavigation = props => {
-	return <NavigationContainer {...props}>{props.children}</NavigationContainer>
-}
-
 const SubView = ({ match }) => {
 	const all = content.map((entry, index) => (
 		<VerticalCardWrapper {...theme} key={index.toString()}>
@@ -70,9 +38,11 @@ const SubView = ({ match }) => {
 				title={entry.title}
 				date={entry.date}
 				body={entry.body}
+				category={categories[entry.category]}
+				categoryid={entry.category}
 				image={entry.image}
-				backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-				iconcolor={theme.colors.orangeTheme.orangeIcon}
+				backgroundcolor={theme.colors.orange.light}
+				iconcolor={theme.colors.orange.dark}
 			/>
 		</VerticalCardWrapper>
 	))
@@ -87,8 +57,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.orangeTheme.orangeGentle}
-					iconcolor={theme.colors.orangeTheme.orangeIcon}
+					backgroundcolor={theme.colors.orange.light}
+					iconcolor={theme.colors.orange.dark}
 				/>
 			</VerticalCardWrapper>
 		))
@@ -103,8 +73,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.greenTheme.greenGentle}
-					iconcolor={theme.colors.greenTheme.greenIcon}
+					backgroundcolor={theme.colors.green.light}
+					iconcolor={theme.colors.green.dark}
 				/>
 			</VerticalCardWrapper>
 		))
@@ -119,8 +89,8 @@ const SubView = ({ match }) => {
 					date={entry.date}
 					body={entry.body}
 					image={entry.image}
-					backgroundcolor={theme.colors.purpleTheme.purpleGentle}
-					iconcolor={theme.colors.purpleTheme.purpleIcon}
+					backgroundcolor={theme.colors.purple.light}
+					iconcolor={theme.colors.purple.dark}
 				/>
 			</VerticalCardWrapper>
 		))
@@ -137,51 +107,17 @@ const SubView = ({ match }) => {
 	}
 }
 
-function NavigationEntries(match) {
-	const nav = []
-	const navItems = [
-		{ name: 'insights', route: 'insights' },
-		{ name: 'foundations', route: 'foundations' },
-		{ name: 'experiences', route: 'experiences' },
-	]
-	nav.push(
-		<StyledLink
-			{...theme}
-			exact
-			key="index"
-			to={`${match.url}`}
-			activeStyle={{
-				borderBottomColor: theme.colors.blue,
-				color: theme.colors.grey,
-			}}
-		>
-			<span>LATEST ARTICLES</span>
-		</StyledLink>
-	)
-	nav.push(
-		navItems.map((entry, index) => (
-			<StyledLink
-				{...theme}
-				key={index.toString()}
-				to={`${match.url}/${entry.route}`}
-				activeStyle={{
-					borderBottomColor: theme.colors.blue,
-					color: theme.colors.grey,
-				}}
-			>
-				<span>{entry.name.toUpperCase()}</span>
-			</StyledLink>
-		))
-	)
-	return nav
-}
-
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
-			<CardNavigation {...theme}>
-				{NavigationEntries(match, theme)}
-			</CardNavigation>
+			<PageNavigation>
+				{NavigationEntries(match, [
+					{ name: 'latest articles', route: '' },
+					{ name: 'insights', route: 'insights' },
+					{ name: 'foundations', route: 'foundations' },
+					{ name: 'experiences', route: 'experiences' },
+				])}
+			</PageNavigation>
 			<Route exact path={match.url} component={SubView} />
 			<Route path={`${match.url}/:sectionName`} component={SubView} />
 		</React.Fragment>

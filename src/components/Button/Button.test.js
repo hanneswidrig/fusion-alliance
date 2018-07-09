@@ -11,7 +11,7 @@ it('successfully loads Button', () => {
 		<MemoryRouter initialEntries={['/']} initialIndex={0}>
 			<Button
 				to="#"
-				themecolor={theme.colors.blue}
+				themecolor={theme.colors.blue.primary}
 				textcolor={theme.colors.white}
 			/>
 		</MemoryRouter>,

@@ -20,7 +20,7 @@ const HeroWrapper = styled.div`
 const HeroTitle = styled.div`
 	font-size: calc(16px + 2.75vw);
 	font-weight: 600;
-	color: ${theme.colors.blue};
+	color: ${theme.colors.blue.primary};
 	@media screen and (min-width: ${theme.responsive.large}) {
 		& {
 			font-size: 3rem;
@@ -45,7 +45,7 @@ const HeroBlock = () => (
 		</HeroTitleDetails>
 		<Button
 			to="/expertise"
-			themecolor={theme.colors.blue}
+			themecolor={theme.colors.blue.primary}
 			textcolor={theme.colors.white}
 		>
 			EXPLORE
