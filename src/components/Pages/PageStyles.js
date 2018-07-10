@@ -10,7 +10,6 @@ export const PageContainer = styled.main`
 	width: 100%;
 	max-width: ${theme.sizes.maxWidth};
 	margin: auto;
-	padding: 5% 0;
 `
 
 /**

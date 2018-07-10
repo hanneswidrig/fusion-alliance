@@ -14,6 +14,7 @@ export const AboutUsWrapper = styled.div`
 	@media screen and (min-width: ${theme.responsive.medium}) {
 		& {
 			flex-flow: row wrap;
+			padding: 0 5%;
 		}
 	}
 `
