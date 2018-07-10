@@ -25,7 +25,7 @@ export const PageHeader = styled.h1`
 	font-weight: 600;
 	font-size: 2rem;
 	height: 96px;
-	padding-bottom: 1rem;
+	margin-bottom: 1rem;
 `
 
 /**
