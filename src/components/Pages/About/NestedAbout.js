@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { PageNavigation, NavigationEntries } from '../PageStyles'
-import { AboutUsWrapper, Section } from './AboutStyles'
+import { Container, Section, Block } from './AboutStyles'
 import { pages } from '../../../content'
 
 const AboutUs = () => {
 	return (
-		<AboutUsWrapper>
+		<Container>
 			{pages.aboutus.map((section, id) =>
 				Section(
 					id,
@@ -17,7 +17,17 @@ const AboutUs = () => {
 					section.img
 				)
 			)}
-		</AboutUsWrapper>
+		</Container>
+	)
+}
+
+const Partnership = () => {
+	return (
+		<Container>
+			{pages.partnerships.map((block, id) =>
+				Block(id, block.header, block.img)
+			)}
+		</Container>
 	)
 }
 
@@ -31,7 +41,7 @@ const NestedAbout = ({ match }) => {
 				])}
 			</PageNavigation>
 			<Route exact path={match.url} component={AboutUs} />
-			<Route path={`${match.url}/:sectionName`} component={() => <div />} />
+			<Route path={`${match.url}/:sectionName`} component={Partnership} />
 		</React.Fragment>
 	)
 }

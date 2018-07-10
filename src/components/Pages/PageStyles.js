@@ -8,8 +8,9 @@ import theme from '../../styles/theme'
  */
 export const PageContainer = styled.main`
 	width: 100%;
-	max-width: ${theme.sizes.maxWidth};
+	max-width: calc(${theme.sizes.maxWidth} + 5%);
 	margin: auto;
+	padding: 5% 0;
 `
 
 /**

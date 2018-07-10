@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import theme from '../../../styles/theme'
 
-export const AboutUsWrapper = styled.div`
+export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	@media screen and (max-width: ${theme.responsive.medium}) {
@@ -14,12 +14,11 @@ export const AboutUsWrapper = styled.div`
 	@media screen and (min-width: ${theme.responsive.medium}) {
 		& {
 			flex-flow: row wrap;
-			padding: 0 5%;
 		}
 	}
 `
 
-export const SectionWrapper = styled.section`
+export const Wrapper = styled.section`
 	margin-top: 2rem;
 	color: ${theme.colors.grey};
 	display: flex;
@@ -29,6 +28,23 @@ export const SectionWrapper = styled.section`
 		& {
 			flex: 1 0 50%;
 			padding: 0 1rem 1rem 1rem;
+		}
+	}
+`
+
+export const BlockWrapper = Wrapper.extend`
+	width: 33.3%;
+	flex: 1 0 33.3%;
+	@media screen and (min-width: ${theme.responsive.medium}) {
+		& {
+			width: 50%;
+			flex: 1 0 50%;
+		}
+	}
+	@media screen and (min-width: ${theme.responsive.small}) {
+		& {
+			width: 100%;
+			flex: 1 0 100;
 		}
 	}
 `
@@ -47,14 +63,17 @@ export const SectionImg = styled.img`
 	width: 96px;
 	height: 96px;
 	border-radius: 96px;
-	margin: 1rem;
+`
+
+export const BlockImg = styled.img`
+	padding: 1rem;
 `
 
 export const SectionBody = styled.p`
 	line-height: 1.25rem;
 `
 
-export const SectionHeader = styled.div`
+export const Header = styled.div`
 	width: 100%;
 	display: flex;
 	font-size: 1rem;
@@ -67,28 +86,37 @@ export const SectionHeader = styled.div`
 	}
 `
 
-export const SectionHeading = styled.h1`
+export const Heading = styled.h1`
 	font-size: 1.75rem;
 	font-weight: 500;
 	color: ${theme.colors.blue.primary};
 `
 
-export const SectionSubHeading = styled.span`
+export const SubHeading = styled.span`
 	color: ${theme.colors.grey.primary};
 	font-weight: 500;
 `
 
 export const Section = (id, type, header, body, job, img) => (
-	<SectionWrapper key={id.toString()}>
-		<SectionHeader>
+	<Wrapper key={id.toString()}>
+		<Header>
 			<div>
-				<SectionHeading>{header}</SectionHeading>
-				{type === 'image' ? <SectionSubHeading>{job}</SectionSubHeading> : ''}
+				<Heading>{header}</Heading>
+				{type === 'image' ? <SubHeading>{job}</SubHeading> : ''}
 			</div>
 			{type === 'image' ? <SectionImg src={img} alt={header} /> : ''}
-		</SectionHeader>
+		</Header>
 		<SectionMain>
 			<SectionBody>{body}</SectionBody>
 		</SectionMain>
-	</SectionWrapper>
+	</Wrapper>
+)
+
+export const Block = (id, header, img) => (
+	<BlockWrapper key={id.toString()}>
+		<Header>
+			<Heading>{header}</Heading>
+		</Header>
+		<BlockImg src={img} alt={header} />
+	</BlockWrapper>
 )
