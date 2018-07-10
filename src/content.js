@@ -60,4 +60,52 @@ module.exports = {
 			image: '/images/foundations2.jpg',
 		},
 	],
+	pages: {
+		aboutus: [
+			{
+				type: 'text',
+				header: 'Experience is Our Stability',
+				body:
+					'Established in 1994 in Indianapolis, Indiana, Fusion Alliance is highly regarded as an enterprise solution provider, delivering the practical insights, engaging customer experiences and human-driven technologies that transform the way our clients do business. We are a one-stop, data-driven business transformation firm with big-picture expertise across strategy, digital, data, technology and cloud. We partner with companies to formulate a technology-based strategy that aligns with their business goals. We then deploy our expertise across the enterprise in a cohesive, integrated framework. That’s where Fusion excels. We have the in-house capabilities and extensive expertise to deliver it all. That’s why our clients trust us. They know that the solutions we build alongside them are robust, scalable, usable and secure – even in the most challenging, dynamic, highly regulated environments. Our deep experience delivering solutions spans many vertical markets, including life sciences and healthcare, banking and insurance, manufacturing, energy and utilities, and more.',
+			},
+			{
+				type: 'text',
+				header: 'People are Our Strength',
+				body:
+					'Fusion employs over 500 consultants: the strategic thinkers, creative geniuses, pragmatic technologists and ethical business experts who built our reputation as a true partner. Our expertise in digital, data, cloud and technology shapes our clients’ businesses, giving ideas lift, clarity and a clear path to execution and measurable results. Not only have we enjoyed solid and sustainable business growth over our 25+ years in business, we also brought Quick Solutions into the Fusion family in 2014, allowing us to expand our expertise and our consultant base.',
+			},
+			{
+				type: 'image',
+				job: 'CEO',
+				header: 'Doug Brown',
+				img: '/images/about/doug_brown.jpg',
+				body:
+					'Doug Brown has over 32 years of experience as a strategic business executive and entrepreneur. He is the CEO and co-founded Fusion Alliance in 1994. Doug has led Fusion’s regional expansion effort by opening the Cincinnati, Ohio office in 2003 and, in 2014, Fusion Alliance combined companies with Quick Solutions, now branded as Fusion Alliance in the Columbus, Ohio market. Doug has a passion for helping companies succeed by strategically leveraging technology and data to drive business. He spent the first 12 years of his career working for PSI Energy, now a part of Duke Energy, in various roles in the IT organization leading to director and leadership roles. Doug is passionate about serving the community and sits on the board of the Center of Leadership Development at the Indiana University Kelley School of Business Dean’s Council. Doug resides in Indianapolis and has three amazing children.',
+			},
+			{
+				type: 'image',
+				job: 'COO',
+				header: 'Tom Campbell',
+				img: '/images/about/tom_campbell.jpg',
+				body:
+					'As Fusion Alliance COO, Tom brings more than 40 years of senior management experience to the firm. Prior to Fusion, Tom was majority shareholder and CEO of Quick Solutions, Inc. Tom spent 12 years as the COO of an international distribution company, and he also held senior management positions in the technology and real estate industries. Tom is a Certified Public Accountant (CPA), a member of the American Institute of CPAs and a member of the Ohio Society of CPAs. He is also a board member of Palmer Donavin Holdings, Inc., a board member of the Ohio Health Foundation Kobacker House Board and a board member of the Westerville Area Chamber of Commerce. Tom and his wife, Becky, reside in Westerville, Ohio. They have three grown children.',
+			},
+			{
+				type: 'image',
+				job: 'Partner and President',
+				header: 'Rick Mariotti',
+				img: '/images/about/rick_mariotti.jpg',
+				body:
+					'Rick brings 24 years of management, finance, and consulting experience to Fusion Alliance. He leads an executive team responsible for: establishing and executing the strategic direction of the firm, sales and management of client relationships; assembling and providing executive oversight for delivery teams; managing internal operations, and driving Fusion’s continued growth and success. Throughout his career, Rick focused on helping companies achieve results by transforming business goals and objectives into actionable solutions. Prior to Fusion, Rick was a partner and president of Quick Solutions, Inc., one of Central Ohio’s largest privately held IT consulting firms. He is credited with helping the company expand its reach into new markets and industries, leading strategic sales and overseeing the successful delivery of Quick Solutions’ largest implementations. Rick is passionate about serving the community and holds multiple leadership roles, including: chairman of the Operations Board of the Buckeye Ranch, founding committee member of the Bobby Rahal Foundation Rally for the Ranch, treasurer of TechServe Alliance (Ohio Chapter), and trustee of the Sandra Mariotti Pancreatic Cancer Fund. A devoted family man, Rick currently resides in Lewis Center, Ohio, with his wife, Lori, and sons, Kilar and Lucas.',
+			},
+			{
+				type: 'image',
+				job: 'Partner',
+				header: 'Tom Wood',
+				img: '/images/about/tom_wood.jpg',
+				body:
+					'Tom brings over 36 years of corporate and consulting experience to Fusion Alliance. He spent the last 19 years of his career partnered with Doug Brown working to build the firm into a recognized leader in the consulting industry. Currently, as a partner and president at Fusion, Tom works with Doug, new partners Rick Mariotti and Tom Campbell, and our executive management team to set strategic and tactical direction for the firm. In addition, Tom operationally oversees Fusion’s Indianapolis corporate office and the Cincinnati office. Tom has spent his career focused on working with customers to enable the successful planning and execution of core business objectives through the use of technology. Prior to Fusion, Tom held multiple executive leadership positions in sales/marketing, delivery and recruiting, while helping build two successful consulting firms in the Indiana marketplace. His experience also includes opening a branch office with a large national firm and building a consulting firm from the ground up, in both cases opening new markets across the Midwest and surrounding regions. Tom is passionate about faith, family, Fusion and football. He works with a number of faith-based organizations in the community and serves as a board member of his church. Tom is married to his lovely wife, Sharon, and is blessed with three wonderful children, James, Katie and John. He resides in Carmel, Indiana, where he actively participates in the Carmel Dad’s Club. Tom has served as head coach for the Carmel PUPS travel football team for over 10 years.',
+			},
+		],
+	},
 }
