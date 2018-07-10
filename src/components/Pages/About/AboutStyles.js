@@ -3,19 +3,33 @@ import styled from 'styled-components'
 import theme from '../../../styles/theme'
 
 export const AboutUsWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
 	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
 			padding: 0 10%;
 		}
 	}
+
+	@media screen and (min-width: ${theme.responsive.medium}) {
+		& {
+			flex-flow: row wrap;
+		}
+	}
 `
 
 export const SectionWrapper = styled.section`
-	margin-top: 3rem;
+	margin-top: 2rem;
 	color: ${theme.colors.grey};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media screen and (min-width: ${theme.responsive.medium}) {
+		& {
+			flex: 1 0 50%;
+			padding: 0 1rem 1rem 1rem;
+		}
+	}
 `
 
 export const SectionMain = styled.div`
@@ -29,30 +43,27 @@ export const SectionMain = styled.div`
 `
 
 export const SectionImg = styled.img`
-	width: 140px;
-	height: 140px;
-	border-radius: 140px;
-	margin: 0 1rem 1rem 1rem;
-	@media screen and (max-width: ${theme.responsive.medium}) {
-		& {
-			width: 96px;
-			height: 96px;
-			border-radius: 96px;
-			margin-top: 0;
-		}
-	}
+	width: 96px;
+	height: 96px;
+	border-radius: 96px;
+	margin: 1rem;
 `
 
 export const SectionBody = styled.p`
 	line-height: 1.25rem;
-	text-align: justify;
 `
 
 export const SectionHeader = styled.div`
-	font-size: 1rem;
+	width: 100%;
 	display: flex;
+	font-size: 1rem;
 	flex-direction: column;
-	align-self: flex-start;
+	justify-content: space-between;
+	@media screen and (max-width: ${theme.responsive.small}) {
+		& {
+			flex-direction: row;
+		}
+	}
 `
 
 export const SectionHeading = styled.h1`
@@ -69,11 +80,13 @@ export const SectionSubHeading = styled.span`
 export const Section = (id, type, header, body, job, img) => (
 	<SectionWrapper key={id.toString()}>
 		<SectionHeader>
-			<SectionHeading>{header}</SectionHeading>
-			{type === 'image' ? <SectionSubHeading>{job}</SectionSubHeading> : ''}
+			<div>
+				<SectionHeading>{header}</SectionHeading>
+				{type === 'image' ? <SectionSubHeading>{job}</SectionSubHeading> : ''}
+			</div>
+			{type === 'image' ? <SectionImg src={img} alt={header} /> : ''}
 		</SectionHeader>
 		<SectionMain>
-			{type === 'image' ? <SectionImg src={img} alt={header} /> : ''}
 			<SectionBody>{body}</SectionBody>
 		</SectionMain>
 	</SectionWrapper>
