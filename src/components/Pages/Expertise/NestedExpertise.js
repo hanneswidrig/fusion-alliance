@@ -110,7 +110,7 @@ const SubView = ({ match }) => {
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
-			<PageNavigation>
+			<PageNavigation vertical>
 				{NavigationEntries(match, [
 					{ name: 'latest articles', route: '' },
 					{ name: 'insights', route: 'insights' },

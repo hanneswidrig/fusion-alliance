@@ -34,7 +34,7 @@ export const NavigationContainer = styled.div`
 	display: flex;
 	@media screen and (max-width: ${theme.responsive.small}) {
 		& {
-			flex-direction: column;
+			flex-direction: ${props => (props.vertical ? 'column' : 'row')};
 		}
 	}
 `
@@ -44,7 +44,7 @@ export const PageNavigation = props => {
 }
 
 export const StyledLink = styled(NavLink)`
-	flex: 1 0 25%;
+	flex: 1 0 ${props => (props.count ? props.count : 100)}%;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 500;
@@ -57,7 +57,6 @@ export const StyledLink = styled(NavLink)`
 	}
 	@media screen and (max-width: ${theme.responsive.small}) {
 		& {
-			flex: 1 0 100%;
 			padding: 16px 4px;
 		}
 	}
@@ -65,12 +64,14 @@ export const StyledLink = styled(NavLink)`
 
 export function NavigationEntries(match, navItems) {
 	const nav = []
+	const countOfNavItems = (1 / navItems.length) * 100
 	const indexNavigationEntry = navItems.shift()
 	nav.push(
 		<StyledLink
 			exact
 			key="index"
 			to={`${match.url}`}
+			count={countOfNavItems}
 			activeStyle={{
 				borderBottomColor: theme.colors.blue.primary,
 				color: theme.colors.grey,
@@ -84,6 +85,7 @@ export function NavigationEntries(match, navItems) {
 			<StyledLink
 				key={index.toString()}
 				to={`${match.url}/${entry.route}`}
+				count={countOfNavItems}
 				activeStyle={{
 					borderBottomColor: theme.colors.blue.primary,
 					color: theme.colors.grey,
