@@ -18,11 +18,18 @@ export const Container = styled.div`
 	}
 `
 
+export const BlockContainer = Container.extend`
+	flex-flow: row wrap;
+`
+
 export const Wrapper = styled.section`
-	margin-top: 2rem;
-	color: ${theme.colors.grey};
 	display: flex;
 	flex-direction: column;
+	margin-top: 2rem;
+`
+
+export const SectionWrapper = Wrapper.extend`
+	color: ${theme.colors.grey};
 	align-items: center;
 	@media screen and (min-width: ${theme.responsive.medium}) {
 		& {
@@ -33,18 +40,18 @@ export const Wrapper = styled.section`
 `
 
 export const BlockWrapper = Wrapper.extend`
-	width: 33.3%;
 	flex: 1 0 33.3%;
-	@media screen and (min-width: ${theme.responsive.medium}) {
+	max-width: 33.3%;
+	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
-			width: 50%;
 			flex: 1 0 50%;
+			max-width: 50%;
 		}
 	}
-	@media screen and (min-width: ${theme.responsive.small}) {
+	@media screen and (max-width: ${theme.responsive.small}) {
 		& {
-			width: 100%;
-			flex: 1 0 100;
+			flex: 1 0 100%;
+			max-width: 100%;
 		}
 	}
 `
@@ -57,6 +64,12 @@ export const SectionMain = styled.div`
 			flex-direction: column;
 		}
 	}
+`
+
+export const BlockMain = styled.div`
+	flex-direction: column;
+	margin: auto;
+	width: 75%;
 `
 
 export const SectionImg = styled.img`
@@ -86,6 +99,10 @@ export const Header = styled.div`
 	}
 `
 
+export const BlockHeader = styled.div`
+	text-align: center;
+`
+
 export const Heading = styled.h1`
 	font-size: 1.75rem;
 	font-weight: 500;
@@ -98,7 +115,7 @@ export const SubHeading = styled.span`
 `
 
 export const Section = (id, type, header, body, job, img) => (
-	<Wrapper key={id.toString()}>
+	<SectionWrapper key={id.toString()}>
 		<Header>
 			<div>
 				<Heading>{header}</Heading>
@@ -109,14 +126,16 @@ export const Section = (id, type, header, body, job, img) => (
 		<SectionMain>
 			<SectionBody>{body}</SectionBody>
 		</SectionMain>
-	</Wrapper>
+	</SectionWrapper>
 )
 
 export const Block = (id, header, img) => (
 	<BlockWrapper key={id.toString()}>
-		<Header>
+		<BlockHeader>
 			<Heading>{header}</Heading>
-		</Header>
-		<BlockImg src={img} alt={header} />
+		</BlockHeader>
+		<BlockMain>
+			<BlockImg src={img} alt={header} />
+		</BlockMain>
 	</BlockWrapper>
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { PageNavigation, NavigationEntries } from '../PageStyles'
-import { Container, Section, Block } from './AboutStyles'
+import { Container, BlockContainer, Section, Block } from './AboutStyles'
 import { pages } from '../../../content'
 
 const AboutUs = () => {
@@ -23,11 +23,11 @@ const AboutUs = () => {
 
 const Partnership = () => {
 	return (
-		<Container>
+		<BlockContainer>
 			{pages.partnerships.map((block, id) =>
 				Block(id, block.header, block.img)
 			)}
-		</Container>
+		</BlockContainer>
 	)
 }
 
