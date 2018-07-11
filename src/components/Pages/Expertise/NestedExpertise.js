@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import styled from 'styled-components'
-import { NavigationEntries, PageNavigation } from '../PageStyles'
+import { PageNavigation } from '../PageStyles'
 import VerticalCard from '../../Card/VerticalCard'
 import { content, categories } from '../../../content'
 import theme from '../../../styles/theme'
@@ -110,14 +110,16 @@ const SubView = ({ match }) => {
 const NestedExpertise = ({ match }) => {
 	return (
 		<React.Fragment>
-			<PageNavigation vertical>
-				{NavigationEntries(match, [
+			<PageNavigation
+				vertical
+				match={match}
+				routes={[
 					{ name: 'latest articles', route: '' },
 					{ name: 'insights', route: 'insights' },
 					{ name: 'foundations', route: 'foundations' },
 					{ name: 'experiences', route: 'experiences' },
-				])}
-			</PageNavigation>
+				]}
+			/>
 			<Route exact path={match.url} component={SubView} />
 			<Route path={`${match.url}/:sectionName`} component={SubView} />
 		</React.Fragment>

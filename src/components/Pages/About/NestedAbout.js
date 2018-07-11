@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { PageNavigation, NavigationEntries } from '../PageStyles'
+import { PageNavigation } from '../PageStyles'
 import { Container, BlockContainer, Section, Block } from './AboutStyles'
 import { pages } from '../../../content'
 
@@ -34,12 +34,13 @@ const Partnership = () => {
 const NestedAbout = ({ match }) => {
 	return (
 		<React.Fragment>
-			<PageNavigation>
-				{NavigationEntries(match, [
+			<PageNavigation
+				match={match}
+				routes={[
 					{ name: 'about us', route: '' },
 					{ name: 'partnerships', route: 'partnerships' },
-				])}
-			</PageNavigation>
+				]}
+			/>
 			<Route exact path={match.url} component={AboutUs} />
 			<Route path={`${match.url}/:sectionName`} component={Partnership} />
 		</React.Fragment>

@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import theme from '../../styles/theme'
+import errorPage from '../../images/404.svg'
 
 /**
- * Page Container
+ * PageContainer
+ * - Wraps around main body of page. Ignoring Header / Footer.
+ *
  */
 export const PageContainer = styled.main`
 	width: 100%;
@@ -14,7 +17,9 @@ export const PageContainer = styled.main`
 `
 
 /**
- * Header Section
+ * PageHeader
+ * - Goes at the top of a page above content or navigation.
+ *
  */
 export const PageHeader = styled.h1`
 	color: ${theme.colors.grey};
@@ -23,44 +28,22 @@ export const PageHeader = styled.h1`
 	font-size: 2rem;
 	height: 96px;
 	margin-bottom: 1rem;
+	@media screen and (max-width: ${theme.responsive.medium}) {
+		& {
+			margin-top: 1rem;
+		}
+	}
 `
 
 /**
- * Page Navigation
+ * PageNavigation
+ * - Handles interal routing to page navigation
+ *
+ * Example:
+ * <PageNavigation match={match} routes={[{name: 'index', route:'',}]} />
+ *
  */
-export const NavigationContainer = styled.div`
-	display: flex;
-	@media screen and (max-width: ${theme.responsive.small}) {
-		& {
-			flex-direction: ${props => (props.vertical ? 'column' : 'row')};
-		}
-	}
-`
-
-export const PageNavigation = props => {
-	return <NavigationContainer {...props}>{props.children}</NavigationContainer>
-}
-
-export const StyledLink = styled(NavLink)`
-	flex: 1 0 ${props => (props.count ? props.count : 100)}%;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 500;
-	padding: 16px 0;
-	color: hsla(0, 0%, 50%, 1);
-	border-bottom: 3px solid transparent;
-	transition: 200ms ease-in-out;
-	&:hover {
-		border-bottom: 3px solid ${theme.colors.grey};
-	}
-	@media screen and (max-width: ${theme.responsive.small}) {
-		& {
-			padding: 16px 4px;
-		}
-	}
-`
-
-export function NavigationEntries(match, navItems) {
+function NavigationEntries(match, navItems) {
 	const nav = []
 	const countOfNavItems = (1 / navItems.length) * 100
 	const indexNavigationEntry = navItems.shift()
@@ -95,3 +78,79 @@ export function NavigationEntries(match, navItems) {
 	)
 	return nav
 }
+
+export const PageNavigation = props => {
+	return (
+		<NavigationContainer {...props}>
+			{NavigationEntries(props.match, props.routes)}
+		</NavigationContainer>
+	)
+}
+
+const NavigationContainer = styled.div`
+	display: flex;
+	@media screen and (max-width: ${theme.responsive.small}) {
+		& {
+			flex-direction: ${props => (props.vertical ? 'column' : 'row')};
+		}
+	}
+`
+
+const StyledLink = styled(NavLink)`
+	flex: 1 0 ${props => (props.count ? props.count : 100)}%;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 500;
+	padding: 16px 0;
+	color: hsla(0, 0%, 50%, 1);
+	border-bottom: 3px solid transparent;
+	transition: 200ms ease-in-out;
+	&:hover {
+		border-bottom: 3px solid ${theme.colors.grey};
+	}
+	@media screen and (max-width: ${theme.responsive.small}) {
+		& {
+			padding: 16px 4px;
+		}
+	}
+`
+
+/**
+ * Placeholder
+ * - Useful for empty pages that haven't been constructed yet or 404s
+ */
+export const Placeholder = () => {
+	return (
+		<PlaceholderWrapper>
+			<PlaceholderTitle>
+				The requested page has not been completed yet.
+			</PlaceholderTitle>
+			<PlaceholderImg src={errorPage} />
+		</PlaceholderWrapper>
+	)
+}
+
+const PlaceholderWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem;
+`
+
+const PlaceholderTitle = styled.div`
+	font-size: 2rem;
+	font-weight: 500;
+	color: ${theme.colors.grey};
+	@media screen and (max-width: ${theme.responsive.medium}) {
+		& {
+			font-size: 1.5rem;
+		}
+	}
+`
+
+const PlaceholderImg = styled.img`
+	width: 50%;
+	height: auto;
+	padding: 1rem;
+`
