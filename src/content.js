@@ -107,5 +107,49 @@ module.exports = {
 					'Tom brings over 36 years of corporate and consulting experience to Fusion Alliance. He spent the last 19 years of his career partnered with Doug Brown working to build the firm into a recognized leader in the consulting industry. Currently, as a partner and president at Fusion, Tom works with Doug, new partners Rick Mariotti and Tom Campbell, and our executive management team to set strategic and tactical direction for the firm. In addition, Tom operationally oversees Fusion’s Indianapolis corporate office and the Cincinnati office. Tom has spent his career focused on working with customers to enable the successful planning and execution of core business objectives through the use of technology. Prior to Fusion, Tom held multiple executive leadership positions in sales/marketing, delivery and recruiting, while helping build two successful consulting firms in the Indiana marketplace. His experience also includes opening a branch office with a large national firm and building a consulting firm from the ground up, in both cases opening new markets across the Midwest and surrounding regions. Tom is passionate about faith, family, Fusion and football. He works with a number of faith-based organizations in the community and serves as a board member of his church. Tom is married to his lovely wife, Sharon, and is blessed with three wonderful children, James, Katie and John. He resides in Carmel, Indiana, where he actively participates in the Carmel Dad’s Club. Tom has served as head coach for the Carmel PUPS travel football team for over 10 years.',
 			},
 		],
+		partnerships: [
+			{
+				header: 'Microsoft',
+				img: '/images/about/microsoft-partnership.jpg',
+				width: '300',
+				height: '150',
+			},
+			{
+				header: 'Tableau',
+				img: '/images/about/tableau-partnership.jpg',
+				width: '300',
+				height: '200',
+			},
+			{
+				header: 'Oracle',
+				img: '/images/about/oracle-partnership.jpg',
+				width: '300',
+				height: '150',
+			},
+			{
+				header: 'Cisco',
+				img: '/images/about/cisco-partnership.jpg',
+				width: '150',
+				height: '150',
+			},
+			{
+				header: 'Podium',
+				img: '/images/about/podium-data.jpg',
+				width: '970',
+				height: '404',
+			},
+			{
+				header: 'Ordercloud.io',
+				img: '/images/about/ordercloud.jpg',
+				width: '1042',
+				height: '175',
+			},
+			{
+				header: 'Alteryx',
+				img: '/images/about/alteryx-partner.jpg',
+				width: '884',
+				height: '288',
+			},
+		],
 	},
 }

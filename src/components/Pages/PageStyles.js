@@ -8,12 +8,9 @@ import theme from '../../styles/theme'
  */
 export const PageContainer = styled.main`
 	width: 100%;
-	padding: 5% 10%;
-	@media screen and (max-width: ${theme.responsive.medium}) {
-		& {
-			padding: 5% 0;
-		}
-	}
+	max-width: calc(${theme.sizes.maxWidth} + 5%);
+	margin: auto;
+	padding: 5% 0;
 `
 
 /**
