@@ -10,7 +10,7 @@ const match = {
 it(' successfully loads default route', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/about']}>
+		<MemoryRouter initialEntries={[match.url]}>
 			<NestedAbout match={match} />
 		</MemoryRouter>,
 		div
@@ -19,9 +19,10 @@ it(' successfully loads default route', () => {
 })
 
 it(' successfully loads partnerships page', () => {
+	const route = 'partnerships'
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/about/partnerships']}>
+		<MemoryRouter initialEntries={[`${match.url}/${route}`]}>
 			<NestedAbout match={match} />
 		</MemoryRouter>,
 		div

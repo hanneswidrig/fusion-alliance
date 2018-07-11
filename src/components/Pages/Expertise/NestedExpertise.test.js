@@ -10,7 +10,7 @@ const match = {
 it(' successfully loads default route', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/expertise']}>
+		<MemoryRouter initialEntries={[match.url]}>
 			<NestedExpertise match={match} />
 		</MemoryRouter>,
 		div
@@ -19,9 +19,10 @@ it(' successfully loads default route', () => {
 })
 
 it(' successfully loads insights filter', () => {
+	const route = 'insights'
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/expertise/insights']}>
+		<MemoryRouter initialEntries={[`${match.url}/${route}`]}>
 			<NestedExpertise match={match} />
 		</MemoryRouter>,
 		div
@@ -30,9 +31,10 @@ it(' successfully loads insights filter', () => {
 })
 
 it(' successfully loads foundations filter', () => {
+	const route = 'foundations'
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/expertise/foundations']}>
+		<MemoryRouter initialEntries={[`${match.url}/${route}`]}>
 			<NestedExpertise match={match} />
 		</MemoryRouter>,
 		div
@@ -41,9 +43,10 @@ it(' successfully loads foundations filter', () => {
 })
 
 it(' successfully loads experiences filter', () => {
+	const route = 'experiences'
 	const div = document.createElement('div')
 	ReactDOM.render(
-		<MemoryRouter initialEntries={['/expertise/experiences']}>
+		<MemoryRouter initialEntries={[`${match.url}/${route}`]}>
 			<NestedExpertise match={match} />
 		</MemoryRouter>,
 		div
