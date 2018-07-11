@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { PageContainer, PageHeader } from '../PageStyles'
+import { PageContainer } from '../PageStyles'
 import NestedContact from './NestedContact'
 
 const Contact = ({ match }) => {
