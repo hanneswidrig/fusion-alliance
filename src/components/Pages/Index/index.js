@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeroBanner from '../Hero/HeroBanner/HeroBanner'
-import VideoBanner from '../Hero/VideoBanner/VideoBanner'
-import Card from '../Card/Card'
-import MainContainer from '../Layouts/Container/MainContainer/MainContainer'
-import ContextContainer from '../Layouts/Container/ContextContainer/ContextContainer'
-import MCC from '../Layouts/Container/MainCardContainer/MainCardContainer'
-import MBC from '../Layouts/Container/MainButtonContainer/MainButtonContainer'
-import theme from '../../styles/theme'
-import { categories, buttonText, descriptions, content } from '../../content'
+import HeroBanner from '../../Hero/HeroBanner/HeroBanner'
+import VideoBanner from '../../Hero/VideoBanner/VideoBanner'
+import Card from '../../Card/Card'
+import MainContainer from '../../Layouts/Container/MainContainer/MainContainer'
+import ContextContainer from '../../Layouts/Container/ContextContainer/ContextContainer'
+import MCC from '../../Layouts/Container/MainCardContainer/MainCardContainer'
+import MBC from '../../Layouts/Container/MainButtonContainer/MainButtonContainer'
+import theme from '../../../styles/theme'
+import { categories, buttonText, descriptions, content } from '../../../content'
 
 const Container = styled.div`
 	display: flex;
