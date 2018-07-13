@@ -3,6 +3,14 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import theme from '../../styles/theme'
 
+/**
+ * Component: Button
+ * Props:
+ * - to: Route that is followed when button is clicked.
+ * - themecolor: Color of button and text color before hover
+ * - textcolor: Color of text when hover or focus is triggered.
+ * - margin: Apply side margins to Button.
+ */
 const StyledButton = styled(Link)`
 	color: ${props => props.themecolor};
 	background-color: transparent;
@@ -16,7 +24,8 @@ const StyledButton = styled(Link)`
 	padding: 10px 40px 10px 40px;
 	transition: 100ms ease-in-out;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		transform: scale(1.1);
 		color: ${props => props.textcolor};
 		background-color: ${props => props.themecolor};
