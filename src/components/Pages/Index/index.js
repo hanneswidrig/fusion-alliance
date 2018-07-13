@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroBanner from '../../Hero/HeroBanner/HeroBanner'
 import VideoBanner from '../../Hero/VideoBanner/VideoBanner'
-import { IndexSectionContent, FeatureContainer } from './IndexStyles'
+import { FeatureContainer } from './IndexStyles'
 import { content } from '../../../content'
 
 const Main = props => {
@@ -9,7 +9,7 @@ const Main = props => {
 		<main>
 			<HeroBanner {...props} />
 			<VideoBanner />
-			<FeatureContainer content={IndexSectionContent(content)} />
+			<FeatureContainer content={content} />
 		</main>
 	)
 }

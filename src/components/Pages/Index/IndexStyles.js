@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from '../../Card/Card'
-import Button from '../../Button/Button'
-import ContextContainer from '../../Layouts/ContextContainer/ContextContainer'
-import { categories, buttonText, descriptions } from '../../../content'
+import { buttonText, categories, descriptions } from '../../../content'
 import theme from '../../../styles/theme'
+import Button from '../../Button/Button'
+import Card from '../../Card/Card'
+import ContextContainer from '../../Layouts/ContextContainer/ContextContainer'
 
 /**
  * IndexFeatureContainer
@@ -80,7 +80,7 @@ const Wrapper = styled.div`
  * 	experiences: Experiences,
  * }
  */
-export function IndexSectionContent(content) {
+function IndexSectionContent(content) {
 	const Insights = content
 		.filter(entry => entry.category === 0)
 		.map((entry, index) => (
@@ -132,8 +132,12 @@ export function IndexSectionContent(content) {
 
 /**
  * FeatureContainer
+ * - Wrapper around Feature sections on Index page
+ * Required Props:
+ * content = {content}
  */
 export const FeatureContainer = props => {
+	const content = IndexSectionContent(props.content)
 	return (
 		<React.Fragment>
 			{categories.map((feature, index) => (
@@ -145,7 +149,7 @@ export const FeatureContainer = props => {
 						{feature.name === 'foundations' ? (
 							<React.Fragment>
 								<ExpertiseContainer>
-									<CardContainer>{props.content[feature.name]}</CardContainer>
+									<CardContainer>{content[feature.name]}</CardContainer>
 									<Button
 										to={`/expertise/${categories[index].name}`}
 										themecolor={theme.colors.grey}
@@ -168,7 +172,7 @@ export const FeatureContainer = props => {
 									body={descriptions[index]}
 								/>
 								<ExpertiseContainer extrapadding>
-									<CardContainer>{props.content[feature.name]}</CardContainer>
+									<CardContainer>{content[feature.name]}</CardContainer>
 									<Button
 										to={`/expertise/${categories[index].name}`}
 										themecolor={theme.colors.grey}
@@ -184,4 +188,8 @@ export const FeatureContainer = props => {
 			))}
 		</React.Fragment>
 	)
+}
+
+FeatureContainer.defaultProps = {
+	content: [],
 }
