@@ -6,6 +6,7 @@ import theme from '../../styles/theme'
 const StyledButton = styled(Link)`
 	color: ${props => props.themecolor};
 	background-color: transparent;
+	margin: ${props => `0 ${props.margin}px`};
 	text-align: center;
 	border: solid 2px ${props => props.themecolor};
 	border-radius: 4px;
@@ -28,6 +29,7 @@ Button.defaultProps = {
 	to: '#',
 	themecolor: theme.colors.blue.primary,
 	textcolor: theme.colors.white,
+	margin: 0,
 }
 
 export default Button
