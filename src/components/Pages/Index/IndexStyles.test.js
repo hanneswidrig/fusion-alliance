@@ -1,17 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { MemoryRouter } from 'react-router-dom'
-import NestedContact from './NestedContact'
+import { ContextContainer } from './IndexStyles'
 
 const match = {
-	url: '/contact',
+	url: '/',
 }
 
-it(' successfully loads default route', () => {
+const props = {
+	title: '',
+	body: '',
+}
+
+it(' successfully loads ContextContainer without sectionName', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<MemoryRouter initialEntries={[match.url]}>
-			<NestedContact match={match} />
+			<ContextContainer {...props} />
 		</MemoryRouter>,
 		div
 	)

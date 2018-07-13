@@ -42,15 +42,6 @@ module.exports = {
 		large: '70em',
 	},
 	fonts: {
-		netto: 'netto-web, sans-serif',
-		metaWeb: 'meta-web, sans-serif',
 		renner: 'Renner, sans-serif',
-	},
-	fontSize: {
-		h1: '3rem',
-		h2: '2.5rem',
-		h3: '2rem',
-		button: '1.25rem',
-		description: '1rem',
 	},
 }

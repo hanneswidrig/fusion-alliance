@@ -97,7 +97,7 @@ const NavigationContainer = styled.div`
 `
 
 const StyledLink = styled(NavLink)`
-	flex: 1 0 ${props => (props.count ? props.count : 100)}%;
+	flex: 1 0 ${props => props.count}%;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 500;

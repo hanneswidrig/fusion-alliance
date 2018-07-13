@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import theme from '../../../styles/theme'
 
 const VideoSection = styled.section`
 	display: flex;
@@ -11,13 +12,13 @@ const VideoSection = styled.section`
 `
 
 const Header = styled.h1`
-	color: ${props => props.colors.grey};
+	color: ${theme.colors.grey};
 	font-weight: 600;
 	font-size: calc(16px + 1.5vw);
 	margin-bottom: 20px;
 	text-align: center;
 
-	@media screen and (max-width: ${props => props.responsive.small}) {
+	@media screen and (max-width: ${theme.responsive.small}) {
 		& {
 			margin-top: 20px;
 		}
@@ -27,8 +28,8 @@ const Header = styled.h1`
 const VideoContainer = styled.div`
 	width: 80%;
 	margin-bottom: 80px;
-	max-width: ${props => props.sizes.maxWidth};
-	@media screen and (max-width: ${props => props.responsive.small}) {
+	max-width: ${theme.sizes.maxWidth};
+	@media screen and (max-width: ${theme.responsive.small}) {
 		& {
 			margin-bottom: 20px;
 		}

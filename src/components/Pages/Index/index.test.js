@@ -1,14 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import MainCardContainer from './MainCardContainer'
-import theme from '../../../../styles/theme'
+import { ThemeProvider } from 'styled-components'
+import Main from './index'
+import theme from '../../../styles/theme'
 
-it(' successfully loads MainCardContainer', () => {
+it(' successfully loads Main', () => {
 	const div = document.createElement('div')
 	ReactDOM.render(
 		<BrowserRouter>
-			<MainCardContainer {...theme} />
+			<ThemeProvider theme={theme}>
+				<Main />
+			</ThemeProvider>
 		</BrowserRouter>,
 		div
 	)

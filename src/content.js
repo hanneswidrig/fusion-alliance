@@ -1,5 +1,9 @@
 module.exports = {
-	categories: ['insights', 'foundations', 'experiences'],
+	categories: [
+		{ name: 'insights', themecolor: 'orange' },
+		{ name: 'foundations', themecolor: 'green' },
+		{ name: 'experiences', themecolor: 'purple' },
+	],
 	buttonText: [
 		'view more insights',
 		'view more foundations',
