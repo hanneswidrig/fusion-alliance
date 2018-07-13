@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import insightsSVG from '../../../../images/insights.svg'
-import foundationsSVG from '../../../../images/foundations.svg'
-import experiencesSVG from '../../../../images/experiences.svg'
+import insightsSVG from '../../../images/insights.svg'
+import foundationsSVG from '../../../images/foundations.svg'
+import experiencesSVG from '../../../images/experiences.svg'
 
 const ContextWrapper = styled.div`
 	display: flex;

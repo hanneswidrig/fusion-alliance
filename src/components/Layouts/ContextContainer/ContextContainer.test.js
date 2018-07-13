@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import ContextContainer from './ContextContainer'
-import theme from '../../../../styles/theme'
+import theme from '../../../styles/theme'
 
 const props = {
 	title: 'Insights',

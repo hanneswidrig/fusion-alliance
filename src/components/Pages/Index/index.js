@@ -1,96 +1,26 @@
 import React from 'react'
-import styled from 'styled-components'
 import HeroBanner from '../../Hero/HeroBanner/HeroBanner'
 import VideoBanner from '../../Hero/VideoBanner/VideoBanner'
-import Card from '../../Card/Card'
-import MainContainer from '../../Layouts/Container/MainContainer/MainContainer'
-import ContextContainer from '../../Layouts/Container/ContextContainer/ContextContainer'
-import MCC from '../../Layouts/Container/MainCardContainer/MainCardContainer'
+import ContextContainer from '../../Layouts/ContextContainer/ContextContainer'
+import {
+	IndexFeatureContainer,
+	InnerContainer,
+	ExpertiseContainer,
+	CardContainer,
+	IndexSectionContent,
+} from './IndexStyles'
 import Button from '../../Button/Button'
 import theme from '../../../styles/theme'
-import { categories, buttonText, descriptions, content } from '../../../content'
-
-const Container = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	max-width: 1440px;
-	height: 540px;
-	margin: 0 auto;
-	padding: 40px 0;
-	@media screen and (max-width: ${theme.responsive.medium}) {
-		& {
-			flex-direction: ${props => (props.reverse ? 'column-reverse' : 'column')};
-			height: auto;
-			align-items: center;
-		}
-	}
-`
-
-const ExpertiseContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding-right: ${props => (props.extrapadding ? '16px' : '0')};
-	width: 50%;
-	@media screen and (max-width: ${theme.responsive.medium}) {
-		& {
-			width: 100%;
-			padding-right: 0;
-			max-width: calc(${props => props.sizes.maxWidth} / 2);
-		}
-	}
-`
+import { categories, buttonText, descriptions } from '../../../content'
 
 const Main = props => {
-	const Insights = content
-		.filter(entry => entry.category === 0)
-		.map((entry, index) => (
-			<Card
-				{...theme}
-				title={entry.title}
-				date={entry.date}
-				body={entry.body}
-				image={entry.image}
-				backgroundcolor={theme.colors.orange.light}
-				iconcolor={theme.colors.orange.dark}
-				key={index.toString()}
-			/>
-		))
-	const Foundations = content
-		.filter(entry => entry.category === 1)
-		.map((entry, index) => (
-			<Card
-				{...theme}
-				title={entry.title}
-				date={entry.date}
-				body={entry.body}
-				image={entry.image}
-				backgroundcolor={theme.colors.green.light}
-				iconcolor={theme.colors.green.dark}
-				key={index.toString()}
-			/>
-		))
-	const Experiences = content
-		.filter(entry => entry.category === 2)
-		.map((entry, index) => (
-			<Card
-				{...theme}
-				title={entry.title}
-				date={entry.date}
-				body={entry.body}
-				image={entry.image}
-				backgroundcolor={theme.colors.purple.light}
-				iconcolor={theme.colors.purple.dark}
-				key={index.toString()}
-			/>
-		))
+	const content = IndexSectionContent()
 	return (
 		<main>
 			<HeroBanner {...props} />
-			<VideoBanner {...theme} />
-			<MainContainer backgroundcolor={theme.colors.orange.light}>
-				<Container>
+			<VideoBanner />
+			<IndexFeatureContainer backgroundcolor={theme.colors.orange.light}>
+				<InnerContainer>
 					<ContextContainer
 						{...theme}
 						section={categories[0]}
@@ -98,7 +28,7 @@ const Main = props => {
 						body={descriptions[0]}
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
-						<MCC {...theme}>{Insights}</MCC>
+						<CardContainer {...theme}>{content.insights}</CardContainer>
 						<Button
 							to={`/expertise/${categories[0]}`}
 							themecolor={theme.colors.grey}
@@ -107,12 +37,12 @@ const Main = props => {
 							{buttonText[0].toUpperCase()}
 						</Button>
 					</ExpertiseContainer>
-				</Container>
-			</MainContainer>
-			<MainContainer backgroundcolor={theme.colors.green.light}>
-				<Container reverse>
+				</InnerContainer>
+			</IndexFeatureContainer>
+			<IndexFeatureContainer backgroundcolor={theme.colors.green.light}>
+				<InnerContainer reverse="true">
 					<ExpertiseContainer {...theme}>
-						<MCC {...theme}>{Foundations}</MCC>
+						<CardContainer {...theme}>{content.foundations}</CardContainer>
 						<Button
 							to={`/expertise/${categories[1]}`}
 							themecolor={theme.colors.grey}
@@ -127,10 +57,10 @@ const Main = props => {
 						title={categories[1]}
 						body={descriptions[1]}
 					/>
-				</Container>
-			</MainContainer>
-			<MainContainer backgroundcolor={theme.colors.purple.light}>
-				<Container>
+				</InnerContainer>
+			</IndexFeatureContainer>
+			<IndexFeatureContainer backgroundcolor={theme.colors.purple.light}>
+				<InnerContainer>
 					<ContextContainer
 						{...theme}
 						section={categories[2]}
@@ -138,7 +68,7 @@ const Main = props => {
 						body={descriptions[2]}
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
-						<MCC {...theme}>{Experiences}</MCC>
+						<CardContainer {...theme}>{content.experiences}</CardContainer>
 						<Button
 							to={`/expertise/${categories[2]}`}
 							themecolor={theme.colors.grey}
@@ -147,8 +77,8 @@ const Main = props => {
 							{buttonText[2].toUpperCase()}
 						</Button>
 					</ExpertiseContainer>
-				</Container>
-			</MainContainer>
+				</InnerContainer>
+			</IndexFeatureContainer>
 		</main>
 	)
 }
