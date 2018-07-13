@@ -38,7 +38,7 @@ const SubView = ({ match }) => {
 				title={entry.title}
 				date={entry.date}
 				body={entry.body}
-				category={categories[entry.category]}
+				category={categories[entry.category].name}
 				categoryid={entry.category}
 				image={entry.image}
 				backgroundcolor={theme.colors.orange.light}

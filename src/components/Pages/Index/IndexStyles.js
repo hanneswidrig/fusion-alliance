@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../../../styles/theme'
-import { content } from '../../../content'
 import Card from '../../Card/Card'
+import Button from '../../Button/Button'
+import ContextContainer from '../../Layouts/ContextContainer/ContextContainer'
+import { categories, buttonText, descriptions } from '../../../content'
+import theme from '../../../styles/theme'
 
 /**
  * IndexFeatureContainer
@@ -49,7 +51,7 @@ export const ExpertiseContainer = styled.div`
 		& {
 			width: 100%;
 			padding-right: 0;
-			max-width: calc(${props => props.sizes.maxWidth} / 2);
+			max-width: calc(${theme.sizes.maxWidth} / 2);
 		}
 	}
 `
@@ -78,7 +80,7 @@ const Wrapper = styled.div`
  * 	experiences: Experiences,
  * }
  */
-export function IndexSectionContent() {
+export function IndexSectionContent(content) {
 	const Insights = content
 		.filter(entry => entry.category === 0)
 		.map((entry, index) => (
@@ -126,4 +128,60 @@ export function IndexSectionContent() {
 		foundations: Foundations,
 		experiences: Experiences,
 	}
+}
+
+/**
+ * FeatureContainer
+ */
+export const FeatureContainer = props => {
+	return (
+		<React.Fragment>
+			{categories.map((feature, index) => (
+				<IndexFeatureContainer
+					backgroundcolor={theme.colors[feature.themecolor].light}
+					key={index.toString()}
+				>
+					<InnerContainer reverse={feature.name === 'foundations'}>
+						{feature.name === 'foundations' ? (
+							<React.Fragment>
+								<ExpertiseContainer>
+									<CardContainer>{props.content[feature.name]}</CardContainer>
+									<Button
+										to={`/expertise/${categories[index].name}`}
+										themecolor={theme.colors.grey}
+										textcolor={theme.colors.white}
+									>
+										{buttonText[index].toUpperCase()}
+									</Button>
+								</ExpertiseContainer>
+								<ContextContainer
+									section={categories[index].name}
+									title={categories[index].name}
+									body={descriptions[index]}
+								/>
+							</React.Fragment>
+						) : (
+							<React.Fragment>
+								<ContextContainer
+									section={categories[index].name}
+									title={categories[index].name}
+									body={descriptions[index]}
+								/>
+								<ExpertiseContainer extrapadding>
+									<CardContainer>{props.content[feature.name]}</CardContainer>
+									<Button
+										to={`/expertise/${categories[index].name}`}
+										themecolor={theme.colors.grey}
+										textcolor={theme.colors.white}
+									>
+										{buttonText[index].toUpperCase()}
+									</Button>
+								</ExpertiseContainer>
+							</React.Fragment>
+						)}
+					</InnerContainer>
+				</IndexFeatureContainer>
+			))}
+		</React.Fragment>
+	)
 }

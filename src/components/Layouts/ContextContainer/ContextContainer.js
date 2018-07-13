@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import insightsSVG from '../../../images/insights.svg'
 import foundationsSVG from '../../../images/foundations.svg'
 import experiencesSVG from '../../../images/experiences.svg'
+import theme from '../../../styles/theme'
 
 const ContextWrapper = styled.div`
 	display: flex;
 	width: 50%;
-	color: ${props => props.colors.grey};
-	max-width: calc(${props => props.sizes.maxWidth} / 2);
-	@media screen and (max-width: ${props => props.responsive.medium}) {
+	color: ${theme.colors.grey};
+	max-width: calc(${theme.sizes.maxWidth} / 2);
+	@media screen and (max-width: ${theme.responsive.medium}) {
 		& {
 			width: 100%;
 			padding-bottom: 20px;
@@ -39,7 +40,7 @@ const InsightsSVG = styled.img`
 
 const Insights = InnerContextWrapper.extend`
 	z-index: 1;
-	color: ${props => props.colors.grey};
+	color: ${theme.colors.grey};
 	width: 60%;
 	margin-right: 20px;
 `
