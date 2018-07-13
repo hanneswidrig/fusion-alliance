@@ -6,7 +6,7 @@ import Card from '../../Card/Card'
 import MainContainer from '../../Layouts/Container/MainContainer/MainContainer'
 import ContextContainer from '../../Layouts/Container/ContextContainer/ContextContainer'
 import MCC from '../../Layouts/Container/MainCardContainer/MainCardContainer'
-import MBC from '../../Layouts/Container/MainButtonContainer/MainButtonContainer'
+import Button from '../../Button/Button'
 import theme from '../../../styles/theme'
 import { categories, buttonText, descriptions, content } from '../../../content'
 
@@ -99,7 +99,13 @@ const Main = props => {
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Insights}</MCC>
-						<MBC {...theme} text={buttonText[0]} route={categories[0]} />
+						<Button
+							to={`/expertise/${categories[0]}`}
+							themecolor={theme.colors.grey}
+							textcolor={theme.colors.white}
+						>
+							{buttonText[0].toUpperCase()}
+						</Button>
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
@@ -107,7 +113,13 @@ const Main = props => {
 				<Container reverse>
 					<ExpertiseContainer {...theme}>
 						<MCC {...theme}>{Foundations}</MCC>
-						<MBC {...theme} text={buttonText[1]} route={categories[1]} />
+						<Button
+							to={`/expertise/${categories[1]}`}
+							themecolor={theme.colors.grey}
+							textcolor={theme.colors.white}
+						>
+							{buttonText[1].toUpperCase()}
+						</Button>
 					</ExpertiseContainer>
 					<ContextContainer
 						{...theme}
@@ -127,7 +139,13 @@ const Main = props => {
 					/>
 					<ExpertiseContainer {...theme} extrapadding>
 						<MCC {...theme}>{Experiences}</MCC>
-						<MBC {...theme} text={buttonText[2]} route={categories[2]} />
+						<Button
+							to={`/expertise/${categories[2]}`}
+							themecolor={theme.colors.grey}
+							textcolor={theme.colors.white}
+						>
+							{buttonText[2].toUpperCase()}
+						</Button>
 					</ExpertiseContainer>
 				</Container>
 			</MainContainer>
