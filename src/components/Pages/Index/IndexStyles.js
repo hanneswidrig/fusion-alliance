@@ -34,6 +34,7 @@ export const InnerContainer = styled.div`
 		}
 	}
 `
+
 /**
  * ExpertiseContainer
  * - Wraps around description of expertise
