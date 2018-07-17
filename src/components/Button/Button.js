@@ -14,7 +14,10 @@ import theme from '../../styles/theme'
 const StyledButton = styled(Link)`
 	color: ${props => props.themecolor};
 	background-color: transparent;
-	margin: ${props => `0 ${props.margin}px`};
+	margin-top: ${props => props.margin.top};
+	margin-right: ${props => props.margin.right};
+	margin-bottom: ${props => props.margin.bottom};
+	margin-left: ${props => props.margin.left};
 	text-align: center;
 	border: solid 2px ${props => props.themecolor};
 	border-radius: 4px;
@@ -24,11 +27,10 @@ const StyledButton = styled(Link)`
 	padding: 10px 40px 10px 40px;
 	transition: 100ms ease-in-out;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		transform: scale(1.1);
-		color: ${props => props.textcolor};
 		background-color: ${props => props.themecolor};
+		color: ${props => props.textcolor};
 	}
 `
 
@@ -38,7 +40,7 @@ Button.defaultProps = {
 	to: '#',
 	themecolor: theme.colors.blue.primary,
 	textcolor: theme.colors.white,
-	margin: 0,
+	margin: { top: '0', right: '0', bottom: '0', left: '0' },
 }
 
 export default Button

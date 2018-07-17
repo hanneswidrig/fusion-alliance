@@ -56,6 +56,8 @@ const SubView = ({ match }) => {
 					title={entry.title}
 					date={entry.date}
 					body={entry.body}
+					category={categories[entry.category].name}
+					categoryid={entry.category}
 					image={entry.image}
 					backgroundcolor={theme.colors.orange.light}
 					iconcolor={theme.colors.orange.dark}
@@ -72,6 +74,8 @@ const SubView = ({ match }) => {
 					title={entry.title}
 					date={entry.date}
 					body={entry.body}
+					category={categories[entry.category].name}
+					categoryid={entry.category}
 					image={entry.image}
 					backgroundcolor={theme.colors.green.light}
 					iconcolor={theme.colors.green.dark}
@@ -88,6 +92,8 @@ const SubView = ({ match }) => {
 					title={entry.title}
 					date={entry.date}
 					body={entry.body}
+					category={categories[entry.category].name}
+					categoryid={entry.category}
 					image={entry.image}
 					backgroundcolor={theme.colors.purple.light}
 					iconcolor={theme.colors.purple.dark}

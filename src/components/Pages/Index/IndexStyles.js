@@ -156,7 +156,7 @@ export const FeatureContainer = props => {
 										to={`/expertise/${categories[index].name}`}
 										themecolor={theme.colors.grey}
 										textcolor={theme.colors.white}
-										margin="16"
+										margin={{ left: '16px', right: '16px' }}
 									>
 										{buttonText[index].toUpperCase()}
 									</Button>
@@ -180,7 +180,7 @@ export const FeatureContainer = props => {
 										to={`/expertise/${categories[index].name}`}
 										themecolor={theme.colors.grey}
 										textcolor={theme.colors.white}
-										margin="16"
+										margin={{ left: '16px', right: '16px' }}
 									>
 										{buttonText[index].toUpperCase()}
 									</Button>

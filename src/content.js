@@ -155,5 +155,39 @@ module.exports = {
 				height: '288',
 			},
 		],
+		products: [
+			{
+				header: 'Fusion',
+				headerhighlight: 'Acuity',
+				img: '/images/orangeicon.svg',
+				description:
+					'Fusion Acuity puts you in command of all the variables and settlements in your contracts so you can manage your demand chain seamlessly and more profitably',
+				themecolor: 'orange',
+			},
+			{
+				header: 'Fusion',
+				headerhighlight: 'ComTrac',
+				img: '/images/pinkicon.svg',
+				description:
+					'We give you clear snapshots of your entire supply chain system, allowing you to dial in your company processes, model alternatives and get in front of your operations.',
+				themecolor: 'pink',
+			},
+			{
+				header: 'Fusion',
+				headerhighlight: 'MAP',
+				img: '/images/purpleicon.svg',
+				description:
+					'We utilize Tableau to generate personalized digital marketing reports that help you make sense of the raw the numbers and provide you concrete strategies to ge the most out of your digital marketing efforts.',
+				themecolor: 'purple',
+			},
+			{
+				header: 'Fusion',
+				headerhighlight: 'Innovation',
+				img: '/images/greenicon.svg',
+				description:
+					'Our innovation space provides a unique environment that promotes hands-on problem solving through various creative practices designed to be thrilling. Solving tomorrow’s problems requires forethought.',
+				themecolor: 'green',
+			},
+		],
 	},
 }
