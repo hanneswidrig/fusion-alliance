@@ -1,21 +1,27 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import { PageNavigation, Placeholder } from '../PageStyles'
+import { InfoCard, OverviewWrapper } from './ProductsStyles'
+import { pages } from '../../../content'
+
+const Overview = () => (
+	<OverviewWrapper>
+		{pages.products.map((product, index) => (
+			<InfoCard
+				key={index.toString()}
+				header={product.header}
+				headerhighlight={product.headerhighlight}
+				img={product.img}
+				description={product.description}
+				themecolor={product.themecolor}
+			/>
+		))}
+	</OverviewWrapper>
+)
 
 const NestedProducts = ({ match }) => {
 	return (
 		<React.Fragment>
-			<PageNavigation
-				match={match}
-				routes={[
-					{ name: 'overview', route: '' },
-					{ name: 'acuity', route: 'acuity' },
-					{ name: 'comtrac', route: 'comtrac' },
-					{ name: 'map', route: 'map' },
-				]}
-			/>
-			<Route exact path={match.url} component={Placeholder} />
-			<Route exact path={`${match.url}/:sectionName`} component={Placeholder} />
+			<Route exact path={match.url} component={Overview} />
 		</React.Fragment>
 	)
 }

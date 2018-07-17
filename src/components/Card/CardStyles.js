@@ -25,6 +25,7 @@ export const Icon = styled(MdArrowForward)`
 `
 
 export const CardTag = styled.div`
+	display: block;
 	z-index: 1;
 	position: absolute;
 	top: 0;
@@ -69,7 +70,7 @@ export const CardTitle = styled.div`
 
 export const CardBody = styled.div`
 	margin: 12px 16px 16px 16px;
-	line-height: 1.25em;
+	line-height: 1.25rem;
 `
 
 export function tagTheme(categoryid) {

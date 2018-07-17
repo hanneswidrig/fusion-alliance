@@ -9,13 +9,13 @@ module.exports = {
 			dark: 'hsla(214, 84%, 22%, 1)',
 		},
 		orange: {
-			primary: 'hsla(14, 100%, 63%, 1)',
+			primary: 'hsla(4, 90%, 58%, 1)',
 			active: 'hsla(14, 100%, 48%, 1)',
 			light: 'hsla(6, 71%, 95%, 1)',
 			dark: 'hsla(14, 88%, 40%, 1)',
 		},
 		green: {
-			primary: 'hsla(123, 38%, 57%, 1)',
+			primary: 'hsla(123, 43%, 39%, 1)',
 			active: 'hsla(123, 38%, 42%, 1)',
 			light: 'hsla(125, 39%, 94%, 1)',
 			dark: 'hsla(124, 55%, 24%, 1)',
@@ -27,10 +27,16 @@ module.exports = {
 			dark: 'hsla(251, 69%, 34%, 1)',
 		},
 		brown: {
-			primary: 'hsla(16, 18%, 47%, 1)',
+			primary: 'hsla(17, 18%, 46%, 1)',
 			active: 'hsla(16, 18%, 32%, 1)',
 			light: 'hsla(20, 16%, 93%, 1)',
 			dark: 'hsla(9, 28%, 19%, 1)',
+		},
+		pink: {
+			primary: 'hsla(344, 100%, 63%, 1)',
+			active: 'hsla(344, 100%, 40%, 1)',
+			light: 'hsla(344, 100%, 88%, 1)',
+			dark: 'hsla(344, 100%, 25%, 1)',
 		},
 	},
 	sizes: {
