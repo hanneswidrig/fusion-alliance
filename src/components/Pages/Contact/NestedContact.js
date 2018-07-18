@@ -14,22 +14,22 @@ const Field = styled(Input)`
 `
 
 const ContactUs = () => (
-	<ContactForm netlify>
+	<ContactForm name="form" method="POST" netlify>
 		<InputWrapper>
 			{`Name `}
-			<Field />
+			<Field name="name" />
 		</InputWrapper>
 		<InputWrapper>
 			{`Email Address `}
-			<Field />
+			<Field name="email" />
 		</InputWrapper>
 		<InputWrapper>
 			{`Company `}
-			<Field />
+			<Field name="company" />
 		</InputWrapper>
 		<InputWrapper>
 			{`I'd like to discuss:`}
-			<Field as="select">
+			<Field as="select" name="reason">
 				<option>Please select one of the following:</option>
 				<option>Cloud solutions</option>
 				<option>Data solutions</option>
@@ -44,7 +44,7 @@ const ContactUs = () => (
 		</InputWrapper>
 		<InputWrapper>
 			{`Have a burning question? Ask us here.`}
-			<Field as="textarea" />
+			<Field as="textarea" name="question" />
 		</InputWrapper>
 		<input type="submit" value="SUBMIT INQUIRY" />
 	</ContactForm>
