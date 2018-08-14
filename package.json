@@ -1,7 +1,7 @@
 {
 	"name": "fusion-alliance",
 	"description": "Unsolicited redesign of fusionalliance.com",
-	"version": "0.15.3",
+	"version": "0.15.4",
 	"repository": "https://github.com/hanneswidrig/fusion-alliance",
 	"author": "Hannes Widrig<hanneswidrig@gmail.com>",
 	"private": true,
