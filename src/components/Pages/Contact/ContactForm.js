@@ -1,21 +1,45 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Confirmation = styled.h3`
+	font-weight: bold;
+	margin-bottom: 25px;
+`
+
+const Label = styled.label`
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+`
+
+const LabelText = styled.span`
+	margin-right: 5px;
+	width: 100px;
+`
+
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`
 
 class ContactForm extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = { name: '' }
-
-		this.handleChange = this.handleChange.bind(this)
+		this.state = { name: '', email: '', question: '', confirm: '' }
 		this.handleSubmit = this.handleSubmit.bind(this)
-	}
-
-	handleChange(e) {
-		this.setState({ name: e.target.value })
 	}
 
 	handleSubmit(e) {
 		e.preventDefault()
 		console.log(this.state)
+		this.setState({
+			name: '',
+			email: '',
+			question: '',
+			confirm: `We've received your request! :)`,
+		})
 	}
 
 	isEnterKey(e) {
@@ -26,19 +50,43 @@ class ContactForm extends React.Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<label htmlFor="name">
-					Name:
-					<input
-						name="name"
-						type="text"
-						value={this.state.name}
-						onChange={e => this.setState({ name: e.target.value })}
-						onKeyPress={this.isEnterKey}
-					/>
-				</label>
-				<input type="submit" value="Submit" />
-			</form>
+			<Wrapper>
+				<Confirmation>{this.state.confirm}</Confirmation>
+				<form onSubmit={this.handleSubmit}>
+					<Label htmlFor="name">
+						<LabelText>Name</LabelText>
+						<input
+							name="name"
+							type="text"
+							value={this.state.name}
+							onChange={e => this.setState({ name: e.target.value })}
+							onKeyPress={this.isEnterKey}
+						/>
+					</Label>
+					<Label htmlFor="email">
+						<LabelText>Email</LabelText>
+						<input
+							name="email"
+							type="text"
+							value={this.state.email}
+							onChange={e => this.setState({ email: e.target.value })}
+							onKeyPress={this.isEnterKey}
+						/>
+					</Label>
+					<Label>
+						<LabelText>Your Question</LabelText>
+						<textarea
+							name="question"
+							id="question"
+							cols="27"
+							rows="10"
+							value={this.state.question}
+							onChange={e => this.setState({ question: e.target.value })}
+						/>
+					</Label>
+					<input type="submit" value="Submit" />
+				</form>
+			</Wrapper>
 		)
 	}
 }

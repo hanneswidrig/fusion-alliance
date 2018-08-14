@@ -11,6 +11,7 @@
 			{ "components": ["Link"], "specialLink": ["to"] }
 		],
 		"no-tabs": 0,
+		"no-alert": "off",
 		"arrow-body-style": "off",
 		"react/prop-types": 0,
 		"react/jsx-indent": [2, "tab"],
