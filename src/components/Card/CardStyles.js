@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import MdArrowForward from 'react-icons/lib/md/arrow-forward'
+import { MdArrowForward } from 'react-icons/md'
 import theme from '../../styles/theme'
 
 export const CardWrapper = styled(Link)`

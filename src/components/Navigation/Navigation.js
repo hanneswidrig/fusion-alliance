@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import MdMenu from 'react-icons/lib/md/menu'
+import { MdMenu } from 'react-icons/md'
 import LogoSection from './LogoSection/LogoSection'
 import MobileNavSection from './MobileNavSection/MobileNavSection'
 import DesktopNavSection from './DesktopNavSection/DesktopNavSection'
