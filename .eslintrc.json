@@ -16,7 +16,8 @@
 		"react/prop-types": 0,
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
-		"class-methods-use-this": "off"
+		"class-methods-use-this": "off",
+		"linebreak-style": "off"
 	},
 	"globals": {
 		"document": false,
