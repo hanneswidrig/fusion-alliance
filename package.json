@@ -7,17 +7,16 @@
 	"private": true,
 	"dependencies": {
 		"prop-types": "^15.6.2",
-		"react": "^16.4.1",
-		"react-app-rewire-styled-components": "^3.0.2",
-		"react-dom": "^16.4.1",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0",
 		"react-icons": "^3.2.1",
 		"react-router-dom": "^4.3.1",
-		"react-scripts": "1.1.4",
+		"react-scripts": "^2.1.3",
 		"styled-components": "^3.3.3"
 	},
 	"scripts": {
-		"start": "react-app-rewired start",
-		"build": "react-app-rewired build",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
 		"test": "jest",
 		"format": "prettier --write \"src/**/*.js\"",
 		"eject": "react-scripts eject"
@@ -26,7 +25,6 @@
 		"enzyme": "^3.3.0",
 		"enzyme-adapter-react-16": "^1.1.1",
 		"enzyme-to-json": "^3.3.4",
-		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-config-prettier": "^2.9.0",
 		"eslint-plugin-import": "^2.13.0",
@@ -34,7 +32,6 @@
 		"eslint-plugin-react": "^7.10.0",
 		"prettier": "^1.13.7",
 		"raf": "^3.4.0",
-		"react-app-rewired": "^1.5.2",
 		"react-test-renderer": "^16.4.1",
 		"stylelint": "^9.3.0",
 		"stylelint-config-prettier": "^3.3.0",
@@ -75,5 +72,11 @@
 		"rules": {
 			"no-descending-specificity": null
 		}
-	}
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
