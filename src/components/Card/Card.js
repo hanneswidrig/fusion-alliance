@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
 	CardWrapper,
 	Icon,
@@ -9,12 +10,12 @@ import {
 	CardBody,
 } from './CardStyles'
 
-const CardContainer = CardWrapper.extend`
+const CardContainer = styled(CardWrapper)`
 	flex-direction: row;
 	margin: 4px;
 `
 
-const CardImg = ImgWrapper.extend`
+const CardImg = styled(ImgWrapper)`
 	display: none;
 	height: 180px;
 	width: 180px;
@@ -26,7 +27,7 @@ const CardImg = ImgWrapper.extend`
 	}
 `
 
-const Title = CardTitle.extend`
+const Title = styled(CardTitle)`
 	width: calc(100% - 48px);
 `
 

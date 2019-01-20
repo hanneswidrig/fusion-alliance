@@ -220,7 +220,7 @@ const InnerContextWrapper = styled.div`
 	flex-direction: column;
 `
 
-const InsightsContainer = ContextWrapper.extend`
+const InsightsContainer = styled(ContextWrapper)`
 	position: relative;
 	justify-content: flex-end;
 	align-items: center;
@@ -235,14 +235,14 @@ const InsightsSVG = styled.img`
 	height: 50%;
 `
 
-const Insights = InnerContextWrapper.extend`
+const Insights = styled(InnerContextWrapper)`
 	z-index: 1;
 	color: ${theme.colors.grey};
 	width: 60%;
 	margin-right: 20px;
 `
 
-const FoundationsContainer = ContextWrapper.extend`
+const FoundationsContainer = styled(ContextWrapper)`
 	flex-direction: column;
 	justify-content: center;
 	margin-left: 16px;
@@ -254,7 +254,7 @@ const FoundationsSVG = styled.img`
 	align-self: center;
 `
 
-const ExperiencesContainer = ContextWrapper.extend`
+const ExperiencesContainer = styled(ContextWrapper)`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -266,7 +266,7 @@ const ExperiencesSVG = styled.img`
 	padding-top: 16px;
 `
 
-const Experiences = InnerContextWrapper.extend`
+const Experiences = styled(InnerContextWrapper)`
 	justify-content: center;
 	align-items: center;
 `

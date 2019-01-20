@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
 	CardWrapper,
 	ImgWrapper,
@@ -10,13 +11,13 @@ import {
 	tagTheme,
 } from './CardStyles'
 
-const CardContainer = CardWrapper.extend`
+const CardContainer = styled(CardWrapper)`
 	flex-direction: column;
 	min-height: 368px;
 	position: relative;
 `
 
-const CardImg = ImgWrapper.extend`
+const CardImg = styled(ImgWrapper)`
 	display: flex;
 	width: 100%;
 	height: 192px;

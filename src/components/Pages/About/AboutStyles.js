@@ -18,7 +18,7 @@ export const Container = styled.div`
 	}
 `
 
-export const BlockContainer = Container.extend`
+export const BlockContainer = styled(Container)`
 	flex-flow: row wrap;
 `
 
@@ -28,7 +28,7 @@ export const Wrapper = styled.section`
 	margin-top: 2rem;
 `
 
-export const SectionWrapper = Wrapper.extend`
+export const SectionWrapper = styled(Wrapper)`
 	color: ${theme.colors.grey};
 	align-items: center;
 	@media screen and (min-width: ${theme.responsive.medium}) {
@@ -39,7 +39,7 @@ export const SectionWrapper = Wrapper.extend`
 	}
 `
 
-export const BlockWrapper = Wrapper.extend`
+export const BlockWrapper = styled(Wrapper)`
 	flex: 1 0 33.3%;
 	max-width: 33.3%;
 	@media screen and (max-width: ${theme.responsive.medium}) {

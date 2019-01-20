@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import GlobalStyle from '../../styles/GlobalStyle'
 import Header from '../Header/Header'
 import Main from '../Pages/Index/index'
 import Expertise from '../Pages/Expertise/index'
@@ -12,6 +13,7 @@ import Footer from '../Footer/Footer'
 const App = props => {
 	return (
 		<React.Fragment>
+			<GlobalStyle />
 			<Header {...props} />
 			<Route exact path="/" component={Main} />
 			<Route path="/expertise" component={Expertise} />

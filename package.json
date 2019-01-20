@@ -1,7 +1,7 @@
 {
 	"name": "fusion-alliance",
 	"description": "Unsolicited redesign of fusionalliance.com",
-	"version": "0.15.5",
+	"version": "0.16.0",
 	"repository": "https://github.com/hanneswidrig/fusion-alliance",
 	"author": "Hannes Widrig<hanneswidrig@gmail.com>",
 	"private": true,
@@ -12,7 +12,7 @@
 		"react-icons": "^3.3.0",
 		"react-router-dom": "^4.3.1",
 		"react-scripts": "^2.1.3",
-		"styled-components": "^3.3.3"
+		"styled-components": "^4.1.3"
 	},
 	"scripts": {
 		"start": "react-scripts start",
