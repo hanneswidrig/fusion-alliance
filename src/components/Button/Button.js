@@ -34,7 +34,9 @@ const StyledButton = styled(Link)`
 	}
 `
 
-const Button = props => <StyledButton {...props}>{props.children}</StyledButton>
+const Button = ({ children, ...props }) => (
+	<StyledButton {...props}>{children}</StyledButton>
+)
 
 Button.defaultProps = {
 	to: '#',

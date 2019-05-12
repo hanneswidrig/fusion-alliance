@@ -49,16 +49,17 @@ class ContactForm extends React.Component {
 	}
 
 	render() {
+		const { name, email, question, confirm } = this.state
 		return (
 			<Wrapper>
-				<Confirmation>{this.state.confirm}</Confirmation>
+				<Confirmation>{confirm}</Confirmation>
 				<form onSubmit={this.handleSubmit}>
 					<Label htmlFor="name">
 						<LabelText>Name</LabelText>
 						<input
 							name="name"
 							type="text"
-							value={this.state.name}
+							value={name}
 							onChange={e => this.setState({ name: e.target.value })}
 							onKeyPress={this.isEnterKey}
 						/>
@@ -68,7 +69,7 @@ class ContactForm extends React.Component {
 						<input
 							name="email"
 							type="text"
-							value={this.state.email}
+							value={email}
 							onChange={e => this.setState({ email: e.target.value })}
 							onKeyPress={this.isEnterKey}
 						/>
@@ -80,7 +81,7 @@ class ContactForm extends React.Component {
 							id="question"
 							cols="27"
 							rows="10"
-							value={this.state.question}
+							value={question}
 							onChange={e => this.setState({ question: e.target.value })}
 						/>
 					</Label>

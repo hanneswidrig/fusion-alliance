@@ -12,7 +12,8 @@
 		"react-icons": "^3.7.0",
 		"react-router-dom": "^5.0.0",
 		"react-scripts": "^3.0.1",
-		"styled-components": "^4.2.0"
+		"styled-components": "^4.2.0",
+		"typescript": "^3.4.5"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -22,6 +23,7 @@
 		"eject": "react-scripts eject"
 	},
 	"devDependencies": {
+		"cypress": "^3.2.0",
 		"enzyme": "^3.9.0",
 		"enzyme-adapter-react-16": "^1.13.0",
 		"enzyme-to-json": "^3.3.5",
@@ -51,8 +53,7 @@
 			"src/**/*.js",
 			"!src/index.js",
 			"!src/styles/*"
-		],
-		"mapCoverage": true
+		]
 	},
 	"babel": {
 		"presets": [
